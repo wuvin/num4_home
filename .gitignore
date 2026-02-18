@@ -1,0 +1,6 @@
+# Workspace-specific contents
+num4_ws/build/*
+num4_ws/install/*
+num4_ws/log/*
+num4_ws/src/*
+!num4_ws/src/.gitkeep

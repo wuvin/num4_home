@@ -1,0 +1,14 @@
+[Unit]
+Description=Log Jetson Start and Shutdown
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/home/num4/Documents/Logs/loggerin.sh "POWER_ON"
+ExecStop=/home/num4/Documents/Log/loggerin.sh "SHUTDOWN"
+StandardOutput=journal
+User=num4
+
+[Install]
+WantedBy=multi-user.target

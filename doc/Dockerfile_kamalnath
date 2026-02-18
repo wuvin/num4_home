@@ -1,0 +1,184 @@
+# BASE IMAGE contains Pytorch, TorchVision, OpenCV, CUDA, TensorRT, and Ultralytics
+FROM ultralytics/ultralytics:8.3.49-jetson-jetpack6
+
+# Completely remove OpenCV
+RUN apt-get purge -y '*opencv*' && apt-get autoremove -y \
+    && apt-get clean
+
+# Install Basic packages
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    nano \
+    wget \
+    curl \
+    libpthread-stubs0-dev \
+    python3-setuptools \
+    python3-pip \
+    tmux
+| fix_jetson_routing_dns.sh | Allow remote to use connection
+
+# Fix setuptools dependency
+RUN pip install --upgrade setuptools==70.3.0
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install librealsense from source
+COPY libuvc_installation.sh /usr/local/bin/
+WORKDIR /usr/local/bin
+RUN chmod +x libuvc_installation.sh && ./libuvc_installation.sh
+
+# ROS 2 Humble Installation Steps
+RUN apt-get update && apt-get install -y curl gnupg2 lsb-release \
+    && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg \
+    && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# Install humble
+RUN apt-get update && apt-get install -y ros-humble-desktop \
+    && echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+# Install bootstrap tools
+RUN apt-get install --no-install-recommends -y \
+    build-essential \
+    python3-colcon-common-extensions \
+    python3-rosdep \
+    python3-vcstool \
+    git
+
+# Install realsense-ros from source
+RUN rosdep init && rosdep update
+
+WORKDIR /home/realsense_ws/src
+RUN git clone https://github.com/IntelRealSense/realsense-ros.git -b 4.55.1
+
+WORKDIR /home/realsense_ws
+RUN apt-get update && \
+    rosdep install -i --from-path src --rosdistro humble --skip-keys=librealsense2 -y
+
+RUN . /opt/ros/humble/setup.sh && \
+    colcon build
+
+RUN echo "source /home/realsense_ws/install/local_setup.bash" >> ~/.bashrc
+
+# Install peripheral rtabmap packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-pcl-ros \
+    ros-humble-perception-pcl \
+    ros-humble-octomap-ros \
+    ros-humble-nav2-costmap-2d \
+    ros-humble-grid-map-ros \
+    ros-humble-rosbag2-storage-mcap \
+    ros-humble-rmw-cyclonedds-cpp \
+    equivs
+
+RUN echo "Section: misc\nPriority: optional\nStandards-Version: 3.9.2\n\nPackage: ros-humble-librealsense2\nVersion: 2.55.1\nArchitecture: arm64\nMaintainer: Dummy <dummy@dummy.com>\nDescription: Dummy package for ros-humble-librealsense2" > ros-humble-librealsense2.equivs && \
+    equivs-build ros-humble-librealsense2.equivs && \
+    dpkg -i ros-humble-librealsense2_2.55.1_arm64.deb
+
+# Install rtabmap
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-rtabmap \
+    ros-humble-rtabmap-ros
+
+# Install lio-sam dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-vision-opencv
+
+# Install lio-sam from source
+WORKDIR /home/liosam_ws/src
+RUN git clone https://github.com/TixiaoShan/LIO-SAM.git -b ros2
+RUN git clone https://github.com/ouster-lidar/ouster-ros.git -b ros2 --recurse-submodules
+
+WORKDIR /home/liosam_ws
+
+RUN . /opt/ros/humble/setup.sh && \
+    colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+RUN echo "source /home/liosam_ws/install/local_setup.bash" >> ~/.bashrc
+
+# Install vrpn_mocap dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-vrpn \
+    netbase
+
+# # Livox ROS Driver 2 installation
+# WORKDIR /home/ws_livox/src
+# RUN git clone https://github.com/Livox-SDK/livox_ros_driver2.git
+
+# Install Livox SDK2
+WORKDIR /home
+RUN git clone https://github.com/Livox-SDK/Livox-SDK2.git && \
+    cd Livox-SDK2 && mkdir build && cd build && \
+    cmake .. && make -j$(nproc) && make install
+
+# # Build Livox ROS Driver 2
+# WORKDIR /home/ws_livox/src/livox_ros_driver2
+# RUN chmod +x ./build.sh && ./build.sh humble
+# # RUN ./build.sh humble
+
+# # Source livox_ws
+# RUN echo "source /home/ws_livox/install/setup.bash" >> ~/.bashrc
+
+# Install FAST_LIO dependencies
+ RUN apt-get update && apt-get install -y --no-install-recommends \
+     libpcl-dev \
+     libeigen3-dev
+
+# # Clone and build FAST_LIO
+# WORKDIR /home/fs_lio_ws/src
+# RUN git clone https://github.com/Ericsii/FAST_LIO.git --recursive
+
+
+# #Source bashrc
+# RUN /bin/bash -c "source ~/.bashrc"
+
+# # Install and initialize rosdep
+# RUN apt-get update && apt-get install -y python3-rosdep
+
+# RUN /bin/bash -c "if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then rosdep init; fi"
+
+# RUN rosdep update
+
+# #un rosdep on workspace
+# WORKDIR /home/fs_lio_ws
+# RUN /bin/bash -c "source ~/.bashrc && source /opt/ros/humble/setup.bash && rosdep install --from-paths src --ignore-src -y"
+
+#Build workspace with symlink
+# RUN /bin/bash -c "source ~/.bashrc && source /opt/ros/humble/setup.bash && colcon build --symlink-install"
+
+# # Set working directory
+# WORKDIR /home/fs_lio_ws
+
+# # Install rosdep, initialize and update
+# # RUN apt-get update && apt-get install -y \
+# #     python3-rosdep \
+# #  && rosdep init \
+# #  && rosdep update
+
+# # Source bashrc
+# RUN /bin/bash -c "source ~/.bashrc"
+
+# RUN apt-get update && apt-get install -y python3-rosdep && \
+#     if [ ! -f /etc/ros/rosdep/sources.list.d/20-default.list ]; then rosdep init; fi && \
+#     rosdep update
+
+# # Install dependencies and build
+# RUN source /opt/ros/humble/setup.sh && \
+#     rosdep install --from-paths src --ignore-src -r -y && \
+#     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+
+# # Source FAST_LIO workspace
+# RUN echo "source /home/fs_lio_ws/install/setup.bash" >> ~/.bashrc
+
+# Set home directory - Mount this when running
+WORKDIR /home/num4
+
+# Style command prompt
+RUN echo "export PS1='\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$ '" >> ~/.bashrc
+
+# Set ROS Domain ID
+RUN echo "export ROS_DOMAIN_ID=9" >> ~/.bashrc
+
+# Enable CycloneDDS
+RUN echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
+
+# Set up entrypoint
+ENTRYPOINT [ "bash" ]
