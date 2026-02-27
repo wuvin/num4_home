@@ -1055,7 +1055,7 @@ std::vector<std::string> M4Base::get_active_wheel_names()
 }
 
 // Lock for getters declared in m4_base.h
-std::vector<float> get_wheel_velocity_cmd()
+std::vector<float> M4Base::get_wheel_velocity_cmd()
 {
 	std::lock_guard<std::mutex> lock(drive_cmd);
 	return wheel_velocity_cmd;
