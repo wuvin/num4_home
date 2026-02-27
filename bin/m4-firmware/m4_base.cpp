@@ -856,6 +856,11 @@ void M4Base::log_status_loop()
 void M4Base::update_state()
 {
 	DynamixelStatus status = dxl.read_status();
+
+	// Skip update if read failed or returned garbage
+	if (status.position.empty() || status.velocity.empty() || status.current.empty())
+		return;
+
 	RobotState r;
 	r.timestamp = status.timestamp;
 	r.positions = status.position;
@@ -872,11 +877,24 @@ void M4Base::update_state()
 
 bool M4Base::state_available()
 {
-	return state_updated;
+	// Original code:
+	// return state_updated;
+
+	// Update for thread safety + edge case with log thread just cleared
+	std::lock_guard<std::mutex> lock(m_state);
+	return state_updated && !robot_state.empty();
 }
 
 RobotState M4Base::get_state()
 {
+	// Original code:
+	// state_updated = false;
+	// return robot_state.back();
+
+	// Original does not hold mutex while update_state() pushes with it
+	// This is potential segfault when .back() is called during mid-mod
+	// Fix to ensure safety of control thread
+	std::lock_guard<std::mutex> lock(m_state);
 	state_updated = false;
 	return robot_state.back();
 }
@@ -1029,9 +1047,33 @@ std::vector<std::string> M4Base::get_active_wheel_names()
     return active_wheel_names;
 }
 
-// Lock for getter declared in m4_base.h
+// Lock for getters declared in m4_base.h
 std::vector<float> get_wheel_velocity_cmd()
 {
 	std::lock_guard<std::mutex> lock(drive_cmd);
 	return wheel_velocity_cmd;
+}
+
+float M4Base::get_right_wheel_velocity()
+{
+	std::lock_guard<std::mutex> lock(drive_cmd);
+	return right_wheel_velocity;
+}
+
+float M4Base::get_left_wheel_velocity()
+{
+	std::lock_guard<std::mutex> lock(drive_cmd);
+	return left_wheel_velocity;
+}
+
+float M4Base::get_linear_velocity_cmd()
+{
+	std::lock_guard<std::mutex> lock(drive_cmd);
+	return linear_velocity_cmd;
+}
+
+float M4Base::get_angular_velocity_cmd()
+{
+	std::lock_guard<std::mutex> lock(drive_cmd);
+	return angular_velocity_cmd;
 }
