@@ -741,6 +741,12 @@ void M4Base::execute_mip(int& command_step, bool& command_active, std::chrono::_
 void M4Base::init_log()
 {
 	printf("%s[INFO] Logging to %s\n", CONSOLE_MSG_INFO, LOG_PATH.c_str());
+
+	// Account for additional wheel states
+	std::vector<std::string> all_active_names;
+	all_active_names.insert(all_active_names.end(), active_joint_names.begin(), active_joint_names.end());
+	all_active_names.insert(all_active_names.end(), active_wheel_names.begin(), active_wheel_names.end());
+
 	position_logger = new Logger("position.csv", active_joint_names, LOG_PATH.c_str());
 	velocity_logger = new Logger("velocity.csv", active_joint_names, LOG_PATH.c_str());
 	current_logger = new Logger("current.csv", active_joint_names, LOG_PATH.c_str());
@@ -863,6 +869,10 @@ void M4Base::update_state()
 
 	// Skip update if read failed or returned garbage
 	if (status.position.empty() || status.velocity.empty() || status.current.empty())
+		return;
+
+	// Expect joint count + wheel count
+	if (status.position.size() < active_joint_ids.size() + active_wheel_ids.size())
 		return;
 
 	RobotState r;
