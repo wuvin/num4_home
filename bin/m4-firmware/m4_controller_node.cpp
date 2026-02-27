@@ -13,13 +13,11 @@
 #include <geometry_msgs/Vector3.h>
 #include <sensor_msgs/JointState.h>
 #include <m4_base/WheelVelocityCmd.h>
-#include <m4_base/DerivedVelocityCmd.h>
 #include "m4_base.h"
 
 ros::Publisher cmd_pub;
 ros::Publisher joint_state_pub;
 ros::Publisher drive_cmd_pub;
-// ros::Publisher derived_vel_pub;
 ros::Publisher wheel_cmd_pub;
 
 // #define DRY_RUN
@@ -238,7 +236,6 @@ int main(int argc, char **argv)
 	cmd_pub = nh.advertise<geometry_msgs::TwistStamped>("/m4/cmd_vel_normalized", 10);
 	joint_state_pub = nh.advertise<sensor_msgs::JointState>("/m4/joint_states", 10);
 	drive_cmd_pub = nh.advertise<geometry_msgs::TwistStamped>("/m4/drive_cmd", 10);
-	// derived_vel_pub = nh.advertise<m4_base::DerivedVelocityCmd>("/m4/derived_vel", 10);
 	wheel_cmd_pub = nh.advertise<m4_base::WheelVelocityCmd>("/m4/wheel_velocity_cmd", 10);
 
 	// std::vector<int> active_joint_ids = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -541,13 +538,6 @@ int main(int argc, char **argv)
                 drive_msg.twist.linear.x = m4.get_linear_velocity_cmd();
                 drive_msg.twist.angular.z = m4.get_angular_velocity_cmd();
                 drive_cmd_pub.publish(drive_msg);
-				// right_wheel_vel, left_wheel_vel std::vector<float>
-				// m4_base::DerivedVelocityCmd derived_vel_msg;
-				// derived_vel_msg.header.stamp = ros::Time::now();
-				// derived_vel_msg.vk
-				// derived_vel_msg.wk
-				// derived_vel_msg.phidotr = m4.get_right_wheel_velocity();
-				// derived_vel_msg.phidotl = m4.get_left_wheel_velocity();
 		    }
 		#endif
 
