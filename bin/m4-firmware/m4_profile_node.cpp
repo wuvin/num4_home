@@ -7,6 +7,7 @@
 #include <std_msgs/String.h>
 #include <geometry_msgs/TwistStamped.h>
 #include <m4_base/WheelVelocityCmd.h>
+#include <m4_base/DerivedVelocity.h>
 #include "yaml-cpp/yaml.h"
 #include "m4_base.h"
 
@@ -151,7 +152,7 @@ void execute_profile(M4Base& m4, ros::NodeHandle& nh,
     ros::Publisher wheel_vel_pub =
         nh.advertise<m4_base::WheelVelocityCmd>("/m4/wheel_velocity_cmd", 10);
     ros::Publisher derived_vel_pub =
-        nh.advertise<geometry_msgs::TwistStamped>("/m4/derived_vel", 10);
+        nh.advertise<m4_base::DerivedVelocity>("/m4/derived_vel", 10);
     ros::Publisher status_pub =
         nh.advertise<std_msgs::String>("/m4/profile_status", 10);
 
@@ -231,12 +232,12 @@ void execute_profile(M4Base& m4, ros::NodeHandle& nh,
             
             // Publish derived quantities
             // TODO: custom msg
-            geometry_msgs::TwistStamped derived_msg;
+            m4_base::DerivedVelocity derived_msg;
             derived_msg.header.stamp = ros::Time::now();
-            derived_msg.twist.linear.x = vk;
-            derived_msg.twist.linear.y = wk;
-            derived_msg.twist.angular.x = phidotr;
-            derived_msg.twist.angular.y = phidotl;
+            derived_msg.vk = vk;
+            derived_msg.wk = wk;
+            derived_msg.phidotr = phidotr;
+            derived_msg.phidotl = phidotl;
             derived_vel_pub.publish(derived_msg);
             
             ros::spinOnce();
