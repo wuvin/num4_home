@@ -747,9 +747,9 @@ void M4Base::init_log()
 	all_active_names.insert(all_active_names.end(), active_joint_names.begin(), active_joint_names.end());
 	all_active_names.insert(all_active_names.end(), active_wheel_names.begin(), active_wheel_names.end());
 
-	position_logger = new Logger("position.csv", active_joint_names, LOG_PATH.c_str());
-	velocity_logger = new Logger("velocity.csv", active_joint_names, LOG_PATH.c_str());
-	current_logger = new Logger("current.csv", active_joint_names, LOG_PATH.c_str());
+	position_logger = new Logger("position.csv", all_active_names, LOG_PATH.c_str());
+	velocity_logger = new Logger("velocity.csv", all_active_names, LOG_PATH.c_str());
+	current_logger = new Logger("current.csv", all_active_names, LOG_PATH.c_str());
 
 	log_thread = std::thread(&M4Base::log_status_loop, this);
 }
