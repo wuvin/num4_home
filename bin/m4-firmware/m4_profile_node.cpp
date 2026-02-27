@@ -221,10 +221,10 @@ void execute_profile(M4Base& m4, ros::NodeHandle& nh,
                 {
                     m4_base::WheelVelocityCmd wheel_msg;
                     wheel_msg.header.stamp = ros::Time::now();
-                    wheel_msg.FL_Wheel = wv[0];
-                    wheel_msg.FR_Wheel = wv[1];
-                    wheel_msg.BL_Wheel = wv[2];
-                    wheel_msg.BR_Wheel = wv[3];
+                    wheel_msg.FL = wv[0];
+                    wheel_msg.FR = wv[1];
+                    wheel_msg.BL = wv[2];
+                    wheel_msg.BR = wv[3];
                     wheel_vel_pub.publish(wheel_msg);
                 }
             }
