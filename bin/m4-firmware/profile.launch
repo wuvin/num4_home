@@ -1,0 +1,23 @@
+<launch>
+    <!-- Contact: Kevin Wu, wu.kevi@northeastern.edu -->
+    <!-- Last updated: February 25, 2026 -->
+    
+    <!-- Profile type: "straight", "rotate", or "circle" -->
+    <arg name="profile"     default="straight" />
+
+    <!-- Command signal inputs -->
+    <arg name="xvel"        default="0.0"   /> <!-- normalized forward/backward -->
+    <arg name="yvel"        default="0.0"   /> <!-- normalized turn left/right -->
+    <arg name="duration"    default="2.0"   /> <!-- seconds per segment -->
+
+    <!-- Count -->
+    <arg name="count"       default="1"     />
+
+    <node name="m4_profile_node" pkg="m4_base" type="m4_profile_node" output="screen">
+        <param name="profile"     value="$(arg profile)"     />
+        <param name="xvel"        value="$(arg xvel)"        />
+        <param name="yvel"        value="$(arg yvel)"        />
+        <param name="duration"    value="$(arg duration)"    />
+        <param name="count"       value="$(arg count)"       />
+    </node>
+</launch>

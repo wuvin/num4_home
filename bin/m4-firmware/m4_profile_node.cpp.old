@@ -1,0 +1,311 @@
+#include <string>
+#include <vector>
+#include <thread>
+#include <ros/ros.h>
+#include <sensor_msgs/JointState.h>
+#include <std_msgs/Float32MultiArray.h>
+#include <std_msgs/String.h>
+#include <geometry_msgs/TwistStamped.h>
+#include <m4_base/WheelVelocityCmd.h>
+#include "m4_base.h"
+
+// Contact: Kevin Wu <wu.kevi@northeastern.edu>
+// Last updated: February 25, 2026
+// C++ and memory segmentation faults make me sad
+
+// (lin_vel, ang_vel, duration) -> drive at (lin_vel, ang_vel) for (duration)
+// NOTE: input is xvel, yvel
+// TODO: may want to specify wheel rates, but m4_base uses xvel, yvel for now
+// EXAMPLE: roslaunch m4_base profile.launch profile:=straight lin_speed:=0.6 duration:=2 count:=5
+// EXAMPLE: roslaunch m4_base profile.launch profile:=rotate ang_speed:=0.6 duration:=2 count:=5
+
+# Profile 2: Rotate in place, 360deg at 0.5 rad/s, 5 repetitions
+roslaunch YOUR_PACKAGE profile.launch profile:=rotate angle_deg:=360 ang_speed:=0.5 repeats:=4
+
+# Profile 3: Drive in a circle, 1m radius at 0.3 m/s
+roslaunch YOUR_PACKAGE profile.launch profile:=circle radius:=1.0 lin_speed:=0.3 num_circles:=1
+struct MotionSegment
+{
+    float lin_vel;    // m/s
+    float ang_vel;    // rad/s
+    float duration;   // seconds
+    std::string label;
+};
+
+// Profile from a list of motion segments
+std::vector<MotionSegment> build_motion_profile(
+    const std::vector<MotionSegment>& base_segments,
+    int segment_count)
+{
+    std::vector<MotionSegment> profile;
+    for (int ii = 0; ii < segment_count; ii++)
+    {
+        for (const auto& seg : base_segments)
+            profile.push_back(seg);
+    }
+    return profile;
+}
+
+// Profile 1: (speed, duration, count) -> straight forward/backward
+std::vector<MotionSegment> profile_straight_line(
+    float speed_mps, float duration, int count)
+{
+    //float duration = distance_m / speed_mps;
+
+    std::vector<MotionSegment> base = {
+        { speed_mps,  0.0f, duration, "Forward"  },
+        { 0.0f,       0.0f, 2.0f,     "Wait 2s"  },
+        {-speed_mps,  0.0f, duration, "Backward" },
+        { 0.0f,       0.0f, 5.0f,     "Wait 5s"  }
+    };
+
+    return build_motion_profile(base, count);
+}
+
+// Profile 2: (speed, duration, count) -> rotate in place
+std::vector<MotionSegment> profile_rotate_in_place(
+    float speed_degps, float duration, int count)
+{
+    //float duration = angle_rad / ang_speed_rps;
+    float speed_radps = speed_degps * M_PI / 180.0f;
+
+    std::vector<MotionSegment> base = {
+        { 0.0f,  speed_radps, duration, "Rotate CCW" },
+        { 0.0f,  0.0f,        2.0f,     "Wait 2s"    },
+        { 0.0f, -speed_radps, duration, "Rotate CW"  },
+        { 0.0f,  0.0f,        5.0f,     "Wait 5s"    }
+    };
+
+    return build_motion_profile(base, count);
+}
+
+// Profile 3: (lin_speed, ang_speed, count) -> drive in a circle
+std::vector<MotionSegment> profile_circle(
+    float lin_speed_mps, float ang_speed_degps, int count)
+    //float radius_m, float speed_mps, int num_circles)
+{
+    // angular_vel = linear_vel / radius
+    //float ang_vel = speed_mps / radius_m;
+    // circumference = 2 * pi * radius
+    //float circumference = 2.0f * M_PI * radius_m;
+    // duration = circumference / linear_vel
+    //float duration_per_circle = circumference / speed_mps;
+
+    float ang_speed_radps = ang_speed_degps * M_PI / 180.0f;
+    // radius = lin_speed / ang_speed
+    float radius_m = lin_speed_mps / ang_speed_radps;
+    // circumference = 2 * pi * radius
+    float circumference_m = 2.0f * M_PI * radius_m;
+    // duration per circle = circumference / lin_speed
+    float duration_per_circle = circumference_m / speed_mps;
+
+    std::vector<MotionSegment> profile;
+    for (int ii = 0; ii < count; ii++)
+    {
+        profile.push_back({lin_speed_mps, ang_speed_radps, duration_per_circle,
+                           "Circle " + std::to_string(ii + 1)});
+    }
+    
+    // Stop
+    profile.push_back({0.0f, 0.0f, 1.0f, "Stop"});
+    
+    return profile;
+}
+
+// Execute
+void execute_profile(M4Base& m4, ros::NodeHandle& nh,
+                     const std::vector<MotionSegment>& profile)
+{
+    // Publishers for recording
+    ros::Publisher joint_state_pub =
+        nh.advertise<sensor_msgs::JointState>("/m4/joint_states", 10);
+    ros::Publisher drive_cmd_pub =
+        nh.advertise<geometry_msgs::TwistStamped>("/m4/drive_cmd", 10);
+    ros::Publisher wheel_vel_pub =
+        nh.advertise<m4_base::WheelVelocityCmd>("/m4/wheel_velocity_cmd", 10);
+    ros::Publisher status_pub =
+        nh.advertise<std_msgs::String>("/m4/profile_status", 10);
+
+    ros::Rate publish_rate(50); // 50 Hz publishing while executing
+
+    for (size_t ii = 0; ii < profile.size() && ros::ok(); ii++)
+    {
+        const MotionSegment& seg = profile[ii];
+        ROS_INFO("Segment %zu/%zu: %s (lin=%.3f, ang=%.3f, dur=%.2fs)",
+                 ii + 1, profile.size(), seg.label.c_str(),
+                 seg.lin_vel, seg.ang_vel, seg.duration);
+
+        // Publish status
+        std_msgs::String status_msg;
+        status_msg.data = seg.label;
+        status_pub.publish(status_msg);
+
+        // Send command
+        m4.drive(seg.lin_vel, seg.ang_vel);
+
+        // Hold command for segment duration
+        auto seg_start = std::chrono::steady_clock::now();
+        while (ros::ok())
+        {
+            auto now = std::chrono::steady_clock::now();
+            double elapsed = std::chrono::duration<double>(now - seg_start).count();
+            if (elapsed >= seg.duration)
+                break;
+
+            // Publish joint states and drive command
+            #ifndef DRY_RUN
+                if (m4.state_available())
+                {
+                    RobotState state = m4.get_state();
+                    sensor_msgs::JointState js_msg;
+                    js_msg.header.stamp = ros::Time::now();
+                    // state.positions, state.velocities std::vector<float>
+                    js_msg.position.assign(state.positions.begin(), state.positions.end());
+                    js_msg.velocity.assign(state.velocities.begin(), state.velocities.end());
+                    js_msg.effort.assign(state.currents.begin(), state.currents.end());
+                    joint_state_pub.publish(js_msg);
+                    // lin_vel_cmd, ang_vel_cmd std::vector<float>
+                    geometry_msgs::TwistStamped drive_msg;
+                    drive_msg.header.stamp = ros::Time::now();
+                    drive_msg.twist.linear.x = m4.get_linear_velocity_cmd();
+                    drive_msg.twist.angular.z = m4.get_angular_velocity_cmd();
+                    drive_cmd_pub.publish(drive_msg);
+                }
+            #endif
+
+            // Publish wheel velocity command
+            #ifndef DRY_RUN
+            {
+                // right_wheel_velocity, left_wheel_velocity std::vector<float>
+                std::vector<float> wv = m4.get_wheel_velocity_cmd();
+                if (wv.size() >= 4) // guard
+                {
+                    m4_base::WheelVelocityCmd wheel_msg;
+                    wheel_msg.header.stamp = ros::Time::now();
+                    wheel_msg.FL_Wheel = wv[0];
+                    wheel_msg.FR_Wheel = wv[1];
+                    wheel_msg.BL_Wheel = wv[2];
+                    wheel_msg.BR_Wheel = wv[3];
+                    wheel_vel_pub.publish(wheel_msg);
+                }
+            }
+            #endif
+            
+            ros::spinOnce();
+            publish_rate.sleep();
+        }
+    }
+
+    // Stop when profile is complete
+    m4.drive(0.0f, 0.0f);
+    ROS_INFO("Motion profile complete.");
+}
+
+int main(int argc, char** argv)
+{
+    ros::init(argc, argv, "m4_profile_node");
+    ros::NodeHandle nh("~"); // private namespace for parameters
+
+    // Read parameters
+    std::string profile_type;
+    nh.param<std::string>("profile", profile_type, "straight");
+
+    // Speed / geometry parameters with defaults
+    //float lin_speed, ang_speed, distance, angle_deg, radius;
+    float lin_speed, ang_speed, duration
+    int count;
+
+    nh.param<float>("xvel",        xvel,        0.5f);
+    nh.param<float>("yvel",        yvel,        0.5f);
+    //nh.param<float>("lin_speed",   lin_speed,   0.3f);   // m/s
+    //nh.param<float>("ang_speed",   ang_speed,   0.5f);   // deg/s
+    //nh.param<float>("distance",    distance,    2.0f);   // meters
+    //nh.param<float>("angle_deg",   angle_deg,   360.0f); // degrees
+    //nh.param<float>("radius",      radius,      1.0f);   // meters
+    nh.param<float>("duration",    duration,    2.0f);   // s
+    nh.param<int>("count",         count,       5);
+    //nh.param<int>("num_circles",   num_circles, 1);
+
+    //float angle_rad = angle_deg * M_PI / 180.0f;
+
+    // Build profile
+    std::vector<MotionSegment> profile;
+
+    if (profile_type == "straight")
+    {
+        float distance = lin_speed * duration;
+        ROS_INFO("Profile: Straight line, distance=%.2fm, speed=%.2fm/s, count=%d",
+                 distance, lin_speed, count);
+        //profile = profile_straight_line(distance, lin_speed, count);
+        profile = profile_straight_line(lin_speed, duration, count);
+    }
+    else if (profile_type == "rotate")
+    {
+        float distance = ang_speed * duration;
+        ROS_INFO("Profile: Rotate in place, angle=%.1fdeg, speed=%.2fdeg/s, count=%d",
+                 distance, ang_speed, count);
+        //profile = profile_rotate_in_place(distance, ang_speed, count);
+        profile = profile_rotate_in_place(ang_speed, duration, count);
+    }
+    else if (profile_type == "circle")
+    {
+        float ang_speed_radps = ang_speed * M_PI / 180.0f;
+        float radius_m = lin_speed / ang_speed_radps;
+        ROS_INFO("Profile: Circle, radius=%.2fm, fwd=%.2fm/s, rot=%.2fdeg/s, count=%d",
+                 radius_m, lin_speed, ang_speed, count);
+        //profile = profile_circle(radius, lin_speed, num_circles);
+        profile = profile_circle(lin_speed, ang_speed, count);
+    }
+    else
+    {
+        ROS_ERROR("Unknown profile type: %s", profile_type.c_str());
+        return 1;
+    }
+
+    // Initialize robot
+    std::vector<int> active_joint_ids = {1, 2, 3, 4, 5, 6, 7, 8};
+    std::vector<int> active_wheel_ids = {9, 10, 11, 12};
+    M4Base m4(active_joint_ids, active_wheel_ids, true); //false);
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    
+    #ifndef DRY_RUN
+		m4.sit();
+		std::cout<<"Sit complete!\n";
+		while(m4.get_current_configuration() != M4Configurations::SIT)
+		    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+		std::cout<<"Sit wait complete!\n";
+	#endif
+	
+	#ifndef DRY_RUN
+		m4.stand();
+		while(m4.get_current_configuration() != M4Configurations::STAND)
+		    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+	#endif
+
+    // --- Not sure if this is needed ---
+	ros::Rate loop_rate(200);
+
+	M4Configurations current_configuration=M4Configurations::INIT;
+	#ifdef DRY_RUN
+		current_configuration = M4Configurations::STAND;
+	#endif
+	// ----------------------------------
+
+    ROS_INFO("Robot ready. Starting profile in 3 seconds...");
+    std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+
+    // Execute 
+    execute_profile(m4, nh, profile);
+
+    // Shutdown
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+	#ifndef DRY_RUN
+		m4.sit();
+		while(m4.get_current_configuration() != M4Configurations::SIT)
+		    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+	#endif
+
+    return 0;
+}

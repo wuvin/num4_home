@@ -1,0 +1,35 @@
+<launch>
+    <!-- Contact: Kevin Wu, wu.kevi@northeastern.edu -->
+    <!-- Last updated: February 25, 2026 -->
+
+    <!-- Profile type: "straight", "rotate", or "circle" -->
+    <arg name="profile"     default="straight" />
+
+    <!-- Shared parameters -->
+    <arg name="lin_speed"   default="0.3"   /> <!-- m/s -->
+    <arg name="ang_speed"   default="0.5"   /> <!-- rad/s -->
+
+    <!-- Straight line parameters -->
+    <arg name="distance"    default="2.0"   /> <!-- meters -->
+
+    <!-- Rotation parameters -->
+    <arg name="angle_deg"   default="360.0" /> <!-- degrees -->
+
+    <!-- Circle parameters -->
+    <arg name="radius"      default="1.0"   /> <!-- meters -->
+    <arg name="num_circles" default="1"     />
+
+    <!-- Repeat count (for straight and rotate profiles) -->
+    <arg name="repeats"     default="4"     />
+
+    <node name="m4_profile_node" pkg="YOUR_PACKAGE_NAME" type="m4_profile_node" output="screen">
+        <param name="profile"     value="$(arg profile)"     />
+        <param name="lin_speed"   value="$(arg lin_speed)"   />
+        <param name="ang_speed"   value="$(arg ang_speed)"   />
+        <param name="distance"    value="$(arg distance)"    />
+        <param name="angle_deg"   value="$(arg angle_deg)"   />
+        <param name="radius"      value="$(arg radius)"      />
+        <param name="num_circles" value="$(arg num_circles)" />
+        <param name="repeats"     value="$(arg repeats)"     />
+    </node>
+</launch>
