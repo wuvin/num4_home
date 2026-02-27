@@ -63,6 +63,7 @@ add_definitions("-DLATENCY_TIMER=1")
 add_message_files(
   FILES
   WheelVelocityCmd.msg
+  DerivedVelocityCmd.msg
 )
 
 ## Generate services in the 'srv' folder
