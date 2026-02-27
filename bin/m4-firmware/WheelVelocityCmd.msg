@@ -1,5 +1,5 @@
 Header header
-float32 FL_Wheel
-float32 FR_Wheel
-float32 BL_Wheel
-float32 BR_Wheel
+float32 FL
+float32 FR
+float32 BL
+float32 BR
