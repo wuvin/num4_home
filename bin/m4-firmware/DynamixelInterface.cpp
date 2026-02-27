@@ -198,6 +198,17 @@ void DynamixelInterface::init(const char* port, const int &baudrate, const std::
 		}
 	}
 
+	// Also register wheel IDs with groupSyncRead and add wheels
+	for(int ii = 0; ii < active_wheel_ids.size(); ii++)
+	{
+		dxl_addparam_result = groupSyncRead->addParam(active_wheel_ids[ii]);
+		if (dxl_addparam_result != true)
+		{
+			fprintf(stderr, "[ID:%03d] groupSyncRead addparam failed\n", active_wheel_ids[ii]);
+			exit(1);
+		}
+	}
+
 	groupSyncWritePosition = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_POSITION, LEN_GOAL_POSITION);
 	groupSyncWriteMoveSpeed = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_MOVEMENT_SPEED, LEN_MOVEMENT_SPEED);
 	groupSyncWriteVelocity = new dynamixel::GroupSyncWrite(portHandler, packetHandler, ADDR_GOAL_VELOCITY, LEN_GOAL_VELOCITY);
