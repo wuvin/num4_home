@@ -45,6 +45,10 @@ M4Base::M4Base(std::vector<int> active_joint_ids, std::vector<int> active_wheel_
 
 	dxl.init(interface_port.c_str(), baudrate, active_joint_ids, active_wheel_ids);
 
+	// Initialize so parameter is not accessed while empty
+	wheel_velocity_cmd = std::vector<float>(active_wheel_ids.size(), 0.0f);
+	// need wheel_velocity_cmd_ids here too? or is ok just in mutex lock
+
 	control_thread = std::thread(&M4Base::control_loop, this);
     set_log_status(log_status);
 }
@@ -916,11 +920,14 @@ void M4Base::execute_drive()
 		std::lock_guard<std::mutex> lock(drive_cmd);
 		right_wheel_velocity = ((linear_velocity_cmd - 4 * angular_velocity_cmd * wheel_base / 2.0) / wheel_radius)*360/(2*M_PI);
 		left_wheel_velocity = ((linear_velocity_cmd + 4 * angular_velocity_cmd * wheel_base / 2.0) / wheel_radius)*360/(2*M_PI);
+
+		// Expand mutex to cover assignment and avoid reading mid-change
+		std::vector<float> wheel_velocity_list = {left_wheel_velocity, right_wheel_velocity, left_wheel_velocity, right_wheel_velocity};
+		wheel_velocity_cmd = get_active_wheel_velocities(wheel_velocity_list);
+		wheel_velocity_cmd_ids = active_wheel_ids;
 	}// MUTEX UNLOCK
 
-	std::vector<float> wheel_velocity_list = {left_wheel_velocity, right_wheel_velocity, left_wheel_velocity, right_wheel_velocity};
-	wheel_velocity_cmd = get_active_wheel_velocities(wheel_velocity_list);
-	wheel_velocity_cmd_ids = active_wheel_ids;
+	// Keep hardware write outside lock
 	dxl.write_velocity(wheel_velocity_cmd_ids, wheel_velocity_cmd);
 
 }
