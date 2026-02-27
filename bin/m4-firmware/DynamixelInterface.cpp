@@ -457,9 +457,9 @@ DynamixelStatus DynamixelInterface::read_status()
 
         WheelConfig wheel_config = get_wheel_config(active_wheel_ids[ii]);
 
-		status.position[active_joint_ids.size + ii] = MULT_POSITION * (twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION), LEN_PRESENT_POSITION) - wheel_config.zero_tick);
-		status.velocity[active_joint_ids.size + ii] = MULT_SPEED * twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY), LEN_PRESENT_VELOCITY);
-		status.current[ii] = MULT_CURRENT * short(twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_CURRENT, LEN_PRESENT_CURRENT), LEN_PRESENT_CURRENT));
+		status.position[active_joint_ids.size() + ii] = MULT_POSITION * (twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_POSITION, LEN_PRESENT_POSITION), LEN_PRESENT_POSITION));
+		status.velocity[active_joint_ids.size() + ii] = MULT_SPEED * twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_VELOCITY, LEN_PRESENT_VELOCITY), LEN_PRESENT_VELOCITY);
+		status.current[active_joint_ids.size() + ii] = MULT_CURRENT * short(twos_complement(groupSyncRead->getData(active_wheel_ids[ii], ADDR_PRESENT_CURRENT, LEN_PRESENT_CURRENT), LEN_PRESENT_CURRENT));
 	}
 
 	// for(int i = 0; i < active_wheel_ids.size(); i++)
