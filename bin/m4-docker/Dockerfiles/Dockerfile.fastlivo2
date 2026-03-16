@@ -1,0 +1,81 @@
+ARG BASE_IMAGE=ros:humble-ros-base
+
+FROM ${BASE_IMAGE}
+
+ENV DEBIAN_FRONTEND=noninteractive
+SHELL ["/bin/bash", "-lc"]
+ENV ROS_DISTRO=humble
+
+# Common tools
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    nano wget curl tmux git ca-certificates \
+    build-essential python3-pip python3-setuptools \
+    python3-colcon-common-extensions python3-rosdep python3-vcstool \
+  && rm -rf /var/lib/apt/lists/*
+
+# ROS Packages and dependencies for FAST-LIVO2
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-rmw-cyclonedds-cpp \
+    ros-humble-rosbag2-storage-mcap \
+    ros-humble-foxglove-bridge \
+    ros-humble-sophus \
+    libeigen3-dev \
+    libpcl-dev \
+    ros-humble-visualization-msgs \
+    ros-humble-pcl-ros \
+  && rm -rf /var/lib/apt/lists/*
+
+# pip basics
+RUN pip3 install --no-cache-dir --upgrade pip setuptools==70.3.0 wheel
+
+# Build Sophus from source (specific commit required by FAST-LIVO2)
+WORKDIR /tmp
+RUN git clone https://github.com/strasdat/Sophus.git && \
+    cd Sophus && \
+    git checkout 1.22.10 && \
+    #git checkout a621ff && \
+    ###### Attempt to fix Sophus's CMakeLists.txt appending -Werror  ######  \
+    # Note: `cmake ..` with -DCMAKE_CXX_FLAGS="-Wno-error" did not work      \
+    # Fix so2.cpp for C++11 std::complex (real/imag return by value)         \
+    #sed -i 's/unit_complex_.real() = 1./unit_complex_ = std::complex<double>(1., 0.)/' sophus/so2.cpp && \
+    #sed -i '/unit_complex_.imag() = 0.;/d' sophus/so2.cpp && \
+    # Remove -Werror from CMakeLists to avoid Eigen NEON warnings on aarch64 \
+    #sed -i 's/-Werror//g' CMakeLists.txt && \
+    ###### ######################################################### ######  \
+    mkdir build && cd build && \
+    cmake .. -DCMAKE_CXX_FLAGS="-Wno-error" -DSOPHUS_BUILD_TESTS=OFF && \
+    make -j$(nproc) && \
+    make install && \
+    cd /tmp && rm -rf Sophus
+
+# Clone FAST-LIVO2 (ROS 2 Humble port) and Vikit
+WORKDIR /opt/fastlivo_ws/src
+RUN git clone -b humble https://github.com/Robotic-Developer-Road/FAST-LIVO2.git && \
+    git clone https://github.com/Robotic-Developer-Road/rpg_vikit.git && \
+    # Also strip x86 SIMD flags from CMakeLists \
+    sed -i 's/-mmmx//g; s/-mssse3//g; s/-msse3//g; s/-msse2//g; s/-msse//g' \
+    rpg_vikit/vikit_common/CMakeLists.txt
+
+RUN ls /usr/local/include/sophus/ 2>/dev/null || echo "No sophus in /usr/local/include" && \
+    find /usr/local -name "se3.h*" 2>/dev/null || echo "se3 header not found anywhere in /usr/local"
+
+# Resolve dependencies and build
+WORKDIR /opt/fastlivo_ws
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && \
+    . /opt/realsense_ws/install/local_setup.sh && \
+    . /opt/livox_ws/install/local_setup.sh && \
+    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp && \
+    rosdep install -i --from-path src --rosdistro ${ROS_DISTRO} -y \
+    --skip-keys="cmake_modules livox_ros_driver2 \
+    cv_bridge libopencv-dev libopencv-contrib-dev libopencv-imgproc-dev python3-opencv" && \
+    colcon build --symlink-install --continue-on-error --cmake-args -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_CXX_FLAGS="-I/usr/local/include"
+
+# Environment setup
+WORKDIR /home/num4
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc && \
+    echo "source /opt/fastlivo_ws/install/setup.bash" >> ~/.bashrc && \
+    echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc && \
+    echo "export PS1='\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$ '" >> ~/.bashrc
+
+ENTRYPOINT ["bash"]

@@ -1,0 +1,84 @@
+ARG BASE_IMAGE=ros:humble-ros-base-jammy
+
+FROM ${BASE_IMAGE}
+
+ENV DEBIAN_FRONTEND=noninteractive
+SHELL ["/bin/bash","-lc"]
+ENV ROS_DISTRO=humble
+
+# Common tools
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    nano wget curl tmux git build-essential \
+    python3-pip python3-setuptools python3-colcon-common-extensions \
+    python3-rosdep python3-vcstool \
+ && rm -rf /var/lib/apt/lists/*
+RUN pip3 install --no-cache-dir --upgrade pip setuptools==70.3.0 wheel
+RUN rosdep init || true && rosdep update
+
+# ROS Packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-rmw-cyclonedds-cpp \
+    ros-humble-rosbag2-storage-mcap \
+    ros-humble-foxglove-bridge \
+    libeigen3-dev \
+    ros-humble-rosidl-default-generators \
+  && rm -rf /var/lib/apt/lists/*
+
+# MAVProxy
+RUN pip3 install --no-cache-dir mavproxy future
+
+# Install mavros
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-humble-mavros \
+    && rm -rf /var/lib/apt/lists/*
+# Install GeographicLib datasets for mavros
+RUN wget -q https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh \
+    && bash ./install_geographiclib_datasets.sh \
+    && rm -f install_geographiclib_datasets.sh
+
+# Install MAVSDK based on specified architecture
+ARG ARCH
+RUN set -eux; \
+    case "${ARCH}" in \
+        amd) \
+            url="https://github.com/mavlink/MAVSDK/releases/download/v3.10.2/libmavsdk-dev_3.10.2_ubuntu22.04_amd64.deb"; \
+            deb="libmavsdk-dev_3.10.2_ubuntu22.04_amd64.deb" ;; \
+        arm) \
+            url="https://github.com/mavlink/MAVSDK/releases/download/v3.10.2/libmavsdk-dev_3.10.2_debian12_arm64.deb"; \
+            deb="libmavsdk-dev_3.10.2_debian12_arm64.deb" ;; \
+        *) echo "Invalid ARCH argument: ${ARCH}. Use 'amd' or 'arm'"; exit 1 ;; \
+    esac; \
+    wget -q "$url"; \
+    dpkg -i "$deb" || (apt-get update && apt-get -y -f install); \
+    rm -f "$deb"
+
+RUN pip3 install --no-cache-dir protobuf==5.29.0 mavsdk
+
+# Clone and build px4_msgs
+RUN mkdir -p /opt/px4_ws/src && \
+    cd /opt/px4_ws/src && \
+    git clone https://github.com/PX4/px4_msgs.git && \
+    cd /opt/px4_ws && \
+    . /opt/ros/humble/setup.sh && \
+    colcon build --parallel-workers 2 --event-handlers console_direct+ && \
+    rm -rf build log
+
+# Install Micro-XRCE-DDS-Agent
+RUN cd /opt && \
+    git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git && \
+    cd Micro-XRCE-DDS-Agent && \
+    mkdir build && cd build && \
+    cmake .. && \
+    make && \
+    make install && \
+    ldconfig /usr/local/lib/ && \
+    cd /opt && rm -rf Micro-XRCE-DDS-Agent
+
+# Environment
+WORKDIR /home/num4
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /etc/bash.bashrc && \
+    echo "source /opt/px4_ws/install/local_setup.bash" >> /etc/bash.bashrc && \
+    echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> /etc/bash.bashrc && \
+    echo "export PS1='\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$ '" >> /etc/bash.bashrc
+
+ENTRYPOINT ["bash"]
