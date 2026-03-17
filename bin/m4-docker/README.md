@@ -73,4 +73,10 @@ TBD
 - Check tag `1.22.10` of Sophus instead, which was version used in previous
   image (i.e., Kamalnath's) with functional FAST-LIVO2
 
+-----
+
+## To-Do
+
+- Fix issue where `run-docker.sh` will fail if any existing container is already running, even if from a different image
+
 ---
