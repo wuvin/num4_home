@@ -5,7 +5,7 @@
 # on remote Jetson.
 #
 # Contact:      wu.kevi@northeastern.edu
-# Last Updated: December 23, 2025
+# Last Updated: March 15, 2026
 
 # Define expected address strings for wired and wireless connections
 USB_JETSON_STR='192.168.55.0/24'
@@ -59,6 +59,7 @@ fi
 # Clear previous rules
 sudo iptables -t nat -F
 sudo iptables -F FORWARD
+sudo iptables -t mangle -F FORWARD
 
 # Enable IP forwarding
 echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward
@@ -71,3 +72,7 @@ sudo iptables -A FORWARD -i $netname -o $jetname -m state \
 
 # Check if rules are applied
 sudo iptables -t nat -L -n -v
+
+# Fix MTU for TCP connections going through NAT
+sudo iptables -t mangle -A FORWARD -p tcp --tcp-flags SYN,RST SYN \
+    -j TCPMSS --clamp-mss-to-pmtu
