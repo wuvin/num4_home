@@ -1,0 +1,10 @@
+<CycloneDDS>
+  <Domain>
+    <General>
+      <AllowMulticast>true</AllowMulticast>
+      <Interfaces>
+        <NetworkInterface name="wlp61s0"/>
+      </Interfaces>
+    </General>
+  </Domain>
+</CycloneDDS>

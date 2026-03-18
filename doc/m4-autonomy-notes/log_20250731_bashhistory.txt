@@ -1,0 +1,1460 @@
+df -h
+sudo apt update
+cat /etc/nv_tegra_release
+uname -r
+lspci | grep -i network
+lsmod | grep iwlwifi
+dmesg | grep iwlwifi
+sudo dmesg | grep iwlwifi
+clear
+lsmod | grep iwlwifi
+iw reg get
+nmcli device wifi list
+clear
+lsmod | grep iwlwifi
+sudo dmesg | grep iwlwifi
+sudo iw reg set US
+iw reg get
+nmcli device wifi rescan
+nmcli device wifi list
+iw reg get
+nmcli device wifi list
+nmcli device wifi rescan
+nmcli device wifi list
+nmcli device wifi rescan
+nmcli device wifi list
+nmcli device wifi
+nmcli device wifi -h
+nmcli device wifi list
+nmcli device wifi rescan
+nmcli device wifi list
+ls /boot/extlinux/extlinux.conf
+sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
+cat /boot/extlinux/extlinux.conf.nv-update-extlinux-backup 
+cat /boot/extlinux/extlinux.conf
+ls /boot/Image
+ls /boot/Image.bak
+ls /boot/Image.backup
+sudo cp /boot/Image /boot/Image.backup
+ls /boot/Image.backup
+sudo vim /boot/extlinux/extlinux.conf
+sync
+sudo vim /boot/extlinux/extlinux.conf
+sudo reboot
+ls /boot/Image
+sudo cat /boot/Image
+nmcli device
+nmcli device show wlp1s0
+nmcli device show wlP1p1s0 
+nmcli device show wlP1p1s0 | grep -i capabilities
+sync -h
+sync --help
+sudo mv /boot/Image.bak /boot/Image.backup
+iw reg get
+clear
+ls /etc/modprobe.d
+sudo COUNTRY=US crda
+sudo crda
+ls /etc/default/crda
+sudo modprobe -r iwlmvm
+sudo modprobe cfg80211 ieee80211_regdom=US
+sudo modprobe iwlmvm
+iw reg get
+ls /etc/modprobe.d/iwlwifi.conf
+cat /etc/modprobe.d/iwlwifi.conf
+ls /sys/module/iwlwifi/parameters
+sudo iw reg reload
+sudo iw reg get
+nmcli wifi device list
+nmcli device wifi list
+nmcli device wifi rescan
+nmcli device wifi list
+ls
+ls /boot/
+ls /boot/extlinux
+sudo mv /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bad
+sudo cp /boot/extlinux/extlinux.conf.bak /boot/extlinux/extlinux.conf
+ls /boot/extlinux
+cat /boot/extlinux/extlinux.conf
+sudo reboot
+ls
+cat nv_l45_readme.desktop
+cat nv_l4t_readme.desktop
+clear
+head -n 1 /etc/nv_tegra_release
+lspci | grep Network
+sudo lshw -C network
+sudo iwconfig
+uname -r
+dmesg | grep iwl
+sudo dmesg | grep iwl
+sudo modprobe iwlwifi
+nmcli device wifi list
+nmcli device wifi scan
+nmcli device wifi rescan
+nmcli device wifi scan
+nmcli device wifi list
+sudo systemctl restart NetworkManager
+lspci | grep Network
+lspci -nnk
+nmcli -f SSID,SIGNAL device wifi list
+ip a
+iw dev wlP1p1s0 scan | grep -E 'SSID|signal'
+sudo iw dev wlP1p1s0 scan | grep -E 'SSID|signal'
+nmcli -f SSID,SIGNAL device wifi list
+nmcli device wifi rescan
+nmcli device wifi list
+sudo nmtui
+docker run hello-world
+sudo systemctl enable docker.service
+cd m4-autonomy/
+ls
+cd m4-
+cd m4-firmware/
+l
+./build_docker.sh 
+sudo modprobe iptable_raw
+lsmod | grep iptable
+sudo modprobe ip_tables
+sudo modprobe iptable_filter
+sudo modprobe iptable_raw
+sudo systemctl restart docker
+docker run hello-world
+ls /lib/modules/$(uname -r)/kernel/net/ipv4/netfilter/iptable_raw.ko
+sudo nano /etc/docker/daemon.json
+sudo systemctl restart docker
+docker run hello-world
+./build_docker.sh 
+nano Dockerfile 
+./build_docker.sh 
+nannan
+\
+nano Dockerfile 
+./build_docker.sh 
+./run_docker.sh 
+nano Dockerfile 
+./build_docker.sh 
+./run_docker.sh 
+ls
+git clone git@github.com:SS-Lab-at-NU/m4-autonomy.git
+cd m4-autonomy/
+git submodule add git@github.com:SS-Lab-at-NU/m4-docker.git
+git submodule add git@github.com:SS-Lab-at-NU/m4-perception.git
+git submodule add git@github.com:SS-Lab-at-NU/m4-firmware.git
+git submodule add git@github.com:SS-Lab-at-NU/m4-sensors.git
+git add ./*
+git config --name "adarsh"
+git config --local --name "adarshrs"
+git config --local name="adarshrs"
+git commit -m "First commit"
+git config --local user.name "adarshrs"
+git config --local user.email "adarshsalagame@gmail.com"
+git commit -m "First commit"
+git push
+cd m4-
+cd m4-firmware/
+ls
+docker
+cd setup_scripts/
+ls
+./set_udev_rules.sh 
+ls set_udev_rules.sh 
+cat set_udev_rules.sh 
+sudo ./set_udev_rules.sh 
+ls -l /dev/U2D2
+ls -l /dev/pixhawk
+ls -l /dev/*
+cat 11-local.rules 
+ls -l /dev/pixhawk
+ls /dev/ttyACM*
+nano 11-local.rules 
+sudo apt install nano
+nano 11-local.rules 
+udavadm info /dev/ttyACM0
+udevadm info /dev/ttyACM0
+cat 11-local.rules 
+udevadm info -a /dev/ttyACM0
+nano 11-local.rules 
+sudo ./set_udev_rules.sh 
+ls -l /dev/pixhawk
+nano 11-local.rules 
+udevadm info -a /dev/ttyACM0
+sudo ./set_udev_rules.sh 
+ls -l /dev/pixhawk
+cd
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh --dry-run
+sudo apt install curl
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo apt install curl
+sudo sh ./get-docker.sh --dry-run
+sudo sh get-docker.sh
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+cd m4-autonomy/
+ls
+cd m4-
+cd m4-firmware/
+ls
+./run_docker.sh 
+./new_docker_terminal.sh 
+cd m4-autonomy/m4-firmware/
+ls
+./new_docker_terminal.sh 
+cd m4-autonomy/m4-firmware/
+ls
+./new_docker_terminal.sh 
+cd m4-autonomy/m4-firmware/
+./new_docker_terminal.sh 
+cd m4-autonomy/
+cd m4-firmware/
+./new_docker_terminal.sh 
+cd m4-autonomy/
+git submodule update --recursive --init
+cd m4-firmware/
+./run_docker.sh 
+git checkout feature/m4v0-wheel-control 
+git diff
+git add Dockerfile 
+git add setup_scripts/11-local.rules 
+git commit -m "Minor QoL change, ROS key update, pixhawk product id update"
+git config --local user.email "adarshsalagame@gmail.com"
+git config --local user.name "adarshrs"
+git commit -m "Minor QoL change, ROS key update, pixhawk product id update"
+git push
+git pull
+git checkout feature/m4v0-wheel-control 
+./run_docker.sh 
+git status
+git add  m4_home/m4_ws/src/m4_base/config/rc_channel_config.yaml  m4_home/m4_ws/src/m4_base/config/robot_config.yaml  m4_home/m4_ws/src/m4_base/nodes/m4_controller_node.cpp 
+git commit -m "Updated joint limits"
+git push
+git pull
+./run_docker.sh 
+cd m4-autonomy/m4-firmware/
+./new_docker_terminal.sh 
+cd m4-autonomy/m4-firmware/
+./new_docker_terminal.sh 
+git add m4_home/m4_ws/src/m4_base/*
+git commit -m "WIP-Wheel turn during transform"
+git push
+git status
+cd ..
+git add m4-firmware/
+git commit -m "Debugging wheel control"
+git push
+git status
+cd ..
+ls
+rm get-docker.sh 
+ls
+mkdir m4-data
+sudo shutdown now
+sudo dmesg -w
+ls
+exit
+sudo shutdown now
+ifconfig
+sudo ifconfig enP8p1s0 192.168.1.50
+sudo apt install wormhole
+ifconfig
+echo $ROS_DISTRO
+cat ~/.bashrc 
+tmux ls
+ls 
+cd m4-docker-test/
+ls
+cd m4-docker/
+ls
+cat build-docker.sh 
+docker ps -a
+docker images
+./build-docker.sh 
+docker ps -a
+docker images
+./build-docker.sh 
+docker images
+exit
+sudo reboot 
+cd
+df
+df -h\
+df -h
+cd m4-docker-test/m4-docker/
+ls
+./build-docker.sh 
+deocker ps -a
+docker ps -a
+docker images
+cat Dockerfile 
+./build-docker.sh 
+nano error.txt
+sudo shutdown now
+shutdown now
+sudo dmesg -w
+clear
+sudo dmesg -w
+lsusb
+clear
+lsusb
+ls /dev/ttyACM* /dev/ttyUSB*
+ls /dev/ttyACM*
+ls /dev/ttyACM* /dev/ttyUSB*
+ls /dev/ttyACM*
+which QGroundControl
+snap list | grep -i ground
+find $HOME -name "*.py" -exec grep -l "mavlink\|ardupilot\|pixhawk" {} \; 2>/dev/null
+clear
+ls /dev/ttyACM*
+sudo apt-cache show nvidia-jetpack
+ls
+cat /proc/device-tree/model
+ls
+nano /etc/docker/daemon.json 
+sudo nano /etc/docker/daemon.json 
+sudo systemctl restart docker*
+sudo systemctl restart docker
+sudo systemctl restart docker.socket 
+sudo systemctl restart docker.service 
+systemctl restart docker.service 
+journalctl -xeu docker.service
+ifconfig
+ping ports.ubuntu.com
+cd m4-docker-test/m4-docker/
+cat build-docker.sh 
+ls  /etc/docker/
+cat /etc/docker/daemon.json 
+nano /etc/docker/daemon.json 
+sudo nano /etc/docker/daemon.json 
+cat build-docker.sh 
+nano build-docker.sh 
+cat run-docker.sh 
+nano build-docker.sh 
+history 
+sudo docker ps -a
+docker ps -a
+sudo reboot 
+sudo docker ps -a
+docker ps -aa
+docker ps -a
+sudo systemctl restart docker.socket 
+sudo systemctl restart docker.service 
+speedtest
+sudo apt install speedtest-cli 
+speedtest-cli 
+cd m4-docker-test/m4-docker/
+cat error3.txt 
+docker system 
+sudo systemctl start docker.service
+journalctl -xeu docker.service
+clear]
+clear
+sudo systemctl restart docker.service 
+systemctl status docker.service
+journalctl -xeu docker.service
+cd m4-docker-test/m4-docker/
+nano docker-error.txt
+ifconfig 
+sudo nano /etc/docker/daemon.json 
+sudo systemctl restart docker
+sudo docker ps -a
+dcoker ps -a
+docker ps -a
+docker images
+./build-docker.sh 
+nano error2.txt 
+docker images
+cat Dockerfile 
+./build-docker.sh 
+ifconfig 
+nano error3.txt
+./build-docker.sh 
+sudo systemctl restart docker
+./build-docker.sh 
+sudo reboot 
+cd m4-docker-test/m4-docker/
+cat error4.txt 
+./build-docker.sh 
+exit
+cd m4-docker-test/m4-docker/
+./run-docker.sh 
+dpkg -l | grep nvidia-container-runtime
+sudo apt update
+sudo apt install nvidia-container-toolkit
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+./run-docker.sh 
+sudo shutdown now
+cd m4-docker-test/m4-docker/
+./build-docker.sh 
+docker images
+./build-docker.sh 
+cd m4-docker-test/m4-docker/
+./build-docker.sh 
+nano error3.txt
+nano error4.txt
+ifconfig 
+docker image
+docker images
+ls
+cat run-docker.sh 
+./run-docker.sh 
+cd m4-docker-test/m4-docker/
+ls
+./run-docker.sh 
+xhost +local:docker
+exit
+ifconfig 
+ifconfig enP8p1s0 192.168.1.50
+sudo ifconfig enP8p1s0 192.168.1.50
+docker pa -a
+docker ps -a
+docker attach num4_ros2_humble_test
+docker ps -a
+docker exec -it num4_ros2_humble_test bash
+xhost +local:docker
+exit
+cd m4-docker-test/m4-docker/
+xhost +local:docker
+./run-docker.sh 
+xhost +local:docker
+./run-docker.sh 
+exit
+xhost +local:docker
+exit
+ifconfig 
+docker ps -a
+docker exec -ti num4_ros2_humble_test bash
+docker exec -ti num4_ros2_humble_test bash
+xhost +local:docker
+docker ps -a
+docker exec -it  num4_ros2_humble_test bash
+exit
+xhost +local:docker
+cd m4-docker-test/m4-docker/
+./run-docker.sh 
+sudo shutdown now
+ls
+sudo dmesg -w
+lsusb
+ifconfig
+history 
+cat /proc/device-tree/name 
+cat /proc/device-tree/model 
+shutdown now
+sudo shutdown now
+ls /dev/tty*
+sudo reboot 
+ls /dev/tty*
+dmesg -w
+sudo dmesg -w
+sudo reboot 
+ls /dev/tty*
+sudo systemctl stop nvgetty
+sudo systemctl disable nvgetty
+sudo usermod -a -G dialout $USER
+ls /dev/tty*
+sudo reboot 
+ls /dev/tty*
+history 
+ls /dev/tty*
+sudo reboot 
+ls /dev/ttyS*
+ls /dev/tty*
+sudo apt install screen
+screen /dev/ttyTHS1 921600
+ls /dev/ttyACM*
+ls /dev/tty*
+ls
+nano test_com.py
+python3 test_com.py 
+pip3 install pyserial
+sudo apt update
+sudo apt install python3-pip
+pip3 install pyserial
+python3 test_com.py 
+sudo chmod 777 /dev/ttyTHS1
+python3 test_com.py 
+sudo chmod 666 /dev/ttyTHS1
+python3 test_com.py 
+ls /dev/tty*
+sudo reboot 
+ls /dev/tty*
+nano test_com.py 
+sudo chmod 666 /dev/ttyGS0
+python3 test_com.py 
+ls /dev/tty*
+ls -la /dev/ttyTHS*
+sudo chmod 666 /dev/ttyTHS1 /dev/ttyTHS2
+# Check for any data on the port
+timeout 5s cat /dev/ttyTHS1 | hexdump -C
+sudo /opt/nvidia/jetson-io/jetson-io.py
+nano test_com2.py
+python3 test_com2.py 
+ls /dev/tty*
+sudo reboot 
+ls /dev/tty*
+nano test_com.py 
+nano test_com2.py 
+python3 test_com.py 
+nano test_com.py 
+ls -la /dev/ttyTHS*
+sudo chmod 666 /dev/ttyTHS1 /dev/ttyTHS2
+python3 test_com.py 
+python3 test_com2.py 
+ls /dev/tty*
+python3 test_com2.py 
+python3 test_com.py 
+nano test_com.py 
+python3 test_com.py 
+ls
+ls -a
+nano mavlink_connection_test.py
+python3 mavlink_connection_test.py 
+cd m4-autonomy/
+ls
+m4-docker/
+cd m4-docker/
+ls
+cd ../m4-firmware/
+ls
+./run_docker.sh 
+ls
+cd setup_scripts/
+ls
+cat 11-local.rules 
+ls -l /dev/pixhawk
+udevadm
+udevadm -info
+udevadm info -a /dev/ttyTHS1
+cd ../
+ls
+./run_docker.sh 
+sudo shutdown now
+docker ps -a
+docker exec -it m4_ros_noetic bash
+cd m4-autonomy/
+ls
+m4-firmware/
+cd m4-firmware/
+ls
+./run_docker.sh 
+exit
+docke ps -a
+docker ps -a
+docker exec -it m4_ros_noetic bash
+sudo shutdown now
+cd m4-autonomy/
+ls
+m4-firmware/
+ls
+cd m4-firmware/
+ls
+cd m4_home/
+ls
+cd m4_ws/src/m4_base/config/
+cat rc_channel_config.yaml 
+ls
+rm mavlink_connection_test.py test_com.py test_com2.py 
+ls
+history 
+sudo shutdown now
+lsusb
+ls /dev/ttyA*
+ls /dev/tty*
+hostname
+systemctl status
+clear
+systemctl status avahi-daemon
+clear
+ls ~/.profile
+ls
+ls m4-autonomy
+ls m4-autonomy/m4-firmware
+cd m4-autonomy/m4-firmware
+vim startup.sh
+ls
+cat run_docker.sh
+ls ../m4-docker
+cat ../m4-docker/run_docker_tmp.sh 
+which tmux
+tmux --help
+ls /dev/pixhawk
+docker images
+docker ps -a
+ls
+ls m4-autonomy
+ls m4-autonomy/m4-docker
+cat m4-autonomy/m4-docker/run-docker.sh
+cd m4-autonomy/m4-docker
+./run_docker.sh
+./run-docker.sh
+docker images
+cp run-docker.sh run_docker_tmp.sh
+cat build-docker.sh 
+vim run_docker_tmp.sh
+./run_docker_tmp.sh
+cd ../m4-firmware
+ls
+source startup.sh
+ls .profile
+ls m4_home/.profile
+ls m4_home/m4_ws/.profile
+ls m4_home/m4_ws/src/
+ls m4_home/m4_ws/src/m4_base/
+ls m4_home/m4_ws/src/m4_base/.profile
+ls m4_home/m4_ws/src/m4_base/src
+cd ..
+ls
+cd m4-docker
+./run_docker_tmp.sh 
+sudo poweroff --help
+sudo poweroff
+nmcli
+nmcli devices list
+nmcli device list
+nmcli device 
+nmcli con show
+nmcli dev wifi list
+sudo reboot 
+ls
+docker ps -a
+docker images
+cd m4-docker-test/
+cd m4-docker/
+ls
+cat run-docker.sh 
+vim run-docker.sh 
+nano run-docker.sh 
+./run-docker.sh 
+docker ps -a
+ls
+cat Dockerfile 
+nano Dockerfile 
+docker ps -a
+nano run-docker.sh 
+./run-docker.sh 
+docker attach num4_ros2_humble_test
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+tmux 
+tmux
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+docker ps -a
+exit
+ls
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+ls
+history 
+xhost +local:docke
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+sudo shutdown now
+nautilus
+exit
+sudo shutdown now
+xhost +local:docke
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+nautilus
+sudo reboot 
+sudo shutdown now
+cd m4-autonomy/
+ls
+cd m4-firmware/
+ls
+cd setup_scripts/
+ls
+cat 11-local.rules 
+ls /dev/tty*
+sudo chmod 666 /dev/ttyTHS1
+cd ../
+ls
+cd ..
+ls
+ls m4-docker/
+cd
+ls
+cd m4-autonomy/
+ls
+m4-ho
+cd m4_home/
+ls
+cd m4_ws/src/m4-firmware/
+ls
+cd ../../../
+cd ../
+ls
+cd m4-firmware/
+ls
+cat run_docker.sh 
+history 
+ls
+cat startup.sh 
+./run_docker.sh 
+cat run_docker.sh 
+./run_docker.sh 
+docker ps -a
+docker exec -it num4_ros2_humble_test
+docker exec -it num4_ros2_humble_test bash
+docker exec -it m4_ros_noetic bash
+ls
+cd m4-autonomy/m4-firmware/
+ls
+cat startup.sh 
+cat new_docker_terminal.sh 
+sudo shutdown now
+ls
+cd m4-autonomy/
+ls
+cd m4-firmware/
+ls
+cat build_docker.sh 
+cat Dockerfile 
+ls
+m4_home/
+cd m4_home/
+ls
+cd m4_ws/
+cd src/
+ls
+cd ../../../
+ls
+cat run_startup_tmp.sh 
+git status 
+cat run_docker.sh 
+nautilus
+exit
+nautilus
+sudo reboot 
+nautilus
+exit
+nautilus
+sudo shutdown now
+cd m4-docker-test/m4-docker/
+ls
+cat build-docker.sh 
+cat run-docker.sh 
+rviz2
+docker ps -a
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+history 
+nautilus
+t
+exit
+cd m4-docker-test/m4-docker/
+ls
+cat run-docker.sh 
+docker ps -a
+docker images
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+docker ps -a
+docker stop num4_ros2_humble_test
+sudo reboot 
+nmcli dev wifi
+nmcli dev wifi connect Kamal\ wifi
+sudo nmcli dev wifi connect Kamal\ wifi
+ls
+docker ps -a
+docker exec -it num4_ros2_humble_test bash
+docker run -it num4_ros2_humble_test
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+sudo nvpmodel -m 0
+sudo jetson_clocks
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+cat m4-docker-test/m4-docker/run-docker.sh 
+sudo shutdown now
+ros2 run rmw_zenoh_cpp rmw_zenohd
+docker exec -it num4_ros2_humble_test bash
+exit
+docker ps -a
+docker exec -it num4_ros2_humble_test bash
+ifconfig
+sudo ifconfig enP8p1s0 192.168.1.50
+docker exec -it num4_ros2_humble_test bash
+exit
+ls
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+docker start num4_ros2_humble_test
+docker attach num4_ros2_humble_test
+sudo shutdown now
+cat m4-autonomy/m4-firmware/m4_home/m4_ws/src/m4_base/config/rc_channel_config.yaml 
+cd m4-autonomy/m4-firmware/
+ls
+./startup.sh 
+./run_docker.sh 
+sudo /usr/sbin/nvpmodel -q
+sudo nvpmodel -q
+sudo jetson_clocks 
+sudo nvpmodel -m 0 
+docker exec -it num4_ros2_humble_test bash
+exit
+sudo jetson_clocks 
+sudo nvpmodel -q
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+ifconfig 
+sudo ifconfig enP8p1s0 192.168.1.50
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo shutdown now
+history 
+sudo nmcli dev wifi connect kamal\ wifi
+sudo nmcli dev wifi 
+sudo nmcli dev wifi connect Kamal\ wifi
+history 
+sudo reboot 
+htop
+sudo apt install htop
+sudo nvpmodel -q
+htop
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+sudo cpupower frequency-set --governor performance
+ls /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+cat /etc/dphys-swapfile
+sudo dphys-swapfile swapoff
+[200~cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+~
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+for CPU_GOV in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do     echo performance | sudo tee $CPU_GOV; done
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+free -h
+sudo jetson_clocks 
+sudo tegrastats
+sudo nvpmodel -q --verbose
+ls
+cd m4-docker-test/m4-docker/
+ls
+cd
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+cat m4-docker-test/m4-docker/run-docker.sh 
+htop
+clear
+docker exce -it nu
+exit
+docker ps -a
+docker exec -it num4_ros2_humble_test
+docker exec -it num4_ros2_humble_test bash
+exit
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+docker exec -it num4_ros2_humble_test bash
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo reboot 
+sudo shutdown now
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo reboot 
+ls
+docker exec -it num4_ros2_humble_test bash
+ls
+cd m4-docker-test/m4-perception/
+ls
+docker exec -it num4_ros2_humble_test bash
+exit
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo shutdown now
+cd m4-autonomy/m4-firmware/
+ls
+./run_docker.sh 
+cd
+ls
+ls -a
+cd /home/
+ls
+cd 
+ls
+cd ..
+ls
+cd ..
+ls
+lsblk
+ls
+cd media/
+ls
+cd
+ls
+cd /media/num4/
+ls
+cd ../
+cd
+sudo mount /dev/sda2 /media/
+cd /media/
+ls
+cd
+cd m4-docker-test/m4-perception/
+ls
+du -h sample_lidar_data_m4_drive/
+cp -r sample_lidar_data_m4_drive/ /media/
+ls /media/
+sudo umount /media 
+exit
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo shutdown now
+ls
+m4-autonomy/
+cd m4-autonomy/
+ls
+cd m4-firmware/
+ls
+cd m4_home/m4_ws/src/m4_base/config/
+ls
+cp rc_channel_config.yaml /home/num4/
+cd ../../../../
+ls
+cd ../../
+cd
+ls
+cd m4-autonomy/m4-firmware/
+git status 
+git pull
+sudo git pull
+ls ~/.ssh
+git remote add origin https://github.com/SS-Lab-at-NU/m4-firmware.git
+sh -T git@github.com
+ssh -T git@github.com
+sudo ssh -T git@github.com
+ssh -T git@github.com
+ssh-add -l
+sudo ssh-add -l
+ssh -A user@remote-server
+ssh -A bathirappan-k@remote-server
+ssh -A bathirappan-k@git@github.com:SS-Lab-at-NU/m4-firmware.git
+ls ~/.ssh/
+cat ~/.ssh/known_hosts
+ssh -T git@github.com
+ssh-add -l
+ssh-add ~/.ssh/id_ed25519
+eval "$(ssh-agent -s)"
+ls ~/.ssh
+ssh -A bathirappan-k@git@github.com:SS-Lab-at-NU/m4-firmware.git
+ssh -T git@github.com
+[200~ls ~/.ssh~
+ls ~/.ssh~
+ls ~/.ssh
+ssh-keygen -t ed25519 -C "bathirappan.k@northeastern.edu"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+[200~cat ~/.ssh/id_ed25519.pub~
+cat ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+git pull
+cat run_startup_tmp.sh 
+rm run_startup_tmp.sh 
+ls
+sudo rm run_startup_tmp.sh 
+ls
+git status
+cat m4_home/m4_ws/src/m4_base/launch/interfaces.launch
+git add .
+git commit -m "added px4 port and rc parmas"
+git pull
+git branch -a
+cat m4_home/m4_ws/src/m4_base/config/rc_channel_config.yaml 
+cat m4_home/m4_ws/src/m4_base/config/robot_config.yaml 
+cd setup_scripts/
+ls
+cd ../m4_home/m4_ws/src/m4_base/
+ls
+cd config/
+ls
+nano motor_config.yaml 
+nano robot_config.yaml 
+cd ../../../../..
+ls
+./run_docker.sh 
+ls
+ls m4_home/
+ls m4_home/m4_ws/
+./run_docker.sh 
+sudo shutdown now
+cd m4-autonomy/m4-firmware/
+cat run_docker.sh 
+./run_docker.sh 
+docker exec -it m4_ros_noetic bash
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+docker exec -it m4_ros_noetic bash
+exit
+cd m4-autonomy/m4-firmware/
+./run_docker.sh 
+cat m4_home/m4_ws/src/m4_
+cd ../../m4-docker-test/m4-docker/
+ls
+cd
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+exit
+nautilus
+exit
+nautilus
+exit
+nautilus
+sudo reboot 
+docker exec -it num4_ros2_humble_test 
+docker exec -it num4_ros2_humble_test  bash
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+sudo reboot 
+docker start num4_ros2_humble_test 
+docker attach num4_ros2_humble_test 
+ls
+cd m4-docker-test/
+ls
+cd m4-docker/
+./build-docker.sh 
+./run-docker.sh 
+docker ps -a
+docker images
+ls
+./run-docker.sh 
+docker images
+docker ps -a
+docker rm num4_ros2_humble_test 
+docker ps -a
+docker images 
+docker image rm num4:ROS2-Humble-test*
+docker image rm num4:ROS2-Humble-test2
+docker image rm num4:ROS2-Humble-test
+docker images
+cat build-docker.sh 
+./build-docker.sh 
+./run-docker.sh 
+docker ps -a
+docker images
+docker image rm num4:ROS2-Humble-test 
+sudo reboot 
+nautilus
+cd m4-docker-test/
+ls
+sudo git clone https://github.com/SS-Lab-at-NU/m4-sensors.git
+ls
+cd m4-sensors/
+ls
+cd ..
+cd m4-sensors/
+ls
+mkdir src
+sudo mkdir src
+mv realsense2_bringup/ src/
+sudo mv realsense2_bringup/ src/
+sudo mv ouster_bringup/ src/
+ls
+cd ../
+cd m4-docker/
+./run-docker.sh 
+cd ../m4-sensors/src/realsense2_bringup/launch/
+ls
+nano d435i_with_madgwick.launch.py 
+sudo nano d435i_with_madgwick.launch.py 
+cd ../../../../
+cd m4-sensors/
+ls
+cd ../m4-docker/
+./run-docker.sh 
+cd ../
+ls
+cd m4_home/m4_ws/src/m4-sensors/
+ls
+cd ../../../
+cd ../
+ls
+cat m4-docker/run-docker.sh 
+ls
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+ls
+git clone https://github.com/Livox-SDK/Livox-SDK2.git
+cd m4-docker/
+./run-docker.sh 
+ls
+cd ../
+ls
+cd m4-docker/
+ls
+./run-docker.sh 
+ls /usr/local/lib/liblivox_lidar_sdk_*
+ls /usr/local/lib/
+./run-docker.sh 
+ls
+cd ../
+ls
+cd m4_home/m4_ws/src/Livox-SDK2/
+ls
+cd ../../../
+cd ../
+ls Livox-SDK2/
+cd m4-docker/
+./run-docker.sh 
+ls
+cd ../
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+git clone https://github.com/Livox-SDK/Livox-SDK2.git
+cd m4-docker/
+./run-docker.sh 
+cd ../
+rm -rf Livox-SDK2/ ws_livox/
+ls
+LayerManagerControl 
+cd Livox-SDK2/
+ls
+cd ../
+ws_livox/
+cd ws_livox/
+ls
+cd ../m4-sensors/
+cd ../m4_home/
+ls
+cd m4_ws/src/ws_livox/
+ls
+cd ../
+sudo rm -rf ws_livox/ Livox-SDK2/
+cd ../../../
+sudo rm -rf Livox-SDK2/ ws_livox/
+cd m4-docker/
+./run-docker.sh 
+./build-docker.sh 
+./run-docker.sh 
+cat ./run-docker.sh 
+docker start num4_ros2_humble_test2
+docker attach num4_ros2_humble_test2 
+nautilus
+cd
+lsbk
+lsblk
+cp -r m4-docker-test/m4-perception/test_static_cam_livox/ /media/num4/Seagate\ Expansion\ Drive/M4/july\ 23/
+ls
+cd m4-docker-test/m4-perception/
+du -h test_static_cam_livox/
+cd /media/num4/Seagate\ Expansion\ Drive/M4/july\ 23/
+ls
+cd ..
+du -h july\ 23/
+sudo shutdown now
+docker images
+cd m4-docker-test/m4-docker/
+./build-docker.sh 
+docker ps -a\
+docker ps -a
+docker builder prune --all 
+./build-docker.sh 
+./run-docker.sh 
+ls
+cd ..
+ls
+cd m4-sensors/
+ls
+cd ..
+git clone https://github.com/SS-Lab-at-NU/m4-sensors.git
+sudo git clone https://github.com/SS-Lab-at-NU/m4-sensors.git
+docker exec -it num4_ros2_humble_test 
+docker exec -it num4_ros2_humble_test bash
+ifconfig
+docker exec -it num4_ros2_humble_test bash
+docker exec -it num4_ros2_humble_test2 bash
+ls
+ls m4-sensors/
+ls m4-perception/
+docker start num4_ros2_humble_test2 
+docker attach num4_ros2_humble_test2 
+cd m4-docker-test/m4-perception/
+ls
+ls /media/num4/
+sudo reboot 
+c m4-autonomy/m4-firmware/
+cd m4-autonomy/m4-firmware/
+./run_docker.sh 
+lsblk
+ls
+mkdir hdd_mount
+sudo mount /dev/sda2 /home/num4/hdd_mount/
+cd hdd_mount/
+ls
+cd
+cd m4-docker-test/m4-perception/
+cp -r 2025-07-24_16-48-52/ /home/num4/hdd_mount/M4/2025/july\ 24/m4_drive_hb_rs_cam_livox_set1/
+cp -r 2025-07-24_16-48-52/ /home/num4/hdd_mount/M4/2025/july\ 24/
+ls
+mv 2025-07-24_16-48-52/ m4_drive_hb_rs_cam_livox_set1
+ls
+sudo mv 2025-07-24_16-48-52/ m4_drive_hb_rs_cam_livox_set1
+ls
+sudo umount /home/num4/hdd_mount 
+exit
+du -h m4-docker-test/m4-perception/2025-07-24_16-48-52/
+exit
+sudo shutdown now
+ls
+cd m4-docker-test/m4-docker/
+ls
+cd ..
+ls
+cat m4-docker/run-docker.sh 
+exit
+cd new_docker_test/
+ls
+ls m4-sensors/
+docker exec -it num4_ros2_humble_test_new 
+docker exec -it num4_ros2_humble_test_new bash
+ls
+exit
+cd m4-docker-test/m4-docker/
+ls
+cd ../
+cd m4-sensors/
+ls
+cd src/
+ls
+cd ../../../m4-autonomy/m4-firmware/
+git log -1
+git branch 
+git pull
+ls
+cd ..
+mv m4-firmware/ ../m4-firmware_bc
+ls
+git clone git@github.com:SS-Lab-at-NU/m4-firmware.git
+cd m4-firmware/
+cd setup_scripts/
+ls
+cat set_udev_rules.sh 
+cat 11-local.rules 
+cd ../m4_home/m4_ws/src/m4_base/
+ls
+cd launch/
+ls
+nano interfaces.launch 
+cat /home/num4/m4-firmware_bc/m4_home/m4_ws/src/m4_base/launch/interfaces.launch 
+nano interfaces.launch 
+cat m4_control.launch 
+cd ../config/
+cat rc_channel_config.yaml 
+cat robot_config.yaml 
+cat /home/num4/m4-firmware_bc/m4_home/m4_ws/src/m4_base/config/robot_config.yaml 
+mv robot_config.yaml robot_config_git.yaml 
+git branch 
+git checkout feature/m4v0-wheel-control 
+cd ../
+ls
+cd ../../../../
+ls
+cat setup_scripts/11-local.rules 
+cd m4_home/m4_ws/src/m4_base/launch/
+nano interfaces.launch 
+git status 
+cd ../../../../
+cd ../
+rm -rf m4-firmware/
+ls
+git clone git@github.com:SS-Lab-at-NU/m4-firmware.git 
+cd m4-firmware/
+git checkout feature/m4v0-wheel-control 
+ls
+cd m4_home/m4_ws/src/m4_base/launch/
+nano interfaces.launch 
+cd ../config/
+cat robot_config.yaml 
+mv robot_config.yaml robot_config_git.yaml 
+cd
+cd /home/
+ls
+cd num4/
+ls
+cat rc_channel_config.yaml 
+rm rc_channel_config.yaml 
+cat m4-firmware_bc/m4_home/m4_ws/src/m4_base/config/robot_config.yaml 
+cd m4-firmware_bc/m4_home/m4_ws/src/m4_base/config/
+cp robot_config.yaml /home/num4/m4-autonomy/m4-firmware/m4_home/m4_ws/src/m4_base/config/
+cd /home/num4/m4-autonomy/m4-firmware/m4_home/m4_ws/src/m4_base/config/
+cat robot_config.yaml 
+cd ../../../
+cd ../../
+ls
+./run_docker.sh 
+ls
+cd 
+cd /home/num4/m4-firmware_bc/m4_home/m4_ws/src/m4_base/config/
+ls
+cp robot_config.yaml /home/num4/
+cd ~/
+ls
+cat robot_config.yaml 
+cd m4-autonomy/
+rm -rf m4-firmware/
+sudo rm -rf m4-firmware/
+cd /home/num4/
+ls
+mv m4-firmware_bc/ m4-autonomy/m4-firmware
+cd m4-autonomy/m4-firmware/
+ls
+git status 
+git log -3
+git branch 
+git diff m4_home/m4_ws/src/m4_base/config/robot_config.yaml
+git pull 
+git status 
+git log
+git pull --rebase
+git stau
+git status 
+cat m4_home/m4_ws/src/m4_base/config/robot_config.yaml
+nano m4_home/m4_ws/src/m4_base/config/robot_config.yaml
+git status 
+git pull
+git pull --rebase
+git pull
+git log-1
+git log -1
+git log -2
+./run_docker.sh 
+ls
+cd ..
+ls
+m4-sensors/
+cd m4-sensors/
+ls
+cd ../
+ls
+cat m4-docker/
+cat m4-docker/Dockerfile 
+cd ../m4-docker-test/m4-docker/
+ls
+cat Dockerfile 
+docker start num4_ros2_humble_test2
+ls
+docker attach num4_ros2_humble_test2 
+ls
+cd ..
+cp -r m4-docker/ /home/num4/new_docker_test/m4-docker/
+cd
+ls
+mkdir new_docker_test
+ls
+cd m4-docker-test/
+cp -r m4-docker/ /home/num4/new_docker_test/
+cd /home/num4/new_docker_test/
+ls
+ls /home/num4/m4-autonomy/
+cd m4-docker/
+ls
+cat error
+cat error.txt 
+cat error2.txt 
+cat error3.txt 
+cat error4.txt 
+rm error*
+ls
+nano build-docker.sh 
+ls
+cd ../
+cd m4-docker/
+cat run-docker.sh 
+nano run-docker.sh 
+cd ../
+git clone git@github.com:SS-Lab-at-NU/m4-sensors.git
+ls
+git clone git@github.com:SS-Lab-at-NU/m4-firmware.git
+git clone git@github.com:SS-Lab-at-NU/m4-perception.git
+ls
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+git clone https://github.com/Livox-SDK/Livox-SDK2.git
+cd m4-docker/
+nano Dockerfile 
+cat docker-error.txt 
+rm docker-error.txt 
+ls
+cd ..
+ls
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git ws_livox/src/livox_ros_driver2
+ls
+cd m4-docker/
+ls
+cat build-docker.sh 
+./build-docker.sh 
+cd ..
+ls
+git clone https://github.com/Ericsii/FAST_LIO.git --recursive
+ls
+mkdir fs_lio_ws/src -p
+mv FAST_LIO/ fs_lio_ws/src/
+ls fs_lio_ws/src/
+ls
+git clone git@github.com:SS-Lab-at-NU/m4-sensors.git
+ls m4-sensors/
+cd m4-sensors/
+mkdir src
+mv realsense2_bringup/ src/
+mv ouster_bringup/ src/
+ls
+cd ../
+ls
+cd m4-docker/
+ls
+./run-docker.sh 
+sudo shutdown now
+ls
+cd new_docker_test/
+ls
+cd m4-docker/
+ls
+cat run-docker.sh 
+ls
+cd 
+ls
+cd new_docker_test/
+ls
+cd m4-docker/
+./run-docker.sh 
+sudo shutdown now
+sudo reboot 
+htop
+cd m4-autonomy/m4-firmware/
+./run_docker.sh 
+sudo shutdown now
+cat m4-autonomy/m4-firmware/m4_home/m4_ws/src/m4_base/config/robot_config.yaml 
+exit
+cd m4-autonomy/m4-firmware/
+./run_docker.sh 
+sudo shutdown now
+cd m4-autonomy/m4-firmware/
+./run_docker.sh 
+sudo shutdown now
+ls
+history 
+docker images
+cd new_docker_test/
+ls
+cd ws_livox/src/livox_ros_driver2/config/
+cd ../../../../
+cd m4-docker/
+ls
+docker ps -a
+./run-docker.sh 
+sudo shutdown now
+docker exec -it num4_ros2_humble_test_new bash
+docker exec -it num4_ros2_humble_test_new bash
+htop
+docker exec -it num4_ros2_humble_test_new bash
+exit
+cd new_docker_test/m4-docker/
+./run-docker.sh 
+exit
+sudo shutdown now
+cd new_docker_test/
+ls
+exit
+sudo shutdown now

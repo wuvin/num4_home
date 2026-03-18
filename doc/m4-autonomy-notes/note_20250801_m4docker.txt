@@ -1,0 +1,94 @@
+Multi-device ROS 2 test
+---
+
+# Server setup (either laptop or Jetson, if ROS 2 available)
+
+    source /opt/ros/humble/setup.bash
+
+    # Check zero-based server position to set in ROS_DISCOVERY_SERVER
+    echo "$(hostname -I | awk '{print $1}')"
+    # 192.168.0.146 (laptop default) or 192.168.1.50 (Jetson default)
+    
+    # Start discovery server
+    fastdds discovery --server-id 0
+    # -i, --server-id specifies zero-based position as unique server identifier
+    # -l, --udp-address IPv4/6 or name to listen, default (0.0.0.0/::0) or all
+    # -p, --udp-port namesake, default 11811
+    # defaults to UDP instead of TCP (-t, --tcp-address and -q, --tcp-port)
+    
+# Container setup (should be ran with `--network`)
+
+    source /opt/ros/humble/setup.bash
+
+    # Set location of discovery server into environment
+    export ROS_DISCOVERY_SERVER=<hostname>:<port>
+    # e.g., 192.168.0.146:11811
+    
+    # Check existing topics before test topic creation
+    ros2 topic list
+    # only /parameter_events and /rosout by default
+    
+# Server new terminal
+
+    source /opt/ros/humble/setup.bash
+    
+    # Set location of discovery server into environment
+    export ROS_DISCOVERY_SERVER=<hostaddr>:<port>
+    # e.g., 192.168.0.146:11811
+    
+    # Test publisher
+    ros2 topic pub /test_topic std_msgs/msg/String "data: 'Hello from Laptop'" --rate 1
+    
+# Container setup (should be ran with `--network`)
+
+    source /opt/ros/humble/setup.bash
+
+    # Jetson IP from inside container
+    hostname -I
+    # 192.168.1.50 192.168.0.133 192.168.55.1 172.17.0.1 
+
+    # Match ROS 2 environment
+    export ROS_DOMAIN_ID=42
+    
+# Laptop sanity check 1
+
+    ros2 topic list
+    # only /parameter_events and /rosout by default
+    
+# Container publisher
+
+    ros2 topic pub /test_topic std_msgs/msg/String "data: 'Hello from Jetson Docker'" --rate 1
+    
+*** ROS_DOMAIN_ID SHOULD BE 9(DEFAULT)/UNSET
+
+
+source /opt/ros/humble/setup.bash
+
+* SERVER address must be same as computer's addr on target network (and not another machine's)
+* export ROS_DISCOVERY_SERVER must have export; without will not work
+* setup.bash && export ROS_DISCOVERY_SERVER -> run demo listener + talker start disconnected without server active, but fastdds start discovery then will have listener + talker start working
+* start discovery -> listener + talker working will continue working even if server shut down (CTRL+C) BUT restarting either breaks => ergo discovery server assigned when process is run with fastdds active or automatically assigned to existing process when fastdds starts 
+* cannot see topics/nodes over SERVER (or DOMAIN+SERVER) like with DOMAIN?
+    ** setting SERVER at all (even if match other terminal) appears prevent this terminal's topics/nodes from appearing in list output of other terminal (LAPTOP ONLY)
+        *** it seems in docker, this rule does not apply; it listen + talk even without DOMAIN or SERVER
+    ** BUT this terminal can still see other terminal topics/nodes IF other terminal unset SERVER
+    => setting SERVER causes outbound (data + info visibility) to prioritize SERVER over DOMAIN
+    ** setting SERVER still leaves inbound info visibility, but what about data? nope, see next bullets
+* both DOMAIN and SERVER set causes outbound/transmit to ignore DOMAIN, but terminal can still see DOMAIN
+    ** talker w/ DOMAIN + SERVER transmits data to SERVER, so listener w/ only DOMAIN gets no data, BUT talker can see listener node
+    ** talker w/ only DOMAIN transmits data to DOMAIN, and listener w/ DOMAIN + SERVER sees talker BUT does not receive data
+    => setting SERVER overrides DOMAIN outbound data & visibility, as well as DOMAIN inbound data, but lefts in tact DOMAIN inbound visibility
+    => SERVER completely forgoes visibility; cannot see same SERVER nodes/lists from other terminals
+    
+* even with correct setup, listener in container can't seem to catch talker on laptop
+* it appears servers are separate when run on laptop + container even with same addr
+
+
+* sudo ufw allow in proto udp to 192.168.0.133 
+* container: sudo ufw allow in proto udp from [SERVER_IP] to any port [PORT]
+* server: sudo ufw allow in proto udp to [REMOTE_IP] to any port [PORT]
+
+* sudo ufw status numbered
+
+* docker exec -it num4_ros2_humble_test2_new bash
+

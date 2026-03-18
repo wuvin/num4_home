@@ -1,0 +1,44 @@
+## First-time set up for streaming data from NU M4
+
+### Change default ROS middleware (RMW)
+
+In Humble, default is eProsima Fast DDS, but Adarsh has experienced issues,
+especially frame rate drop, and believes the community typically uses
+Eclipse Cyclone DDS.  From my reading, Cyclone has more overhead but handles
+discovery more reliable than Fast.
+
+- Install Cyclone DDS packages: `sudo apt install ros-humble-rmw-cyclonedds-cpp`
+- Switch to rmw_cyclonedds in ROS 2 environment
+    - From new terminal, first activate: `source /opt/ros/humble/setup.bash`
+    - Set RMW in environment: `export RMW_IMPLEMENTATION=rmw_cyclonedds`
+    - Test RMW is active: `ros2 run demo_nodes_cpp talker` or `ros2 topic list`
+        - If RMW implementation is not installed, then this will error out
+        - You can also check `ros2 doctor --report` for RMW MIDDLEWARE
+    - To make persistent, add to `.bashrc` or whichever setup file
+
+### Install Foxglove
+
+Foxglove Studio is an open source visualization app that has been gaining
+traction over RViz for large data streaming and multiple simultaneous topic
+visualizations across different systems.
+
+- First, download from: https://foxglove.dev/download
+- Install package: `sudo apt install ./foxglove-studio-*.deb`
+
+## Sensor activation
+
+### Start Docker container
+
+- `cd /home/num4/m4-autonomy/m4-docker`
+- `./kwu_run_docker.sh`
+
+Or something similar.  Use `docker exec -it <container-name> bash` to access
+the container in subsequent terminals.
+
+### Run LiDAR and Camera
+
+### Run Foxglove
+
+On laptop:
+- export ROS_DOMAIN_ID=9
+-
