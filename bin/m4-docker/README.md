@@ -31,12 +31,12 @@ Applicable files include:
 ### Build-Scripts/build-control-sensors-livo.sh
 
 - Add `--network=host` to every `docker build` block
-- Refresh expired GPG key
 - Add `detect_arch()` function and `ARCH="($detect_arch)` call
 
 ### Dockerfiles/Dockerfile.base
 
 - Use PyPI as fallback when encountering `/jp6/cu122/...` package errors
+- Refresh expired GPG key
 
 ### Dockerfiles/Dockerfile.mavtools
 
