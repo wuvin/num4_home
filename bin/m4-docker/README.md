@@ -31,7 +31,7 @@ Applicable files include:
 ### Build-Scripts/build-control-sensors-livo.sh
 
 - Add `--network=host` to every `docker build` block
-- Add `detect_arch()` function and `ARCH="($detect_arch)` call
+- Add `detect_arch()` function and `ARCH="($detect_arch)"` call
 
 ### Dockerfiles/Dockerfile.base
 
