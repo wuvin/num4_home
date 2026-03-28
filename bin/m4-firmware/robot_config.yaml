@@ -1,0 +1,126 @@
+interface_port: "/dev/U2D2"
+baudrate: 2000000
+
+log_path: "/home/m4/data"
+log_buffer_size: 4000
+
+control_loop_rate: 200
+
+# Robot dimensions (for differential drive kinematics)
+wheel_radius: 0.1 # Radius of the wheel in meters
+wheel_base: 0.285 # Distance between left and right wheels in meters
+
+# List of All joint ids defined below. Acive joint ids defined in executables
+all_joint_ids: [1, 2, 3, 4, 5, 6, 7, 8]
+
+# Joint names must match joint configurations below
+joint_names: 
+  - "FL_Frontal"
+  - "FL_Saggital"
+  - "FR_Frontal"
+  - "FR_Saggital"
+  - "BL_Frontal"
+  - "BL_Saggital"
+  - "BR_Frontal"
+  - "BR_Saggital"
+
+# Joint configurations
+joints:
+    # FL Leg
+    FL_Frontal:
+        id: 1              # Dynamixel motor ID
+        zero_tick: 492     # Encoder tick corresponding to zero degrees position
+        min_tick: 486      # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 1477 #1517     # max_tick = max_position_degrees / 0.087891
+        speed: 27.27       # degrees per second
+    FL_Saggital:           
+        # Reverse drive mode - CW = +ve, CCW = -ve
+        id: 2             # Dynamixel motor ID
+        zero_tick: 960 #925   # Encoder tick corresponding to zero degrees position
+        min_tick: 910  #925   # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 1940 #1876    # max_tick = max_position_degrees / 0.087891 + zero_tick
+        speed: 60         # degrees per second
+    
+    # FR Leg
+    FR_Frontal:
+        # Reverse drive mode - CW = +ve, CCW = -ve
+        id: 3              # Dynamixel motor ID
+        zero_tick: 529 #514     # Encoder tick corresponding to zero degrees position
+        min_tick: 524 #514     # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 1516 #1500     # max_tick = max_position_degrees / 0.087891
+        speed: 27.27          # degrees per second
+    FR_Saggital:
+        id: 4              # Dynamixel motor ID
+        zero_tick: 1030 #2563    # Encoder tick corresponding to zero degrees position
+        min_tick: 1004  #2563   # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 2048  #3575   # max_tick = max_position_degrees / 0.087891 + zero_tick
+        speed: 60          # degrees per second
+
+    # BL Leg
+    BL_Frontal:
+         # Reverse drive mode - CW = +ve, CCW = -ve
+        id: 5              # Dynamixel motor ID
+        zero_tick: 1740 #1771   # Encoder tick corresponding to zero degrees position
+        min_tick: 1734     # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 2730     # max_tick = max_position_degrees / 0.087891
+        speed: 27.27       # degrees per second
+    BL_Saggital:
+        id: 6              # Dynamixel motor ID
+        zero_tick: 120  #1197    # Encoder tick corresponding to zero degrees position
+        min_tick: 105   #1197  # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 1084  #2173   # max_tick = max_position_degrees / 0.087891 + zero_tick
+        speed: 60          # degrees per second
+
+    # BR Leg
+    BR_Frontal:
+        id: 7              # Dynamixel motor ID
+        zero_tick: 215 #2800   # Encoder tick corresponding to zero degrees position
+        min_tick: 207  #2800   # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 1194  #3747   # max_tick = max_position_degrees / 0.087891
+        speed: 27.27          # degrees per second
+    BR_Saggital:
+        id: 8              # Dynamixel motor ID
+        zero_tick: 2149 #1239   # Encoder tick corresponding to zero degrees position
+        min_tick: 2133  #1239   # min_tick = min_position_degrees / 0.087891 + zero_tick
+        max_tick: 3138  #2198   # max_tick = max_position_degrees / 0.087891 + zero_tick
+        speed: 60          # degrees per second
+
+# List of All wheel ids defined below. Acive wheel ids defined in executables
+all_wheel_ids: [9, 10, 11, 12]
+
+# Wheel names must match wheel configurations below
+wheel_names:
+  - "FL_Wheel"
+  - "FR_Wheel"
+  - "BL_Wheel"
+  - "BR_Wheel"
+
+# Wheel configurations
+wheels:
+    FL_Wheel:           
+        id: 9             # Dynamixel motor ID
+        min_speed: -330   # min_speed = min_speed_degrees_per_second / 1.374 (rev/min)
+        max_speed: 330    # max_speed = max_speed_degrees_per_second / 1.374 (rev/min)
+    FR_Wheel:
+        id: 10            # Dynamixel motor ID
+        min_speed: -330   # min_speed = min_speed_degrees_per_second / 1.374 (rev/min)
+        max_speed: 330    # max_speed = max_speed_degrees_per_second / 1.374 (rev/min)
+    BL_Wheel:
+        id: 11             # Dynamixel motor ID
+        min_speed: -330   # min_speed = min_speed_degrees_per_second / 1.374 (rev/min)
+        max_speed: 330    # max_speed = max_speed_degrees_per_second / 1.374 (rev/min)
+    BR_Wheel:
+        id: 12            # Dynamixel motor ID
+        min_speed: -330   # min_speed = min_speed_degrees_per_second / 1.374 (rev/min)
+        max_speed: 330    # max_speed = max_speed_degrees_per_second / 1.374 (rev/min)
+
+# Standard Configurations    
+config_stand: [0, 0, 0, 0, 0, 0, 0, 0]
+config_crouch1: [0, 40, 0, 40, 0, 40, 0, 40]
+config_crouch2: [0, 80, 0, 80, 0, 80, 0, 80]
+config_sit: [0, 90, 0, 90, 0, 90, 0, 90]
+config_uav_step1: [40, 90, 40, 90, 40, 90, 40, 90]
+config_uav_step2: [90, 0, 90, 0, 90, 0, 90, 0]
+config_uav: [90, 0, 90, 0, 90, 0, 90, 0]
+config_mip: [90, 45, 90, 45, 0, 90, 0, 90]
+config_transition_wheel_vel: 120  # In rev/min
