@@ -1,0 +1,4 @@
+#!/bin/bash
+
+source "${PWD}"/install/setup.bash
+ros2 run livox_to_pointcloud2 livox_to_pointcloud2_node

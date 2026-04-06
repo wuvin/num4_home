@@ -1,0 +1,8 @@
+[0.092s] Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_complementary_filter -- -j8 -l8
+[0.271s] [ 20%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter.cpp.o[0m
+[0.275s] [ 40%] [32mBuilding CXX object CMakeFiles/complementary_filter.dir/src/complementary_filter_ros.cpp.o[0m
+[26.456s] [ 60%] [32m[1mLinking CXX shared library libcomplementary_filter.so[0m
+[27.838s] [ 60%] Built target complementary_filter
+[27.859s] [ 80%] [32mBuilding CXX object CMakeFiles/complementary_filter_node.dir/src/complementary_filter_node.cpp.o[0m
+[32.999s] [100%] [32m[1mLinking CXX executable complementary_filter_node[0m
+[33.647s] [100%] Built target complementary_filter_node

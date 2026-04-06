@@ -1,0 +1,711 @@
+[0.000000] (-) TimerEvent: {}
+[0.000419] (livox_bringup) JobQueued: {'identifier': 'livox_bringup', 'dependencies': OrderedDict()}
+[0.000753] (livox_to_pointcloud2) JobQueued: {'identifier': 'livox_to_pointcloud2', 'dependencies': OrderedDict()}
+[0.000827] (realsense2_bringup) JobQueued: {'identifier': 'realsense2_bringup', 'dependencies': OrderedDict()}
+[0.000915] (livox_bringup) JobStarted: {'identifier': 'livox_bringup'}
+[0.025179] (livox_to_pointcloud2) JobStarted: {'identifier': 'livox_to_pointcloud2'}
+[0.038155] (realsense2_bringup) JobStarted: {'identifier': 'realsense2_bringup'}
+[0.053979] (livox_bringup) JobProgress: {'identifier': 'livox_bringup', 'progress': 'cmake'}
+[0.054345] (livox_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/livox_bringup', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_bringup'], 'cwd': '/num4_ws/build/livox_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.060742] (livox_to_pointcloud2) JobProgress: {'identifier': 'livox_to_pointcloud2', 'progress': 'cmake'}
+[0.061296] (livox_to_pointcloud2) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/livox_to_pointcloud2', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2'], 'cwd': '/num4_ws/build/livox_to_pointcloud2', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_to_pointcloud2'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.066455] (realsense2_bringup) JobProgress: {'identifier': 'realsense2_bringup', 'progress': 'cmake'}
+[0.066834] (realsense2_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/realsense2_bringup', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/realsense2_bringup'], 'cwd': '/num4_ws/build/realsense2_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/realsense2_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.098594] (-) TimerEvent: {}
+[0.199081] (-) TimerEvent: {}
+[0.299583] (-) TimerEvent: {}
+[0.333981] (livox_to_pointcloud2) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.336417] (realsense2_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.336845] (livox_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.399741] (-) TimerEvent: {}
+[0.487048] (realsense2_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.493382] (livox_to_pointcloud2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.493924] (livox_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.499858] (-) TimerEvent: {}
+[0.519644] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.527154] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.531077] (livox_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.600021] (-) TimerEvent: {}
+[0.638549] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.639206] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.639815] (livox_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.688981] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.689359] (livox_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.689593] (realsense2_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.690499] (livox_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.691049] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.691430] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.692587] (livox_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.693001] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.693245] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.700104] (-) TimerEvent: {}
+[0.711501] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.711894] (livox_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.712559] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.800267] (-) TimerEvent: {}
+[0.840558] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.841517] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.847271] (livox_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.890875] (realsense2_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.891724] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.892455] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.893032] (realsense2_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.893271] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.894850] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.896879] (livox_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.897711] (livox_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.899286] (livox_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.900346] (-) TimerEvent: {}
+[0.905906] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found ament_cmake_auto: 1.3.10 (/opt/ros/humble/install/share/ament_cmake_auto/cmake)\n'}
+[0.907820] (realsense2_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[0.909125] (livox_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[1.000514] (-) TimerEvent: {}
+[1.101152] (-) TimerEvent: {}
+[1.186925] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.201269] (-) TimerEvent: {}
+[1.203488] (realsense2_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.227072] (livox_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.301382] (-) TimerEvent: {}
+[1.309983] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.330182] (realsense2_bringup) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.347421] (livox_bringup) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.401529] (-) TimerEvent: {}
+[1.502040] (-) TimerEvent: {}
+[1.510727] (realsense2_bringup) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.517157] (realsense2_bringup) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.517662] (realsense2_bringup) StdoutLine: {'line': b'-- Build files have been written to: /num4_ws/build/realsense2_bringup\n'}
+[1.538055] (livox_bringup) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.544864] (livox_bringup) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.545305] (livox_bringup) StdoutLine: {'line': b'-- Build files have been written to: /num4_ws/build/livox_bringup\n'}
+[1.548037] (realsense2_bringup) CommandEnded: {'returncode': 0}
+[1.549165] (realsense2_bringup) JobProgress: {'identifier': 'realsense2_bringup', 'progress': 'build'}
+[1.550267] (realsense2_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/realsense2_bringup', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/realsense2_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/realsense2_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[1.575758] (livox_bringup) CommandEnded: {'returncode': 0}
+[1.576722] (livox_bringup) JobProgress: {'identifier': 'livox_bringup', 'progress': 'build'}
+[1.577057] (livox_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/livox_bringup', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/livox_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[1.602146] (-) TimerEvent: {}
+[1.641827] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[1.652816] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[1.673811] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[1.702299] (-) TimerEvent: {}
+[1.708230] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.713270] (realsense2_bringup) CommandEnded: {'returncode': 0}
+[1.744513] (livox_bringup) CommandEnded: {'returncode': 0}
+[1.748483] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.802400] (-) TimerEvent: {}
+[1.860006] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[1.866655] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.882884] (realsense2_bringup) JobProgress: {'identifier': 'realsense2_bringup', 'progress': 'install'}
+[1.902631] (-) TimerEvent: {}
+[1.928814] (livox_to_pointcloud2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.949325] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.002750] (-) TimerEvent: {}
+[2.025435] (realsense2_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/num4_ws/build/realsense2_bringup'], 'cwd': '/num4_ws/build/realsense2_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/realsense2_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[2.029147] (livox_bringup) JobProgress: {'identifier': 'livox_bringup', 'progress': 'install'}
+[2.029566] (livox_bringup) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/num4_ws/build/livox_bringup'], 'cwd': '/num4_ws/build/livox_bringup', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_bringup'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[2.057842] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.059624] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[2.102836] (-) TimerEvent: {}
+[2.147314] (livox_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.147700] (livox_bringup) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.148447] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup//launch/launch_mid360.py\n'}
+[2.153649] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup//config/config.json\n'}
+[2.158036] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_lorepeat.json\n'}
+[2.159172] (realsense2_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.159789] (realsense2_bringup) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[2.160539] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup//launch/launch_d455.py\n'}
+[2.162458] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_norepeat.json\n'}
+[2.165419] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup//config/config.yaml\n'}
+[2.166554] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_repeat.json\n'}
+[2.170448] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/ament_index/resource_index/package_run_dependencies/realsense2_bringup\n'}
+[2.171240] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/ament_index/resource_index/package_run_dependencies/livox_bringup\n'}
+[2.175534] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/ament_index/resource_index/parent_prefix_path/realsense2_bringup\n'}
+[2.177151] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/ament_index/resource_index/parent_prefix_path/livox_bringup\n'}
+[2.180450] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/environment/ament_prefix_path.sh\n'}
+[2.182569] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/environment/ament_prefix_path.sh\n'}
+[2.185141] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/environment/ament_prefix_path.dsv\n'}
+[2.186903] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/environment/ament_prefix_path.dsv\n'}
+[2.189771] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/environment/path.sh\n'}
+[2.191704] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/environment/path.sh\n'}
+[2.194860] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/environment/path.dsv\n'}
+[2.196471] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/environment/path.dsv\n'}
+[2.199894] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/local_setup.bash\n'}
+[2.201087] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.bash\n'}
+[2.202915] (-) TimerEvent: {}
+[2.205980] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/local_setup.sh\n'}
+[2.206642] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.sh\n'}
+[2.212236] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/local_setup.zsh\n'}
+[2.212530] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.zsh\n'}
+[2.217357] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/local_setup.dsv\n'}
+[2.218484] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.dsv\n'}
+[2.222615] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/package.dsv\n'}
+[2.224283] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/package.dsv\n'}
+[2.227734] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/ament_index/resource_index/packages/realsense2_bringup\n'}
+[2.230133] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/ament_index/resource_index/packages/livox_bringup\n'}
+[2.233561] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/cmake/realsense2_bringupConfig.cmake\n'}
+[2.235114] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/cmake/livox_bringupConfig.cmake\n'}
+[2.239459] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/cmake/realsense2_bringupConfig-version.cmake\n'}
+[2.240112] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/cmake/livox_bringupConfig-version.cmake\n'}
+[2.244190] (realsense2_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/realsense2_bringup/share/realsense2_bringup/package.xml\n'}
+[2.246175] (livox_bringup) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/package.xml\n'}
+[2.273142] (realsense2_bringup) CommandEnded: {'returncode': 0}
+[2.299473] (livox_bringup) CommandEnded: {'returncode': 0}
+[2.303011] (-) TimerEvent: {}
+[2.403732] (-) TimerEvent: {}
+[2.469608] (realsense2_bringup) JobEnded: {'identifier': 'realsense2_bringup', 'rc': 0}
+[2.474347] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):\n'}
+[2.474830] (livox_to_pointcloud2) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[2.475028] (livox_to_pointcloud2) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[2.475397] (livox_to_pointcloud2) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.475541] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.475980] (livox_to_pointcloud2) StderrLine: {'line': b'  CMake variable EIGEN_ROOT is set to:\n'}
+[2.476096] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.476236] (livox_to_pointcloud2) StderrLine: {'line': b'    /usr/include/eigen3\n'}
+[2.476628] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.476944] (livox_to_pointcloud2) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[2.477454] (livox_to_pointcloud2) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[2.477911] (livox_to_pointcloud2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.478571] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)\n'}
+[2.478713] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[2.479237] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.479395] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[2.479492] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.479637] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)\n'}
+[2.479839] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[2.480039] (livox_to_pointcloud2) StderrLine: {'line': b'  CMakeLists.txt:42 (ament_auto_find_build_dependencies)\n'}
+[2.480545] (livox_to_pointcloud2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.480700] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[0m\n'}
+[2.483486] (livox_bringup) JobEnded: {'identifier': 'livox_bringup', 'rc': 0}
+[2.484239] (livox_to_pointcloud2) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[2.503827] (-) TimerEvent: {}
+[2.518690] (livox_to_pointcloud2) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[2.603955] (-) TimerEvent: {}
+[2.606092] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1")\n'}
+[2.606379] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.606962] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):\n'}
+[2.607237] (livox_to_pointcloud2) StderrLine: {'line': b'  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake\n'}
+[2.607388] (livox_to_pointcloud2) StderrLine: {'line': b'  --help-policy CMP0167" for policy details.  Use the cmake_policy command to\n'}
+[2.607527] (livox_to_pointcloud2) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[2.607660] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.607788] (livox_to_pointcloud2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.607916] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)\n'}
+[2.608043] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[2.608171] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.608298] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[2.608423] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.608552] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)\n'}
+[2.608701] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[2.608831] (livox_to_pointcloud2) StderrLine: {'line': b'  CMakeLists.txt:42 (ament_auto_find_build_dependencies)\n'}
+[2.608977] (livox_to_pointcloud2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.609106] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[0m\n'}
+[2.663395] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):\n'}
+[2.663673] (livox_to_pointcloud2) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[2.663807] (livox_to_pointcloud2) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[2.663929] (livox_to_pointcloud2) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[2.664047] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.664162] (livox_to_pointcloud2) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[2.664276] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.664388] (livox_to_pointcloud2) StderrLine: {'line': b'    /usr\n'}
+[2.664499] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[2.664610] (livox_to_pointcloud2) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[2.664722] (livox_to_pointcloud2) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[2.664834] (livox_to_pointcloud2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.664944] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)\n'}
+[2.665054] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)\n'}
+[2.665165] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[2.665279] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.665392] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[2.665504] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[2.665616] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)\n'}
+[2.665728] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[2.665839] (livox_to_pointcloud2) StderrLine: {'line': b'  CMakeLists.txt:42 (ament_auto_find_build_dependencies)\n'}
+[2.665949] (livox_to_pointcloud2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.666059] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[0m\n'}
+[2.695670] (livox_to_pointcloud2) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[2.704045] (-) TimerEvent: {}
+[2.731040] (livox_to_pointcloud2) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[2.804238] (-) TimerEvent: {}
+[2.855439] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so\n'}
+[2.856056] (livox_to_pointcloud2) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)\n'}
+[2.904348] (-) TimerEvent: {}
+[3.004870] (-) TimerEvent: {}
+[3.105420] (-) TimerEvent: {}
+[3.206106] (-) TimerEvent: {}
+[3.306824] (-) TimerEvent: {}
+[3.407677] (-) TimerEvent: {}
+[3.508285] (-) TimerEvent: {}
+[3.608888] (-) TimerEvent: {}
+[3.709583] (-) TimerEvent: {}
+[3.810263] (-) TimerEvent: {}
+[3.911022] (-) TimerEvent: {}
+[4.011573] (-) TimerEvent: {}
+[4.112250] (-) TimerEvent: {}
+[4.212911] (-) TimerEvent: {}
+[4.313421] (-) TimerEvent: {}
+[4.413961] (-) TimerEvent: {}
+[4.514689] (-) TimerEvent: {}
+[4.615333] (-) TimerEvent: {}
+[4.715871] (-) TimerEvent: {}
+[4.816554] (-) TimerEvent: {}
+[4.917178] (-) TimerEvent: {}
+[5.017710] (-) TimerEvent: {}
+[5.118224] (-) TimerEvent: {}
+[5.148875] (livox_to_pointcloud2) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[5.191240] (livox_to_pointcloud2) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[5.218325] (-) TimerEvent: {}
+[5.299143] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found libusb: /usr/lib/aarch64-linux-gnu/libusb-1.0.so\n'}
+[5.304650] (livox_to_pointcloud2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[5.318445] (-) TimerEvent: {}
+[5.419018] (-) TimerEvent: {}
+[5.472005] (livox_to_pointcloud2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[5.519152] (-) TimerEvent: {}
+[5.619670] (-) TimerEvent: {}
+[5.720145] (-) TimerEvent: {}
+[5.820619] (-) TimerEvent: {}
+[5.880361] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):\n'}
+[5.880742] (livox_to_pointcloud2) StderrLine: {'line': b'  Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake\n'}
+[5.880863] (livox_to_pointcloud2) StderrLine: {'line': b'  --help-policy CMP0167" for policy details.  Use the cmake_policy command to\n'}
+[5.880962] (livox_to_pointcloud2) StderrLine: {'line': b'  set the policy and suppress this warning.\n'}
+[5.881057] (livox_to_pointcloud2) StderrLine: {'line': b'\n'}
+[5.881144] (livox_to_pointcloud2) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[5.881229] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)\n'}
+[5.881312] (livox_to_pointcloud2) StderrLine: {'line': b'  /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)\n'}
+[5.881409] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[5.881498] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[5.881582] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[5.881665] (livox_to_pointcloud2) StderrLine: {'line': b'  /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)\n'}
+[5.881746] (livox_to_pointcloud2) StderrLine: {'line': b'  /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)\n'}
+[5.881827] (livox_to_pointcloud2) StderrLine: {'line': b'  CMakeLists.txt:42 (ament_auto_find_build_dependencies)\n'}
+[5.881908] (livox_to_pointcloud2) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[5.881988] (livox_to_pointcloud2) StderrLine: {'line': b'\x1b[0m\n'}
+[5.903083] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[5.915247] (livox_to_pointcloud2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[5.920685] (-) TimerEvent: {}
+[5.927414] (livox_to_pointcloud2) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[6.020996] (-) TimerEvent: {}
+[6.121470] (-) TimerEvent: {}
+[6.221946] (-) TimerEvent: {}
+[6.298378] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[6.322035] (-) TimerEvent: {}
+[6.422623] (-) TimerEvent: {}
+[6.523088] (-) TimerEvent: {}
+[6.623577] (-) TimerEvent: {}
+[6.676482] (livox_to_pointcloud2) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[6.723667] (-) TimerEvent: {}
+[6.824098] (-) TimerEvent: {}
+[6.925616] (-) TimerEvent: {}
+[7.026108] (-) TimerEvent: {}
+[7.043041] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so\n'}
+[7.044429] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so\n'}
+[7.045758] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so\n'}
+[7.047045] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so\n'}
+[7.048427] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so\n'}
+[7.049719] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so\n'}
+[7.050575] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12\n'}
+[7.051264] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12\n'}
+[7.052637] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so\n'}
+[7.054091] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so\n'}
+[7.055576] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so\n'}
+[7.056905] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so\n'}
+[7.058448] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so\n'}
+[7.059977] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so\n'}
+[7.061418] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so\n'}
+[7.062936] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so\n'}
+[7.064191] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so\n'}
+[7.065618] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so\n'}
+[7.067515] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so\n'}
+[7.068883] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so\n'}
+[7.070388] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12\n'}
+[7.071139] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_MODELER: /usr/include/pcl-1.12\n'}
+[7.073014] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12\n'}
+[7.074586] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so\n'}
+[7.076101] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so\n'}
+[7.111656] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Found livox_ros_driver2\n'}
+[7.126168] (-) TimerEvent: {}
+[7.135754] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Configuring done (6.9s)\n'}
+[7.177799] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[7.179843] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Build files have been written to: /num4_ws/build/livox_to_pointcloud2\n'}
+[7.226339] (-) TimerEvent: {}
+[7.237694] (livox_to_pointcloud2) CommandEnded: {'returncode': 0}
+[7.240017] (livox_to_pointcloud2) JobProgress: {'identifier': 'livox_to_pointcloud2', 'progress': 'build'}
+[7.241581] (livox_to_pointcloud2) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/livox_to_pointcloud2', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/livox_to_pointcloud2', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_to_pointcloud2'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[7.326426] (-) TimerEvent: {}
+[7.415362] (livox_to_pointcloud2) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/livox_to_pointcloud2.dir/src/livox_to_pointcloud2_ros2.cpp.o\x1b[0m\n'}
+[7.426601] (-) TimerEvent: {}
+[7.527155] (-) TimerEvent: {}
+[7.627839] (-) TimerEvent: {}
+[7.728356] (-) TimerEvent: {}
+[7.829003] (-) TimerEvent: {}
+[7.929521] (-) TimerEvent: {}
+[8.030074] (-) TimerEvent: {}
+[8.130591] (-) TimerEvent: {}
+[8.231084] (-) TimerEvent: {}
+[8.331571] (-) TimerEvent: {}
+[8.432079] (-) TimerEvent: {}
+[8.532607] (-) TimerEvent: {}
+[8.633136] (-) TimerEvent: {}
+[8.733824] (-) TimerEvent: {}
+[8.834364] (-) TimerEvent: {}
+[8.934925] (-) TimerEvent: {}
+[9.035450] (-) TimerEvent: {}
+[9.136142] (-) TimerEvent: {}
+[9.236654] (-) TimerEvent: {}
+[9.337165] (-) TimerEvent: {}
+[9.437674] (-) TimerEvent: {}
+[9.538342] (-) TimerEvent: {}
+[9.638898] (-) TimerEvent: {}
+[9.739437] (-) TimerEvent: {}
+[9.839969] (-) TimerEvent: {}
+[9.940504] (-) TimerEvent: {}
+[10.041024] (-) TimerEvent: {}
+[10.141553] (-) TimerEvent: {}
+[10.242089] (-) TimerEvent: {}
+[10.342998] (-) TimerEvent: {}
+[10.443681] (-) TimerEvent: {}
+[10.544464] (-) TimerEvent: {}
+[10.645185] (-) TimerEvent: {}
+[10.745999] (-) TimerEvent: {}
+[10.846788] (-) TimerEvent: {}
+[10.947561] (-) TimerEvent: {}
+[11.048294] (-) TimerEvent: {}
+[11.148891] (-) TimerEvent: {}
+[11.249557] (-) TimerEvent: {}
+[11.350259] (-) TimerEvent: {}
+[11.450899] (-) TimerEvent: {}
+[11.551657] (-) TimerEvent: {}
+[11.652453] (-) TimerEvent: {}
+[11.753229] (-) TimerEvent: {}
+[11.854044] (-) TimerEvent: {}
+[11.954763] (-) TimerEvent: {}
+[12.055544] (-) TimerEvent: {}
+[12.156200] (-) TimerEvent: {}
+[12.256844] (-) TimerEvent: {}
+[12.357321] (-) TimerEvent: {}
+[12.457950] (-) TimerEvent: {}
+[12.558599] (-) TimerEvent: {}
+[12.659079] (-) TimerEvent: {}
+[12.759721] (-) TimerEvent: {}
+[12.860251] (-) TimerEvent: {}
+[12.961087] (-) TimerEvent: {}
+[13.061760] (-) TimerEvent: {}
+[13.162389] (-) TimerEvent: {}
+[13.263049] (-) TimerEvent: {}
+[13.363557] (-) TimerEvent: {}
+[13.464299] (-) TimerEvent: {}
+[13.564973] (-) TimerEvent: {}
+[13.665486] (-) TimerEvent: {}
+[13.766286] (-) TimerEvent: {}
+[13.866917] (-) TimerEvent: {}
+[13.967617] (-) TimerEvent: {}
+[14.068199] (-) TimerEvent: {}
+[14.168934] (-) TimerEvent: {}
+[14.269657] (-) TimerEvent: {}
+[14.370395] (-) TimerEvent: {}
+[14.471132] (-) TimerEvent: {}
+[14.571648] (-) TimerEvent: {}
+[14.672262] (-) TimerEvent: {}
+[14.773037] (-) TimerEvent: {}
+[14.873791] (-) TimerEvent: {}
+[14.974540] (-) TimerEvent: {}
+[15.075077] (-) TimerEvent: {}
+[15.175811] (-) TimerEvent: {}
+[15.276547] (-) TimerEvent: {}
+[15.377224] (-) TimerEvent: {}
+[15.477912] (-) TimerEvent: {}
+[15.578548] (-) TimerEvent: {}
+[15.679294] (-) TimerEvent: {}
+[15.780085] (-) TimerEvent: {}
+[15.880863] (-) TimerEvent: {}
+[15.981656] (-) TimerEvent: {}
+[16.082330] (-) TimerEvent: {}
+[16.182840] (-) TimerEvent: {}
+[16.283406] (-) TimerEvent: {}
+[16.384112] (-) TimerEvent: {}
+[16.484739] (-) TimerEvent: {}
+[16.585397] (-) TimerEvent: {}
+[16.686003] (-) TimerEvent: {}
+[16.786566] (-) TimerEvent: {}
+[16.887378] (-) TimerEvent: {}
+[16.988040] (-) TimerEvent: {}
+[17.088668] (-) TimerEvent: {}
+[17.189309] (-) TimerEvent: {}
+[17.289798] (-) TimerEvent: {}
+[17.390269] (-) TimerEvent: {}
+[17.490898] (-) TimerEvent: {}
+[17.591599] (-) TimerEvent: {}
+[17.692413] (-) TimerEvent: {}
+[17.793010] (-) TimerEvent: {}
+[17.893774] (-) TimerEvent: {}
+[17.994353] (-) TimerEvent: {}
+[18.095186] (-) TimerEvent: {}
+[18.195862] (-) TimerEvent: {}
+[18.296542] (-) TimerEvent: {}
+[18.396998] (-) TimerEvent: {}
+[18.497491] (-) TimerEvent: {}
+[18.598088] (-) TimerEvent: {}
+[18.698747] (-) TimerEvent: {}
+[18.799193] (-) TimerEvent: {}
+[18.899790] (-) TimerEvent: {}
+[19.000343] (-) TimerEvent: {}
+[19.101093] (-) TimerEvent: {}
+[19.201727] (-) TimerEvent: {}
+[19.302352] (-) TimerEvent: {}
+[19.403033] (-) TimerEvent: {}
+[19.503537] (-) TimerEvent: {}
+[19.604183] (-) TimerEvent: {}
+[19.704797] (-) TimerEvent: {}
+[19.805408] (-) TimerEvent: {}
+[19.906014] (-) TimerEvent: {}
+[20.006487] (-) TimerEvent: {}
+[20.107233] (-) TimerEvent: {}
+[20.207910] (-) TimerEvent: {}
+[20.308425] (-) TimerEvent: {}
+[20.408865] (-) TimerEvent: {}
+[20.509258] (-) TimerEvent: {}
+[20.609693] (-) TimerEvent: {}
+[20.710274] (-) TimerEvent: {}
+[20.810782] (-) TimerEvent: {}
+[20.911397] (-) TimerEvent: {}
+[21.012030] (-) TimerEvent: {}
+[21.112643] (-) TimerEvent: {}
+[21.213118] (-) TimerEvent: {}
+[21.313752] (-) TimerEvent: {}
+[21.414370] (-) TimerEvent: {}
+[21.515022] (-) TimerEvent: {}
+[21.615640] (-) TimerEvent: {}
+[21.716102] (-) TimerEvent: {}
+[21.816731] (-) TimerEvent: {}
+[21.917333] (-) TimerEvent: {}
+[22.017956] (-) TimerEvent: {}
+[22.118667] (-) TimerEvent: {}
+[22.219473] (-) TimerEvent: {}
+[22.320162] (-) TimerEvent: {}
+[22.420648] (-) TimerEvent: {}
+[22.521277] (-) TimerEvent: {}
+[22.621892] (-) TimerEvent: {}
+[22.722502] (-) TimerEvent: {}
+[22.822986] (-) TimerEvent: {}
+[22.923438] (-) TimerEvent: {}
+[23.023892] (-) TimerEvent: {}
+[23.124507] (-) TimerEvent: {}
+[23.225128] (-) TimerEvent: {}
+[23.325644] (-) TimerEvent: {}
+[23.426270] (-) TimerEvent: {}
+[23.526997] (-) TimerEvent: {}
+[23.627479] (-) TimerEvent: {}
+[23.727926] (-) TimerEvent: {}
+[23.828553] (-) TimerEvent: {}
+[23.929022] (-) TimerEvent: {}
+[24.029661] (-) TimerEvent: {}
+[24.130131] (-) TimerEvent: {}
+[24.230760] (-) TimerEvent: {}
+[24.331219] (-) TimerEvent: {}
+[24.431848] (-) TimerEvent: {}
+[24.532370] (-) TimerEvent: {}
+[24.633007] (-) TimerEvent: {}
+[24.733699] (-) TimerEvent: {}
+[24.834323] (-) TimerEvent: {}
+[24.934797] (-) TimerEvent: {}
+[25.035417] (-) TimerEvent: {}
+[25.135888] (-) TimerEvent: {}
+[25.236516] (-) TimerEvent: {}
+[25.337134] (-) TimerEvent: {}
+[25.437755] (-) TimerEvent: {}
+[25.538448] (-) TimerEvent: {}
+[25.639144] (-) TimerEvent: {}
+[25.739810] (-) TimerEvent: {}
+[25.840438] (-) TimerEvent: {}
+[25.940884] (-) TimerEvent: {}
+[26.041510] (-) TimerEvent: {}
+[26.142125] (-) TimerEvent: {}
+[26.242747] (-) TimerEvent: {}
+[26.343227] (-) TimerEvent: {}
+[26.443862] (-) TimerEvent: {}
+[26.544562] (-) TimerEvent: {}
+[26.645363] (-) TimerEvent: {}
+[26.746035] (-) TimerEvent: {}
+[26.846553] (-) TimerEvent: {}
+[26.947191] (-) TimerEvent: {}
+[27.047641] (-) TimerEvent: {}
+[27.148251] (-) TimerEvent: {}
+[27.248876] (-) TimerEvent: {}
+[27.349360] (-) TimerEvent: {}
+[27.449993] (-) TimerEvent: {}
+[27.550611] (-) TimerEvent: {}
+[27.651220] (-) TimerEvent: {}
+[27.751922] (-) TimerEvent: {}
+[27.852565] (-) TimerEvent: {}
+[27.953256] (-) TimerEvent: {}
+[28.053740] (-) TimerEvent: {}
+[28.154184] (-) TimerEvent: {}
+[28.254764] (-) TimerEvent: {}
+[28.355396] (-) TimerEvent: {}
+[28.456037] (-) TimerEvent: {}
+[28.556507] (-) TimerEvent: {}
+[28.657195] (-) TimerEvent: {}
+[28.757921] (-) TimerEvent: {}
+[28.858595] (-) TimerEvent: {}
+[28.959251] (-) TimerEvent: {}
+[29.059739] (-) TimerEvent: {}
+[29.160205] (-) TimerEvent: {}
+[29.260768] (-) TimerEvent: {}
+[29.361635] (-) TimerEvent: {}
+[29.462289] (-) TimerEvent: {}
+[29.562953] (-) TimerEvent: {}
+[29.663626] (-) TimerEvent: {}
+[29.764255] (-) TimerEvent: {}
+[29.864907] (-) TimerEvent: {}
+[29.965515] (-) TimerEvent: {}
+[30.065949] (-) TimerEvent: {}
+[30.166575] (-) TimerEvent: {}
+[30.267108] (-) TimerEvent: {}
+[30.367790] (-) TimerEvent: {}
+[30.468243] (-) TimerEvent: {}
+[30.568839] (-) TimerEvent: {}
+[30.669445] (-) TimerEvent: {}
+[30.769904] (-) TimerEvent: {}
+[30.870566] (-) TimerEvent: {}
+[30.971170] (-) TimerEvent: {}
+[31.071646] (-) TimerEvent: {}
+[31.172192] (-) TimerEvent: {}
+[31.272715] (-) TimerEvent: {}
+[31.373344] (-) TimerEvent: {}
+[31.473972] (-) TimerEvent: {}
+[31.574595] (-) TimerEvent: {}
+[31.675221] (-) TimerEvent: {}
+[31.775728] (-) TimerEvent: {}
+[31.876458] (-) TimerEvent: {}
+[31.977118] (-) TimerEvent: {}
+[32.077822] (-) TimerEvent: {}
+[32.178391] (-) TimerEvent: {}
+[32.278922] (-) TimerEvent: {}
+[32.379600] (-) TimerEvent: {}
+[32.480125] (-) TimerEvent: {}
+[32.580799] (-) TimerEvent: {}
+[32.681317] (-) TimerEvent: {}
+[32.781840] (-) TimerEvent: {}
+[32.882526] (-) TimerEvent: {}
+[32.983039] (-) TimerEvent: {}
+[33.083702] (-) TimerEvent: {}
+[33.184217] (-) TimerEvent: {}
+[33.284701] (-) TimerEvent: {}
+[33.385354] (-) TimerEvent: {}
+[33.485884] (-) TimerEvent: {}
+[33.586611] (-) TimerEvent: {}
+[33.687294] (-) TimerEvent: {}
+[33.787993] (-) TimerEvent: {}
+[33.859662] (livox_to_pointcloud2) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library liblivox_to_pointcloud2.so\x1b[0m\n'}
+[33.888321] (-) TimerEvent: {}
+[33.989034] (-) TimerEvent: {}
+[34.089574] (-) TimerEvent: {}
+[34.190037] (-) TimerEvent: {}
+[34.290577] (-) TimerEvent: {}
+[34.311178] (livox_to_pointcloud2) StdoutLine: {'line': b'[ 50%] Built target livox_to_pointcloud2\n'}
+[34.334838] (livox_to_pointcloud2) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/livox_to_pointcloud2_node.dir/src/livox_to_pointcloud2_ros2_node.cpp.o\x1b[0m\n'}
+[34.390698] (-) TimerEvent: {}
+[34.491195] (-) TimerEvent: {}
+[34.591868] (-) TimerEvent: {}
+[34.692389] (-) TimerEvent: {}
+[34.792916] (-) TimerEvent: {}
+[34.893450] (-) TimerEvent: {}
+[34.993986] (-) TimerEvent: {}
+[35.094545] (-) TimerEvent: {}
+[35.195081] (-) TimerEvent: {}
+[35.295620] (-) TimerEvent: {}
+[35.396317] (-) TimerEvent: {}
+[35.497000] (-) TimerEvent: {}
+[35.597698] (-) TimerEvent: {}
+[35.698390] (-) TimerEvent: {}
+[35.799100] (-) TimerEvent: {}
+[35.899787] (-) TimerEvent: {}
+[36.000465] (-) TimerEvent: {}
+[36.101164] (-) TimerEvent: {}
+[36.201693] (-) TimerEvent: {}
+[36.302383] (-) TimerEvent: {}
+[36.402933] (-) TimerEvent: {}
+[36.503455] (-) TimerEvent: {}
+[36.604138] (-) TimerEvent: {}
+[36.704822] (-) TimerEvent: {}
+[36.805519] (-) TimerEvent: {}
+[36.906209] (-) TimerEvent: {}
+[37.006903] (-) TimerEvent: {}
+[37.107432] (-) TimerEvent: {}
+[37.207959] (-) TimerEvent: {}
+[37.308504] (-) TimerEvent: {}
+[37.409034] (-) TimerEvent: {}
+[37.509566] (-) TimerEvent: {}
+[37.610103] (-) TimerEvent: {}
+[37.710638] (-) TimerEvent: {}
+[37.811179] (-) TimerEvent: {}
+[37.911719] (-) TimerEvent: {}
+[38.012259] (-) TimerEvent: {}
+[38.112792] (-) TimerEvent: {}
+[38.213328] (-) TimerEvent: {}
+[38.313866] (-) TimerEvent: {}
+[38.414582] (-) TimerEvent: {}
+[38.515262] (-) TimerEvent: {}
+[38.615933] (-) TimerEvent: {}
+[38.716618] (-) TimerEvent: {}
+[38.817302] (-) TimerEvent: {}
+[38.917993] (-) TimerEvent: {}
+[39.018678] (-) TimerEvent: {}
+[39.119357] (-) TimerEvent: {}
+[39.220049] (-) TimerEvent: {}
+[39.320735] (-) TimerEvent: {}
+[39.421426] (-) TimerEvent: {}
+[39.522109] (-) TimerEvent: {}
+[39.622786] (-) TimerEvent: {}
+[39.723471] (-) TimerEvent: {}
+[39.824164] (-) TimerEvent: {}
+[39.924697] (-) TimerEvent: {}
+[40.025222] (-) TimerEvent: {}
+[40.125905] (-) TimerEvent: {}
+[40.226604] (-) TimerEvent: {}
+[40.327120] (-) TimerEvent: {}
+[40.427648] (-) TimerEvent: {}
+[40.528195] (-) TimerEvent: {}
+[40.568039] (livox_to_pointcloud2) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable livox_to_pointcloud2_node\x1b[0m\n'}
+[40.628315] (-) TimerEvent: {}
+[40.728827] (-) TimerEvent: {}
+[40.790540] (livox_to_pointcloud2) StdoutLine: {'line': b'[100%] Built target livox_to_pointcloud2_node\n'}
+[40.822208] (livox_to_pointcloud2) CommandEnded: {'returncode': 0}
+[40.829072] (-) TimerEvent: {}
+[40.929646] (-) TimerEvent: {}
+[41.013050] (livox_to_pointcloud2) JobProgress: {'identifier': 'livox_to_pointcloud2', 'progress': 'install'}
+[41.013954] (livox_to_pointcloud2) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/num4_ws/build/livox_to_pointcloud2'], 'cwd': '/num4_ws/build/livox_to_pointcloud2', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/livox_to_pointcloud2'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[41.029735] (-) TimerEvent: {}
+[41.130101] (-) TimerEvent: {}
+[41.143769] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[41.144620] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[41.145669] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/include/livox_to_pointcloud2/livox_converter.hpp\n'}
+[41.152004] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/include/livox_to_pointcloud2/livox_to_pointcloud2_ros2.hpp\n'}
+[41.157841] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/library_path.sh\n'}
+[41.163758] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/library_path.dsv\n'}
+[41.169561] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/lib/liblivox_to_pointcloud2.so\n'}
+[41.175930] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/lib/livox_to_pointcloud2/livox_to_pointcloud2_node\n'}
+[41.181664] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/package_run_dependencies/livox_to_pointcloud2\n'}
+[41.188292] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/parent_prefix_path/livox_to_pointcloud2\n'}
+[41.193799] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/ament_prefix_path.sh\n'}
+[41.199881] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/ament_prefix_path.dsv\n'}
+[41.205203] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/path.sh\n'}
+[41.211482] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/path.dsv\n'}
+[41.216858] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.bash\n'}
+[41.222762] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.sh\n'}
+[41.228433] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.zsh\n'}
+[41.230190] (-) TimerEvent: {}
+[41.234847] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.dsv\n'}
+[41.240210] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/package.dsv\n'}
+[41.246545] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/packages/livox_to_pointcloud2\n'}
+[41.252084] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/rclcpp_components/livox_to_pointcloud2\n'}
+[41.258095] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[41.266023] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[41.272285] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[41.277987] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/livox_to_pointcloud2Config.cmake\n'}
+[41.284083] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/livox_to_pointcloud2Config-version.cmake\n'}
+[41.289631] (livox_to_pointcloud2) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/package.xml\n'}
+[41.319010] (livox_to_pointcloud2) CommandEnded: {'returncode': 0}
+[41.330306] (-) TimerEvent: {}
+[41.431059] (-) TimerEvent: {}
+[41.531681] (-) TimerEvent: {}
+[41.559365] (livox_to_pointcloud2) JobEnded: {'identifier': 'livox_to_pointcloud2', 'rc': 0}
+[41.562033] (-) EventReactorShutdown: {}

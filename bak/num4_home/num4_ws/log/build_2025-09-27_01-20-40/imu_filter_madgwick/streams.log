@@ -1,0 +1,8 @@
+[0.102s] Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8
+[0.284s] [ 14%] Built target gtest_main
+[0.301s] [ 28%] Built target gtest
+[0.306s] [ 57%] Built target imu_filter_madgwick
+[0.345s] [ 85%] Built target madgwick_test
+[0.346s] [ 85%] Built target stateless_orientation_test
+[0.349s] [100%] Built target imu_filter_madgwick_node
+[0.540s] Invoked command in '/num4_ws/build/imu_filter_madgwick' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8

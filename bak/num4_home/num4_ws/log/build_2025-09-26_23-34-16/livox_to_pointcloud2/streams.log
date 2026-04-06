@@ -1,0 +1,189 @@
+[0.039s] Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+[0.309s] -- The C compiler identification is GNU 11.4.0
+[0.468s] -- The CXX compiler identification is GNU 11.4.0
+[0.502s] -- Detecting C compiler ABI info
+[0.614s] -- Detecting C compiler ABI info - done
+[0.664s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.666s] -- Detecting C compile features
+[0.668s] -- Detecting C compile features - done
+[0.686s] -- Detecting CXX compiler ABI info
+[0.816s] -- Detecting CXX compiler ABI info - done
+[0.867s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.868s] -- Detecting CXX compile features
+[0.870s] -- Detecting CXX compile features - done
+[0.881s] -- Found ament_cmake_auto: 1.3.10 (/opt/ros/humble/install/share/ament_cmake_auto/cmake)
+[1.162s] -- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter
+[1.285s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.617s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[1.628s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[1.649s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[1.683s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.723s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.835s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[1.841s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[1.904s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.924s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.033s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.034s] -- Found Threads: TRUE
+[2.449s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[2.449s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[2.450s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[2.450s]   cmake_policy command to set the policy and suppress this warning.
+[2.450s] 
+[2.451s]   CMake variable EIGEN_ROOT is set to:
+[2.451s] 
+[2.451s]     /usr/include/eigen3
+[2.451s] 
+[2.452s]   For compatibility, find_package is ignoring the variable, but code in a
+[2.452s]   .cmake module might still use it.
+[2.453s] Call Stack (most recent call first):
+[2.453s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[2.454s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[2.454s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.454s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[2.454s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.454s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[2.455s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[2.455s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[2.455s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.455s] [0m
+[2.459s] -- Checking for module 'eigen3'
+[2.493s] --   Found eigen3, version 3.4.0
+[2.581s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1")
+[2.581s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.582s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[2.582s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[2.582s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[2.582s]   set the policy and suppress this warning.
+[2.582s] 
+[2.582s] Call Stack (most recent call first):
+[2.583s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[2.583s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[2.583s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.583s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[2.583s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.583s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[2.583s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[2.583s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[2.584s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.584s] [0m
+[2.638s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[2.638s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[2.638s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[2.639s]   cmake_policy command to set the policy and suppress this warning.
+[2.639s] 
+[2.639s]   CMake variable FLANN_ROOT is set to:
+[2.639s] 
+[2.639s]     /usr
+[2.639s] 
+[2.639s]   For compatibility, find_package is ignoring the variable, but code in a
+[2.639s]   .cmake module might still use it.
+[2.639s] Call Stack (most recent call first):
+[2.640s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[2.640s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[2.640s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[2.640s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.640s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[2.640s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.640s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[2.640s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[2.640s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[2.641s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.641s] [0m
+[2.670s] -- Checking for module 'flann'
+[2.706s] --   Found flann, version 1.9.1
+[2.830s] -- Found FLANN: /usr/lib/aarch64-linux-gnu/libflann_cpp.so
+[2.831s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[5.124s] -- Checking for module 'libusb-1.0'
+[5.166s] --   Found libusb-1.0, version 1.0.25
+[5.274s] -- Found libusb: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
+[5.279s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.447s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[5.855s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[5.855s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[5.855s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[5.856s]   set the policy and suppress this warning.
+[5.856s] 
+[5.856s] Call Stack (most recent call first):
+[5.856s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[5.856s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[5.856s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[5.856s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[5.856s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[5.856s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[5.856s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[5.856s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[5.856s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[5.857s] [0m
+[5.878s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[5.890s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[5.902s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[6.273s] -- Found Qhull version 8.0.2
+[6.651s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[7.018s] -- Found PCL_COMMON: /usr/lib/aarch64-linux-gnu/libpcl_common.so
+[7.019s] -- Found PCL_KDTREE: /usr/lib/aarch64-linux-gnu/libpcl_kdtree.so
+[7.020s] -- Found PCL_OCTREE: /usr/lib/aarch64-linux-gnu/libpcl_octree.so
+[7.022s] -- Found PCL_SEARCH: /usr/lib/aarch64-linux-gnu/libpcl_search.so
+[7.023s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/aarch64-linux-gnu/libpcl_sample_consensus.so
+[7.024s] -- Found PCL_FILTERS: /usr/lib/aarch64-linux-gnu/libpcl_filters.so
+[7.025s] -- Found PCL_2D: /usr/include/pcl-1.12
+[7.026s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12
+[7.027s] -- Found PCL_IO: /usr/lib/aarch64-linux-gnu/libpcl_io.so
+[7.029s] -- Found PCL_FEATURES: /usr/lib/aarch64-linux-gnu/libpcl_features.so
+[7.030s] -- Found PCL_ML: /usr/lib/aarch64-linux-gnu/libpcl_ml.so
+[7.031s] -- Found PCL_SEGMENTATION: /usr/lib/aarch64-linux-gnu/libpcl_segmentation.so
+[7.033s] -- Found PCL_VISUALIZATION: /usr/lib/aarch64-linux-gnu/libpcl_visualization.so
+[7.035s] -- Found PCL_SURFACE: /usr/lib/aarch64-linux-gnu/libpcl_surface.so
+[7.036s] -- Found PCL_REGISTRATION: /usr/lib/aarch64-linux-gnu/libpcl_registration.so
+[7.038s] -- Found PCL_KEYPOINTS: /usr/lib/aarch64-linux-gnu/libpcl_keypoints.so
+[7.039s] -- Found PCL_TRACKING: /usr/lib/aarch64-linux-gnu/libpcl_tracking.so
+[7.040s] -- Found PCL_RECOGNITION: /usr/lib/aarch64-linux-gnu/libpcl_recognition.so
+[7.042s] -- Found PCL_STEREO: /usr/lib/aarch64-linux-gnu/libpcl_stereo.so
+[7.043s] -- Found PCL_APPS: /usr/lib/aarch64-linux-gnu/libpcl_apps.so
+[7.045s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12
+[7.046s] -- Found PCL_MODELER: /usr/include/pcl-1.12
+[7.048s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12
+[7.049s] -- Found PCL_OUTOFCORE: /usr/lib/aarch64-linux-gnu/libpcl_outofcore.so
+[7.051s] -- Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so
+[7.086s] -- Found livox_ros_driver2
+[7.110s] -- Configuring done (6.9s)
+[7.152s] -- Generating done (0.0s)
+[7.154s] -- Build files have been written to: /num4_ws/build/livox_to_pointcloud2
+[7.213s] Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+[7.218s] Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8
+[7.390s] [ 25%] [32mBuilding CXX object CMakeFiles/livox_to_pointcloud2.dir/src/livox_to_pointcloud2_ros2.cpp.o[0m
+[33.834s] [ 50%] [32m[1mLinking CXX shared library liblivox_to_pointcloud2.so[0m
+[34.286s] [ 50%] Built target livox_to_pointcloud2
+[34.310s] [ 75%] [32mBuilding CXX object CMakeFiles/livox_to_pointcloud2_node.dir/src/livox_to_pointcloud2_ros2_node.cpp.o[0m
+[40.543s] [100%] [32m[1mLinking CXX executable livox_to_pointcloud2_node[0m
+[40.765s] [100%] Built target livox_to_pointcloud2_node
+[40.799s] Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8
+[40.991s] Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --install /num4_ws/build/livox_to_pointcloud2
+[41.119s] -- Install configuration: "RelWithDebInfo"
+[41.119s] -- Execute custom install script
+[41.120s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/include/livox_to_pointcloud2/livox_converter.hpp
+[41.127s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/include/livox_to_pointcloud2/livox_to_pointcloud2_ros2.hpp
+[41.133s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/library_path.sh
+[41.138s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/library_path.dsv
+[41.144s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/lib/liblivox_to_pointcloud2.so
+[41.151s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/lib/livox_to_pointcloud2/livox_to_pointcloud2_node
+[41.156s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/package_run_dependencies/livox_to_pointcloud2
+[41.163s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/parent_prefix_path/livox_to_pointcloud2
+[41.168s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/ament_prefix_path.sh
+[41.175s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/ament_prefix_path.dsv
+[41.180s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/path.sh
+[41.186s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/environment/path.dsv
+[41.192s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.bash
+[41.197s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.sh
+[41.203s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.zsh
+[41.210s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/local_setup.dsv
+[41.215s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/package.dsv
+[41.221s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/packages/livox_to_pointcloud2
+[41.227s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/ament_index/resource_index/rclcpp_components/livox_to_pointcloud2
+[41.233s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_dependencies-extras.cmake
+[41.241s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_include_directories-extras.cmake
+[41.247s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/ament_cmake_export_libraries-extras.cmake
+[41.253s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/livox_to_pointcloud2Config.cmake
+[41.259s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/cmake/livox_to_pointcloud2Config-version.cmake
+[41.264s] -- Symlinking: /num4_ws/install/livox_to_pointcloud2/share/livox_to_pointcloud2/package.xml
+[41.295s] Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --install /num4_ws/build/livox_to_pointcloud2

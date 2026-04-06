@@ -1,0 +1,33 @@
+[0.102s] Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_bringup
+[0.257s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[0.687s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.876s] -- Configuring done (0.6s)
+[0.887s] -- Generating done (0.0s)
+[0.888s] -- Build files have been written to: /num4_ws/build/livox_bringup
+[0.923s] Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_bringup
+[0.926s] Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_bringup -- -j8 -l8
+[1.123s] Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_bringup -- -j8 -l8
+[1.549s] Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_bringup
+[1.737s] -- Install configuration: ""
+[1.737s] -- Execute custom install script
+[1.738s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup//launch/launch_mid360.py
+[1.739s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup//config/config.json
+[1.740s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_lorepeat.json
+[1.740s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_norepeat.json
+[1.740s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup//config/config_repeat.json
+[1.741s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/ament_index/resource_index/package_run_dependencies/livox_bringup
+[1.741s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/ament_index/resource_index/parent_prefix_path/livox_bringup
+[1.742s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/environment/ament_prefix_path.sh
+[1.742s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/environment/ament_prefix_path.dsv
+[1.742s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/environment/path.sh
+[1.743s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/environment/path.dsv
+[1.743s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.bash
+[1.744s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.sh
+[1.744s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.zsh
+[1.744s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/local_setup.dsv
+[1.744s] -- Symlinking: /num4_ws/install/livox_bringup/share/livox_bringup/package.dsv
+[1.767s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/ament_index/resource_index/packages/livox_bringup
+[1.767s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/cmake/livox_bringupConfig.cmake
+[1.768s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/cmake/livox_bringupConfig-version.cmake
+[1.768s] -- Up-to-date symlink: /num4_ws/install/livox_bringup/share/livox_bringup/package.xml
+[1.802s] Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_bringup

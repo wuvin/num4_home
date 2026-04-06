@@ -1,0 +1,353 @@
+[0.000000] (-) TimerEvent: {}
+[0.001089] (-) JobUnselected: {'identifier': 'foxglove_bridge'}
+[0.001218] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.001306] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.001425] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.001531] (-) JobUnselected: {'identifier': 'livox_bringup'}
+[0.001613] (-) JobUnselected: {'identifier': 'livox_to_pointcloud2'}
+[0.001851] (-) JobUnselected: {'identifier': 'pc2image'}
+[0.001984] (-) JobUnselected: {'identifier': 'realsense2_bringup'}
+[0.002084] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.002138] (rosx_introspection) JobQueued: {'identifier': 'rosx_introspection', 'dependencies': OrderedDict()}
+[0.002191] (rosx_introspection) JobStarted: {'identifier': 'rosx_introspection'}
+[0.024358] (rosx_introspection) JobProgress: {'identifier': 'rosx_introspection', 'progress': 'cmake'}
+[0.024641] (rosx_introspection) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/rosx_introspection', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection'], 'cwd': '/num4_ws/build/rosx_introspection', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/rosx_introspection'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.099330] (-) TimerEvent: {}
+[0.199744] (-) TimerEvent: {}
+[0.270720] (rosx_introspection) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.299908] (-) TimerEvent: {}
+[0.301486] (rosx_introspection) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400065] (-) TimerEvent: {}
+[0.446680] (rosx_introspection) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.498939] (rosx_introspection) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.500144] (-) TimerEvent: {}
+[0.500601] (rosx_introspection) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.502646] (rosx_introspection) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.600465] (-) TimerEvent: {}
+[0.701124] (-) TimerEvent: {}
+[0.801626] (-) TimerEvent: {}
+[0.902391] (-) TimerEvent: {}
+[1.003110] (-) TimerEvent: {}
+[1.101945] (rosx_introspection) StdoutLine: {'line': b'-- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.103205] (-) TimerEvent: {}
+[1.203695] (-) TimerEvent: {}
+[1.304246] (-) TimerEvent: {}
+[1.315852] (rosx_introspection) StdoutLine: {'line': b'-- Found rosbag2_cpp: 0.15.12 (/opt/ros/humble/install/share/rosbag2_cpp/cmake)\n'}
+[1.404528] (-) TimerEvent: {}
+[1.494967] (rosx_introspection) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[1.504612] (rosx_introspection) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[1.504781] (-) TimerEvent: {}
+[1.522001] (rosx_introspection) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[1.547246] (rosx_introspection) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.574006] (rosx_introspection) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.604882] (-) TimerEvent: {}
+[1.664618] (rosx_introspection) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[1.669694] (rosx_introspection) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.704970] (-) TimerEvent: {}
+[1.716934] (rosx_introspection) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.733271] (rosx_introspection) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.805348] (-) TimerEvent: {}
+[1.860396] (rosx_introspection) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.862748] (rosx_introspection) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[1.905430] (-) TimerEvent: {}
+[2.006024] (-) TimerEvent: {}
+[2.027587] (rosx_introspection) StdoutLine: {'line': b'-- Downloading RapidJSON with CPM\n'}
+[2.027945] (rosx_introspection) StdoutLine: {'line': b'-- CPM: Adding package rapidjson@1.1.0 (v1.1.0)\n'}
+[2.029307] (rosx_introspection) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.30/Modules/FetchContent.cmake:1953 (message):\n'}
+[2.029540] (rosx_introspection) StderrLine: {'line': b'  Calling FetchContent_Populate(rapidjson) is deprecated, call\n'}
+[2.029656] (rosx_introspection) StderrLine: {'line': b'  FetchContent_MakeAvailable(rapidjson) instead.  Policy CMP0169 can be set\n'}
+[2.029756] (rosx_introspection) StderrLine: {'line': b'  to OLD to allow FetchContent_Populate(rapidjson) to be called directly for\n'}
+[2.029848] (rosx_introspection) StderrLine: {'line': b'  now, but the ability to call it with declared details will be removed\n'}
+[2.029937] (rosx_introspection) StderrLine: {'line': b'  completely in a future version.\n'}
+[2.030024] (rosx_introspection) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[2.030108] (rosx_introspection) StderrLine: {'line': b'  /num4_ws/build/rosx_introspection/cmake/CPM_0.40.0.cmake:1074 (FetchContent_Populate)\n'}
+[2.030192] (rosx_introspection) StderrLine: {'line': b'  /num4_ws/build/rosx_introspection/cmake/CPM_0.40.0.cmake:868 (cpm_fetch_package)\n'}
+[2.030274] (rosx_introspection) StderrLine: {'line': b'  CMakeLists.txt:60 (CPMAddPackage)\n'}
+[2.030357] (rosx_introspection) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[2.030440] (rosx_introspection) StderrLine: {'line': b'\x1b[0m\n'}
+[2.106410] (-) TimerEvent: {}
+[2.206998] (-) TimerEvent: {}
+[2.307621] (-) TimerEvent: {}
+[2.408196] (-) TimerEvent: {}
+[2.508770] (-) TimerEvent: {}
+[2.609453] (-) TimerEvent: {}
+[2.710152] (-) TimerEvent: {}
+[2.811197] (-) TimerEvent: {}
+[2.911821] (-) TimerEvent: {}
+[3.012581] (-) TimerEvent: {}
+[3.113328] (-) TimerEvent: {}
+[3.214049] (-) TimerEvent: {}
+[3.314633] (-) TimerEvent: {}
+[3.415255] (-) TimerEvent: {}
+[3.515799] (-) TimerEvent: {}
+[3.616450] (-) TimerEvent: {}
+[3.717103] (-) TimerEvent: {}
+[3.817739] (-) TimerEvent: {}
+[3.918236] (-) TimerEvent: {}
+[4.018957] (-) TimerEvent: {}
+[4.119534] (-) TimerEvent: {}
+[4.220086] (-) TimerEvent: {}
+[4.320613] (-) TimerEvent: {}
+[4.421223] (-) TimerEvent: {}
+[4.521857] (-) TimerEvent: {}
+[4.622538] (-) TimerEvent: {}
+[4.757098] (-) TimerEvent: {}
+[4.857634] (-) TimerEvent: {}
+[4.958167] (-) TimerEvent: {}
+[5.058762] (-) TimerEvent: {}
+[5.159382] (-) TimerEvent: {}
+[5.259870] (-) TimerEvent: {}
+[5.360424] (-) TimerEvent: {}
+[5.461026] (-) TimerEvent: {}
+[5.561545] (-) TimerEvent: {}
+[5.662059] (-) TimerEvent: {}
+[5.762715] (-) TimerEvent: {}
+[5.863183] (-) TimerEvent: {}
+[5.963667] (-) TimerEvent: {}
+[6.064326] (-) TimerEvent: {}
+[6.164987] (-) TimerEvent: {}
+[6.265444] (-) TimerEvent: {}
+[6.365813] (-) TimerEvent: {}
+[6.466413] (-) TimerEvent: {}
+[6.567035] (-) TimerEvent: {}
+[6.667628] (-) TimerEvent: {}
+[6.768213] (-) TimerEvent: {}
+[6.868798] (-) TimerEvent: {}
+[6.969370] (-) TimerEvent: {}
+[7.070040] (-) TimerEvent: {}
+[7.170627] (-) TimerEvent: {}
+[7.271329] (-) TimerEvent: {}
+[7.371997] (-) TimerEvent: {}
+[7.472709] (-) TimerEvent: {}
+[7.573452] (-) TimerEvent: {}
+[7.592031] (rosx_introspection) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /num4_ws/build/rosx_introspection/_deps/rapidjson-src/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):\n'}
+[7.592684] (rosx_introspection) StderrLine: {'line': b'  Compatibility with CMake < 3.5 will be removed from a future version of\n'}
+[7.592919] (rosx_introspection) StderrLine: {'line': b'  CMake.\n'}
+[7.593117] (rosx_introspection) StderrLine: {'line': b'\n'}
+[7.593302] (rosx_introspection) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[7.593481] (rosx_introspection) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[7.593652] (rosx_introspection) StderrLine: {'line': b'\n'}
+[7.593820] (rosx_introspection) StderrLine: {'line': b'\x1b[0m\n'}
+[7.593988] (rosx_introspection) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at /num4_ws/build/rosx_introspection/_deps/rapidjson-src/CMakeLists.txt:12 (PROJECT):\n'}
+[7.594158] (rosx_introspection) StderrLine: {'line': b'  Policy CMP0048 is not set: project() command manages VERSION variables.\n'}
+[7.594324] (rosx_introspection) StderrLine: {'line': b'  Run "cmake --help-policy CMP0048" for policy details.  Use the cmake_policy\n'}
+[7.594712] (rosx_introspection) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[7.594977] (rosx_introspection) StderrLine: {'line': b'\n'}
+[7.595201] (rosx_introspection) StderrLine: {'line': b'  The following variable(s) would be set to empty:\n'}
+[7.595477] (rosx_introspection) StderrLine: {'line': b'\n'}
+[7.595698] (rosx_introspection) StderrLine: {'line': b'    PROJECT_VERSION\n'}
+[7.595911] (rosx_introspection) StderrLine: {'line': b'    PROJECT_VERSION_MAJOR\n'}
+[7.596122] (rosx_introspection) StderrLine: {'line': b'    PROJECT_VERSION_MINOR\n'}
+[7.596331] (rosx_introspection) StderrLine: {'line': b'    PROJECT_VERSION_PATCH\n'}
+[7.596542] (rosx_introspection) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[7.596754] (rosx_introspection) StderrLine: {'line': b'\x1b[0m\n'}
+[7.604951] (rosx_introspection) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/install/share/sensor_msgs/cmake)\n'}
+[7.673537] (-) TimerEvent: {}
+[7.708602] (rosx_introspection) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/install/share/ament_cmake_gtest/cmake)\n'}
+[7.712679] (rosx_introspection) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/install/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[7.773726] (-) TimerEvent: {}
+[7.792692] (rosx_introspection) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[7.813886] (rosx_introspection) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[7.873890] (-) TimerEvent: {}
+[7.946323] (rosx_introspection) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[7.973981] (-) TimerEvent: {}
+[7.999431] (rosx_introspection) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[8.000556] (rosx_introspection) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[8.001976] (rosx_introspection) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[8.048761] (rosx_introspection) StdoutLine: {'line': b'-- Found GTest: /usr/lib/aarch64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.11.0")\n'}
+[8.074109] (-) TimerEvent: {}
+[8.174774] (-) TimerEvent: {}
+[8.198281] (rosx_introspection) StdoutLine: {'line': b'-- Configuring done (8.0s)\n'}
+[8.268555] (rosx_introspection) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[8.269316] (rosx_introspection) StdoutLine: {'line': b'-- Build files have been written to: /num4_ws/build/rosx_introspection\n'}
+[8.274843] (-) TimerEvent: {}
+[8.314612] (rosx_introspection) CommandEnded: {'returncode': 0}
+[8.315940] (rosx_introspection) JobProgress: {'identifier': 'rosx_introspection', 'progress': 'build'}
+[8.317651] (rosx_introspection) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/rosx_introspection', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/rosx_introspection', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/rosx_introspection'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[8.374956] (-) TimerEvent: {}
+[8.475412] (-) TimerEvent: {}
+[8.486086] (rosx_introspection) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_type.cpp.o\x1b[0m\n'}
+[8.486448] (rosx_introspection) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_field.cpp.o\x1b[0m\n'}
+[8.486721] (rosx_introspection) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[8.486876] (rosx_introspection) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/stringtree_leaf.cpp.o\x1b[0m\n'}
+[8.486990] (rosx_introspection) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_message.cpp.o\x1b[0m\n'}
+[8.487095] (rosx_introspection) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o\x1b[0m\n'}
+[8.487194] (rosx_introspection) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[8.490336] (rosx_introspection) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/deserializer.cpp.o\x1b[0m\n'}
+[8.575563] (-) TimerEvent: {}
+[8.676077] (-) TimerEvent: {}
+[8.776595] (-) TimerEvent: {}
+[8.877131] (-) TimerEvent: {}
+[8.977667] (-) TimerEvent: {}
+[9.030806] (rosx_introspection) StderrLine: {'line': b'\x1b[01m\x1b[K/num4_ws/src/rosx_introspection/src/ros_parser.cpp:29:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Krapidjson/document.h: No such file or directory\n'}
+[9.031160] (rosx_introspection) StderrLine: {'line': b'   29 | #include \x1b[01;31m\x1b[K"rapidjson/document.h"\x1b[m\x1b[K\n'}
+[9.031283] (rosx_introspection) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.031387] (rosx_introspection) StderrLine: {'line': b'compilation terminated.\n'}
+[9.034677] (rosx_introspection) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/rosx_introspection.dir/build.make:132: CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o] Error 1\n'}
+[9.035014] (rosx_introspection) StderrLine: {'line': b'gmake[2]: *** Waiting for unfinished jobs....\n'}
+[9.077822] (-) TimerEvent: {}
+[9.178993] (-) TimerEvent: {}
+[9.280930] (-) TimerEvent: {}
+[9.382823] (-) TimerEvent: {}
+[9.484860] (-) TimerEvent: {}
+[9.586871] (-) TimerEvent: {}
+[9.688855] (-) TimerEvent: {}
+[9.790838] (-) TimerEvent: {}
+[9.892932] (-) TimerEvent: {}
+[9.994862] (-) TimerEvent: {}
+[10.096690] (-) TimerEvent: {}
+[10.198713] (-) TimerEvent: {}
+[10.300567] (-) TimerEvent: {}
+[10.342101] (rosx_introspection) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[10.369825] (rosx_introspection) StdoutLine: {'line': b'[ 45%] Built target gtest_main\n'}
+[10.400719] (-) TimerEvent: {}
+[10.501440] (-) TimerEvent: {}
+[10.602205] (-) TimerEvent: {}
+[10.703069] (-) TimerEvent: {}
+[10.803583] (-) TimerEvent: {}
+[10.904264] (-) TimerEvent: {}
+[11.004969] (-) TimerEvent: {}
+[11.105487] (-) TimerEvent: {}
+[11.206173] (-) TimerEvent: {}
+[11.306705] (-) TimerEvent: {}
+[11.407403] (-) TimerEvent: {}
+[11.507931] (-) TimerEvent: {}
+[11.608638] (-) TimerEvent: {}
+[11.709346] (-) TimerEvent: {}
+[11.810056] (-) TimerEvent: {}
+[11.910618] (-) TimerEvent: {}
+[12.011298] (-) TimerEvent: {}
+[12.111834] (-) TimerEvent: {}
+[12.212533] (-) TimerEvent: {}
+[12.313261] (-) TimerEvent: {}
+[12.413974] (-) TimerEvent: {}
+[12.514525] (-) TimerEvent: {}
+[12.615192] (-) TimerEvent: {}
+[12.715909] (-) TimerEvent: {}
+[12.816437] (-) TimerEvent: {}
+[12.916948] (-) TimerEvent: {}
+[13.017463] (-) TimerEvent: {}
+[13.117974] (-) TimerEvent: {}
+[13.218626] (-) TimerEvent: {}
+[13.319329] (-) TimerEvent: {}
+[13.420005] (-) TimerEvent: {}
+[13.520522] (-) TimerEvent: {}
+[13.621027] (-) TimerEvent: {}
+[13.721523] (-) TimerEvent: {}
+[13.822187] (-) TimerEvent: {}
+[13.923002] (-) TimerEvent: {}
+[14.023761] (-) TimerEvent: {}
+[14.124341] (-) TimerEvent: {}
+[14.224921] (-) TimerEvent: {}
+[14.325639] (-) TimerEvent: {}
+[14.426347] (-) TimerEvent: {}
+[14.526881] (-) TimerEvent: {}
+[14.627412] (-) TimerEvent: {}
+[14.727938] (-) TimerEvent: {}
+[14.828621] (-) TimerEvent: {}
+[14.929323] (-) TimerEvent: {}
+[15.030039] (-) TimerEvent: {}
+[15.130769] (-) TimerEvent: {}
+[15.231420] (-) TimerEvent: {}
+[15.332264] (-) TimerEvent: {}
+[15.432960] (-) TimerEvent: {}
+[15.533677] (-) TimerEvent: {}
+[15.634198] (-) TimerEvent: {}
+[15.734921] (-) TimerEvent: {}
+[15.835616] (-) TimerEvent: {}
+[15.936292] (-) TimerEvent: {}
+[16.036995] (-) TimerEvent: {}
+[16.137675] (-) TimerEvent: {}
+[16.238284] (-) TimerEvent: {}
+[16.338802] (-) TimerEvent: {}
+[16.439302] (-) TimerEvent: {}
+[16.540040] (-) TimerEvent: {}
+[16.640562] (-) TimerEvent: {}
+[16.741260] (-) TimerEvent: {}
+[16.841990] (-) TimerEvent: {}
+[16.942549] (-) TimerEvent: {}
+[17.043252] (-) TimerEvent: {}
+[17.143953] (-) TimerEvent: {}
+[17.244639] (-) TimerEvent: {}
+[17.345283] (-) TimerEvent: {}
+[17.445783] (-) TimerEvent: {}
+[17.546477] (-) TimerEvent: {}
+[17.647134] (-) TimerEvent: {}
+[17.747674] (-) TimerEvent: {}
+[17.848348] (-) TimerEvent: {}
+[17.949008] (-) TimerEvent: {}
+[18.049856] (-) TimerEvent: {}
+[18.150527] (-) TimerEvent: {}
+[18.251219] (-) TimerEvent: {}
+[18.351763] (-) TimerEvent: {}
+[18.452488] (-) TimerEvent: {}
+[18.553207] (-) TimerEvent: {}
+[18.653728] (-) TimerEvent: {}
+[18.754407] (-) TimerEvent: {}
+[18.855130] (-) TimerEvent: {}
+[18.955819] (-) TimerEvent: {}
+[19.056512] (-) TimerEvent: {}
+[19.157017] (-) TimerEvent: {}
+[19.257551] (-) TimerEvent: {}
+[19.358233] (-) TimerEvent: {}
+[19.458953] (-) TimerEvent: {}
+[19.559649] (-) TimerEvent: {}
+[19.660186] (-) TimerEvent: {}
+[19.736717] (rosx_introspection) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:177: CMakeFiles/rosx_introspection.dir/all] Error 2\n'}
+[19.737069] (rosx_introspection) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[19.760285] (-) TimerEvent: {}
+[19.860880] (-) TimerEvent: {}
+[19.961547] (-) TimerEvent: {}
+[20.062209] (-) TimerEvent: {}
+[20.162754] (-) TimerEvent: {}
+[20.263270] (-) TimerEvent: {}
+[20.363784] (-) TimerEvent: {}
+[20.464442] (-) TimerEvent: {}
+[20.565091] (-) TimerEvent: {}
+[20.665605] (-) TimerEvent: {}
+[20.766280] (-) TimerEvent: {}
+[20.866823] (-) TimerEvent: {}
+[20.967498] (-) TimerEvent: {}
+[21.068178] (-) TimerEvent: {}
+[21.168856] (-) TimerEvent: {}
+[21.269525] (-) TimerEvent: {}
+[21.370046] (-) TimerEvent: {}
+[21.470724] (-) TimerEvent: {}
+[21.571421] (-) TimerEvent: {}
+[21.672096] (-) TimerEvent: {}
+[21.772769] (-) TimerEvent: {}
+[21.873276] (-) TimerEvent: {}
+[21.973941] (-) TimerEvent: {}
+[22.074442] (-) TimerEvent: {}
+[22.175122] (-) TimerEvent: {}
+[22.275811] (-) TimerEvent: {}
+[22.376358] (-) TimerEvent: {}
+[22.477030] (-) TimerEvent: {}
+[22.577565] (-) TimerEvent: {}
+[22.678262] (-) TimerEvent: {}
+[22.778780] (-) TimerEvent: {}
+[22.879417] (-) TimerEvent: {}
+[22.979951] (-) TimerEvent: {}
+[23.080603] (-) TimerEvent: {}
+[23.181264] (-) TimerEvent: {}
+[23.281882] (-) TimerEvent: {}
+[23.382489] (-) TimerEvent: {}
+[23.482968] (-) TimerEvent: {}
+[23.583438] (-) TimerEvent: {}
+[23.684087] (-) TimerEvent: {}
+[23.784588] (-) TimerEvent: {}
+[23.885336] (-) TimerEvent: {}
+[23.986019] (-) TimerEvent: {}
+[24.086486] (-) TimerEvent: {}
+[24.187121] (-) TimerEvent: {}
+[24.259284] (rosx_introspection) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[24.287293] (-) TimerEvent: {}
+[24.387818] (-) TimerEvent: {}
+[24.392006] (rosx_introspection) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[24.393487] (rosx_introspection) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[24.419970] (rosx_introspection) CommandEnded: {'returncode': 2}
+[24.487913] (-) TimerEvent: {}
+[24.588386] (-) TimerEvent: {}
+[24.689060] (-) TimerEvent: {}
+[24.703690] (rosx_introspection) JobEnded: {'identifier': 'rosx_introspection', 'rc': 2}
+[24.714961] (-) EventReactorShutdown: {}

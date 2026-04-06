@@ -1,0 +1,42 @@
+[33mCMake Warning (dev) at /usr/local/lib/python3.10/dist-packages/cmake/data/share/cmake-3.30/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(rapidjson) is deprecated, call
+  FetchContent_MakeAvailable(rapidjson) instead.  Policy CMP0169 can be set
+  to OLD to allow FetchContent_Populate(rapidjson) to be called directly for
+  now, but the ability to call it with declared details will be removed
+  completely in a future version.
+Call Stack (most recent call first):
+  /num4_ws/build/rosx_introspection/cmake/CPM_0.40.0.cmake:1074 (FetchContent_Populate)
+  /num4_ws/build/rosx_introspection/cmake/CPM_0.40.0.cmake:868 (cpm_fetch_package)
+  CMakeLists.txt:60 (CPMAddPackage)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[0mCMake Deprecation Warning at /num4_ws/build/rosx_introspection/_deps/rapidjson-src/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 3.5 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+[33mCMake Warning (dev) at /num4_ws/build/rosx_introspection/_deps/rapidjson-src/CMakeLists.txt:12 (PROJECT):
+  Policy CMP0048 is not set: project() command manages VERSION variables.
+  Run "cmake --help-policy CMP0048" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  The following variable(s) would be set to empty:
+
+    PROJECT_VERSION
+    PROJECT_VERSION_MAJOR
+    PROJECT_VERSION_MINOR
+    PROJECT_VERSION_PATCH
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[01m[K/num4_ws/src/rosx_introspection/src/ros_parser.cpp:29:10:[m[K [01;31m[Kfatal error: [m[Krapidjson/document.h: No such file or directory
+   29 | #include [01;31m[K"rapidjson/document.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/rosx_introspection.dir/build.make:132: CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:177: CMakeFiles/rosx_introspection.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

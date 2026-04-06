@@ -1,0 +1,18 @@
+running develop
+running egg_info
+creating pc2image.egg-info
+writing pc2image.egg-info/PKG-INFO
+writing dependency_links to pc2image.egg-info/dependency_links.txt
+writing requirements to pc2image.egg-info/requires.txt
+writing top-level names to pc2image.egg-info/top_level.txt
+writing manifest file 'pc2image.egg-info/SOURCES.txt'
+reading manifest file 'pc2image.egg-info/SOURCES.txt'
+writing manifest file 'pc2image.egg-info/SOURCES.txt'
+running build_ext
+Creating /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image.egg-link (link to .)
+
+Installed /num4_ws/build/pc2image
+running symlink_data
+creating /num4_ws/install/pc2image/share/ament_index/resource_index/packages
+symbolically linking /num4_ws/build/pc2image/resource/pc2image -> /num4_ws/install/pc2image/share/ament_index/resource_index/packages
+symbolically linking /num4_ws/build/pc2image/package.xml -> /num4_ws/install/pc2image/share/pc2image

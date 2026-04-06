@@ -1,0 +1,142 @@
+[0.000000] (-) TimerEvent: {}
+[0.000919] (-) JobUnselected: {'identifier': 'foxglove_bridge'}
+[0.001152] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.001249] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.001325] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.001395] (-) JobUnselected: {'identifier': 'livox_bringup'}
+[0.001463] (-) JobUnselected: {'identifier': 'livox_to_pointcloud2'}
+[0.001532] (-) JobUnselected: {'identifier': 'pc2image'}
+[0.001599] (-) JobUnselected: {'identifier': 'realsense2_bringup'}
+[0.001666] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.001740] (rosx_introspection) JobQueued: {'identifier': 'rosx_introspection', 'dependencies': OrderedDict()}
+[0.001817] (rosx_introspection) JobStarted: {'identifier': 'rosx_introspection'}
+[0.025136] (rosx_introspection) JobProgress: {'identifier': 'rosx_introspection', 'progress': 'cmake'}
+[0.026658] (rosx_introspection) JobProgress: {'identifier': 'rosx_introspection', 'progress': 'build'}
+[0.026826] (rosx_introspection) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/rosx_introspection', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/rosx_introspection', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/rosx_introspection'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.099316] (-) TimerEvent: {}
+[0.199753] (-) TimerEvent: {}
+[0.230370] (rosx_introspection) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o\x1b[0m\n'}
+[0.299896] (-) TimerEvent: {}
+[0.400455] (-) TimerEvent: {}
+[0.500886] (-) TimerEvent: {}
+[0.601343] (-) TimerEvent: {}
+[0.702034] (-) TimerEvent: {}
+[0.802525] (-) TimerEvent: {}
+[0.903222] (-) TimerEvent: {}
+[1.003764] (-) TimerEvent: {}
+[1.104245] (-) TimerEvent: {}
+[1.204713] (-) TimerEvent: {}
+[1.305469] (-) TimerEvent: {}
+[1.406015] (-) TimerEvent: {}
+[1.506442] (-) TimerEvent: {}
+[1.607021] (-) TimerEvent: {}
+[1.707483] (-) TimerEvent: {}
+[1.807963] (-) TimerEvent: {}
+[1.908639] (-) TimerEvent: {}
+[2.009314] (-) TimerEvent: {}
+[2.109942] (-) TimerEvent: {}
+[2.210565] (-) TimerEvent: {}
+[2.311075] (-) TimerEvent: {}
+[2.411860] (-) TimerEvent: {}
+[2.512534] (-) TimerEvent: {}
+[2.613225] (-) TimerEvent: {}
+[2.713718] (-) TimerEvent: {}
+[2.814394] (-) TimerEvent: {}
+[2.914887] (-) TimerEvent: {}
+[3.015354] (-) TimerEvent: {}
+[3.115984] (-) TimerEvent: {}
+[3.216444] (-) TimerEvent: {}
+[3.317155] (-) TimerEvent: {}
+[3.417928] (-) TimerEvent: {}
+[3.518604] (-) TimerEvent: {}
+[3.619082] (-) TimerEvent: {}
+[3.719548] (-) TimerEvent: {}
+[3.820186] (-) TimerEvent: {}
+[3.920835] (-) TimerEvent: {}
+[4.021464] (-) TimerEvent: {}
+[4.122092] (-) TimerEvent: {}
+[4.222718] (-) TimerEvent: {}
+[4.323231] (-) TimerEvent: {}
+[4.423865] (-) TimerEvent: {}
+[4.524581] (-) TimerEvent: {}
+[4.625262] (-) TimerEvent: {}
+[4.725756] (-) TimerEvent: {}
+[4.826420] (-) TimerEvent: {}
+[4.927075] (-) TimerEvent: {}
+[5.027713] (-) TimerEvent: {}
+[5.128356] (-) TimerEvent: {}
+[5.228995] (-) TimerEvent: {}
+[5.329517] (-) TimerEvent: {}
+[5.430273] (-) TimerEvent: {}
+[5.530982] (-) TimerEvent: {}
+[5.631638] (-) TimerEvent: {}
+[5.732273] (-) TimerEvent: {}
+[5.832788] (-) TimerEvent: {}
+[5.933566] (-) TimerEvent: {}
+[6.034292] (-) TimerEvent: {}
+[6.134808] (-) TimerEvent: {}
+[6.203600] (rosx_introspection) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking CXX static library librosx_introspection.a\x1b[0m\n'}
+[6.234932] (-) TimerEvent: {}
+[6.335467] (-) TimerEvent: {}
+[6.434018] (rosx_introspection) StdoutLine: {'line': b'[100%] Built target rosx_introspection\n'}
+[6.435530] (-) TimerEvent: {}
+[6.467112] (rosx_introspection) CommandEnded: {'returncode': 0}
+[6.535681] (-) TimerEvent: {}
+[6.636106] (-) TimerEvent: {}
+[6.698305] (rosx_introspection) JobProgress: {'identifier': 'rosx_introspection', 'progress': 'install'}
+[6.736216] (-) TimerEvent: {}
+[6.836852] (-) TimerEvent: {}
+[6.854400] (rosx_introspection) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/num4_ws/build/rosx_introspection'], 'cwd': '/num4_ws/build/rosx_introspection', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/rosx_introspection'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[6.937133] (-) TimerEvent: {}
+[6.978046] (rosx_introspection) StdoutLine: {'line': b'-- Install configuration: "RelWithDebInfo"\n'}
+[6.978489] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.sh\n'}
+[6.978756] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.dsv\n'}
+[6.979195] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/package_run_dependencies/rosx_introspection\n'}
+[6.979533] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/parent_prefix_path/rosx_introspection\n'}
+[6.979862] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.sh\n'}
+[6.980188] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.dsv\n'}
+[6.980370] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.sh\n'}
+[6.980671] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.dsv\n'}
+[6.981036] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.bash\n'}
+[6.981225] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.sh\n'}
+[6.981493] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.zsh\n'}
+[6.981866] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.dsv\n'}
+[6.982000] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.dsv\n'}
+[6.982364] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/packages/rosx_introspection\n'}
+[6.982701] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport.cmake\n'}
+[6.983024] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport-relwithdebinfo.cmake\n'}
+[6.983200] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.983482] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.983803] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig.cmake\n'}
+[6.983970] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig-version.cmake\n'}
+[6.984131] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.xml\n'}
+[6.984288] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include\n'}
+[6.984443] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection\n'}
+[6.984593] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/deserializer.hpp\n'}
+[6.984736] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_message.hpp\n'}
+[6.984913] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/tree.hpp\n'}
+[6.985097] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details\n'}
+[6.985239] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/exceptions.hpp\n'}
+[6.985399] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/conversion_impl.hpp\n'}
+[6.985599] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_type.hpp\n'}
+[6.985912] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils\n'}
+[6.986069] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros1_helpers.hpp\n'}
+[6.986222] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros2_helpers.hpp\n'}
+[6.986398] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/variant.hpp\n'}
+[6.986606] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib\n'}
+[6.986748] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/span.hpp\n'}
+[6.987015] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/nanocdr.hpp\n'}
+[6.987227] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/msgpack.hpp\n'}
+[6.987413] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/SmallVector.h\n'}
+[6.987649] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_field.hpp\n'}
+[6.987821] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_parser.hpp\n'}
+[6.988019] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/stringtree_leaf.hpp\n'}
+[6.988195] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/serializer.hpp\n'}
+[6.988367] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/builtin_types.hpp\n'}
+[6.988670] (rosx_introspection) StdoutLine: {'line': b'-- Installing: /num4_ws/install/rosx_introspection/lib/librosx_introspection.a\n'}
+[7.037245] (-) TimerEvent: {}
+[7.043797] (rosx_introspection) CommandEnded: {'returncode': 0}
+[7.137358] (-) TimerEvent: {}
+[7.237903] (-) TimerEvent: {}
+[7.333859] (rosx_introspection) JobEnded: {'identifier': 'rosx_introspection', 'rc': 0}
+[7.336393] (-) EventReactorShutdown: {}

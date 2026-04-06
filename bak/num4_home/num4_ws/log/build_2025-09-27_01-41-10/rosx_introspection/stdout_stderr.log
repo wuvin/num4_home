@@ -1,0 +1,49 @@
+[ 10%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o[0m
+[ 20%] [32m[1mLinking CXX static library librosx_introspection.a[0m
+[100%] Built target rosx_introspection
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.sh
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.dsv
+-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/package_run_dependencies/rosx_introspection
+-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/parent_prefix_path/rosx_introspection
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.sh
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.dsv
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.sh
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.dsv
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.bash
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.sh
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.zsh
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.dsv
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.dsv
+-- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/packages/rosx_introspection
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport-relwithdebinfo.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig-version.cmake
+-- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.xml
+-- Installing: /num4_ws/install/rosx_introspection/include
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/deserializer.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_message.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/tree.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/exceptions.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/conversion_impl.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_type.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros1_helpers.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros2_helpers.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/variant.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/span.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/nanocdr.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/msgpack.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/SmallVector.h
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_field.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_parser.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/stringtree_leaf.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/serializer.hpp
+-- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/builtin_types.hpp
+-- Installing: /num4_ws/install/rosx_introspection/lib/librosx_introspection.a

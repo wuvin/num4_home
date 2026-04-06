@@ -1,0 +1,16 @@
+running develop
+running egg_info
+writing pc2image.egg-info/PKG-INFO
+writing dependency_links to pc2image.egg-info/dependency_links.txt
+writing entry points to pc2image.egg-info/entry_points.txt
+writing requirements to pc2image.egg-info/requires.txt
+writing top-level names to pc2image.egg-info/top_level.txt
+reading manifest file 'pc2image.egg-info/SOURCES.txt'
+writing manifest file 'pc2image.egg-info/SOURCES.txt'
+running build_ext
+Creating /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image.egg-link (link to .)
+Installing launch_projector script to /num4_ws/install/pc2image/lib/pc2image
+
+Installed /num4_ws/build/pc2image
+running symlink_data
+symbolically linking /num4_ws/build/pc2image/launch/launch_projector.py -> /num4_ws/install/pc2image/share/pc2image/launch

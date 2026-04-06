@@ -1,0 +1,1 @@
+Invoking command in '/num4_ws/build/rviz_imu_plugin': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rviz_imu_plugin -- -j8 -l8

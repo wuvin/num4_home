@@ -1,0 +1,53 @@
+[0.029s] Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+[0.229s] [ 10%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o[0m
+[6.202s] [ 20%] [32m[1mLinking CXX static library librosx_introspection.a[0m
+[6.432s] [100%] Built target rosx_introspection
+[6.466s] Invoked command in '/num4_ws/build/rosx_introspection' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+[6.855s] Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/rosx_introspection
+[6.977s] -- Install configuration: "RelWithDebInfo"
+[6.977s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.sh
+[6.977s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/library_path.dsv
+[6.977s] -- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/package_run_dependencies/rosx_introspection
+[6.978s] -- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/parent_prefix_path/rosx_introspection
+[6.978s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.sh
+[6.978s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/ament_prefix_path.dsv
+[6.979s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.sh
+[6.979s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/environment/path.dsv
+[6.979s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.bash
+[6.979s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.sh
+[6.980s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.zsh
+[6.980s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/local_setup.dsv
+[6.980s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.dsv
+[6.981s] -- Installing: /num4_ws/install/rosx_introspection/share/ament_index/resource_index/packages/rosx_introspection
+[6.981s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport.cmake
+[6.981s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionTargetsExport-relwithdebinfo.cmake
+[6.981s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_targets-extras.cmake
+[6.982s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.982s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig.cmake
+[6.982s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/cmake/rosx_introspectionConfig-version.cmake
+[6.982s] -- Installing: /num4_ws/install/rosx_introspection/share/rosx_introspection/package.xml
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/deserializer.hpp
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_message.hpp
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/tree.hpp
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details
+[6.983s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/exceptions.hpp
+[6.984s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/details/conversion_impl.hpp
+[6.984s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_type.hpp
+[6.984s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils
+[6.984s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros1_helpers.hpp
+[6.984s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_utils/ros2_helpers.hpp
+[6.985s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/variant.hpp
+[6.985s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib
+[6.985s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/span.hpp
+[6.985s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/nanocdr.hpp
+[6.985s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/msgpack.hpp
+[6.986s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/contrib/SmallVector.h
+[6.986s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_field.hpp
+[6.986s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/ros_parser.hpp
+[6.986s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/stringtree_leaf.hpp
+[6.986s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/serializer.hpp
+[6.987s] -- Installing: /num4_ws/install/rosx_introspection/include/rosx_introspection/builtin_types.hpp
+[6.987s] -- Installing: /num4_ws/install/rosx_introspection/lib/librosx_introspection.a
+[7.043s] Invoked command in '/num4_ws/build/rosx_introspection' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/rosx_introspection

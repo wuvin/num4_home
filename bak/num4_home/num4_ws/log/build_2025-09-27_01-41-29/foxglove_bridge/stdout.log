@@ -1,0 +1,70 @@
+-- Using standalone ASIO
+-- ROS_VERSION: 2
+-- ROS_DISTRO: humble
+-- ROS_ROOT: /opt/ros/humble
+-- Building with ament_cmake
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/install/share/rosgraph_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/install/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found rclcpp_components: 16.0.10 (/opt/ros/humble/install/share/rclcpp_components/cmake)
+-- Found resource_retriever: 3.1.2 (/opt/ros/humble/install/share/resource_retriever/cmake)
+-- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+-- Found rosx_introspection: 2.0.0 (/num4_ws/install/rosx_introspection/share/rosx_introspection/cmake)
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /num4_ws/build/foxglove_bridge
+[  6%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/base64.cpp.o[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/foxglove_bridge.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/server_factory.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/parameter.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/serialization.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/test/test_client.cpp.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_base.dir/foxglove_bridge_base/src/version.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library libfoxglove_bridge_base.so[0m
+[ 50%] Built target foxglove_bridge_base
+[ 56%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_component.dir/ros2_foxglove_bridge/src/message_definition_cache.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_component.dir/ros2_foxglove_bridge/src/ros2_foxglove_bridge.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_component.dir/ros2_foxglove_bridge/src/param_utils.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_component.dir/ros2_foxglove_bridge/src/generic_client.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/foxglove_bridge_component.dir/ros2_foxglove_bridge/src/parameter_interface.cpp.o[0m
+[ 87%] [32m[1mLinking CXX shared library libfoxglove_bridge_component.so[0m
+[ 87%] Built target foxglove_bridge_component
+[ 93%] [32mBuilding CXX object CMakeFiles/foxglove_bridge.dir/ros2_foxglove_bridge/src/ros2_foxglove_bridge_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable foxglove_bridge[0m
+[100%] Built target foxglove_bridge
+-- Install configuration: "RelWithDebInfo"
+-- Execute custom install script
+-- Symlinking: /num4_ws/install/foxglove_bridge/include/foxglove_bridge//ros2_foxglove_bridge.hpp
+-- Symlinking: /num4_ws/install/foxglove_bridge/lib/foxglove_bridge/foxglove_bridge
+-- Symlinking: /num4_ws/install/foxglove_bridge/lib/libfoxglove_bridge_base.so
+-- Symlinking: /num4_ws/install/foxglove_bridge/lib/libfoxglove_bridge_component.so
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge//launch/foxglove_bridge_launch.xml
+-- Symlinking: /num4_ws/install/foxglove_bridge/include/foxglove_bridge//utils.hpp
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/library_path.sh
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/library_path.dsv
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/ament_index/resource_index/package_run_dependencies/foxglove_bridge
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/ament_index/resource_index/parent_prefix_path/foxglove_bridge
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/ament_prefix_path.sh
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/ament_prefix_path.dsv
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/path.sh
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/environment/path.dsv
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/local_setup.bash
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/local_setup.sh
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/local_setup.zsh
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/local_setup.dsv
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/package.dsv
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/ament_index/resource_index/packages/foxglove_bridge
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/ament_index/resource_index/rclcpp_components/foxglove_bridge
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/cmake/foxglove_bridgeConfig.cmake
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/cmake/foxglove_bridgeConfig-version.cmake
+-- Symlinking: /num4_ws/install/foxglove_bridge/share/foxglove_bridge/package.xml

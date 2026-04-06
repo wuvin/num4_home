@@ -1,0 +1,101 @@
+[0.097s] Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+[0.252s] -- Found ament_cmake_auto: 1.3.10 (/opt/ros/humble/install/share/ament_cmake_auto/cmake)
+[0.654s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.902s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[0.908s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[0.920s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[0.941s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.967s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.040s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[1.043s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[1.089s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.456s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:146 (find_package):
+[1.456s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.456s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.456s]   cmake_policy command to set the policy and suppress this warning.
+[1.456s] 
+[1.456s]   CMake variable EIGEN_ROOT is set to:
+[1.457s] 
+[1.457s]     /usr/include/eigen3
+[1.457s] 
+[1.457s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.457s]   .cmake module might still use it.
+[1.457s] Call Stack (most recent call first):
+[1.457s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:299 (find_eigen)
+[1.458s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.458s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.458s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.458s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.458s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[1.458s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[1.458s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[1.458s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.458s] [0m
+[1.467s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.468s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[1.468s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[1.469s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[1.469s]   set the policy and suppress this warning.
+[1.469s] 
+[1.469s] Call Stack (most recent call first):
+[1.469s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[1.469s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.469s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.470s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.470s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.470s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[1.470s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[1.470s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[1.470s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.471s] [0m
+[1.495s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:44 (find_package):
+[1.495s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[1.495s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[1.495s]   cmake_policy command to set the policy and suppress this warning.
+[1.495s] 
+[1.495s]   CMake variable FLANN_ROOT is set to:
+[1.495s] 
+[1.496s]     /usr
+[1.496s] 
+[1.496s]   For compatibility, find_package is ignoring the variable, but code in a
+[1.496s]   .cmake module might still use it.
+[1.496s] Call Stack (most recent call first):
+[1.496s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:256 (find_package)
+[1.496s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:301 (find_flann)
+[1.496s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[1.496s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.496s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[1.496s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[1.497s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[1.497s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[1.497s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[1.497s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.497s] [0m
+[1.536s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[2.359s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.375s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.768s] [33mCMake Warning (dev) at /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:128 (find_package):
+[2.768s]   Policy CMP0167 is not set: The FindBoost module is removed.  Run "cmake
+[2.768s]   --help-policy CMP0167" for policy details.  Use the cmake_policy command to
+[2.768s]   set the policy and suppress this warning.
+[2.768s] 
+[2.768s] Call Stack (most recent call first):
+[2.768s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:297 (find_boost)
+[2.768s]   /usr/lib/aarch64-linux-gnu/cmake/pcl/PCLConfig.cmake:543 (find_external_library)
+[2.768s]   /opt/ros/humble/install/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.769s]   /opt/ros/humble/install/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[2.769s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[2.769s]   /ros2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake:41 (include)
+[2.769s]   /opt/ros/humble/install/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)
+[2.769s]   CMakeLists.txt:42 (ament_auto_find_build_dependencies)
+[2.769s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[2.769s] [0m
+[2.790s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.801s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.812s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.189s] -- Found Qhull version 8.0.2
+[3.577s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.999s] -- Found livox_ros_driver2
+[4.024s] -- Configuring done (3.8s)
+[4.069s] -- Generating done (0.0s)
+[4.071s] -- Build files have been written to: /num4_ws/build/livox_to_pointcloud2

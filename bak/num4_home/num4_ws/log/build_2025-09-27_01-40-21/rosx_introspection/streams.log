@@ -1,0 +1,29 @@
+[0.082s] Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+[0.615s] -- Found rosbag2_cpp: 0.15.12 (/opt/ros/humble/install/share/rosbag2_cpp/cmake)
+[0.731s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[0.739s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[0.753s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[0.776s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.801s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.875s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[0.878s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[0.919s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.064s] -- RapidJSON found. Headers: /num4_ws/install/rosx_introspection/include
+[1.202s] -- Configuring done (1.0s)
+[1.227s] -- Generating done (0.0s)
+[1.228s] -- Build files have been written to: /num4_ws/build/rosx_introspection
+[1.298s] Invoked command in '/num4_ws/build/rosx_introspection' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+[1.301s] Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+[1.479s] [ 30%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/serializer.cpp.o[0m
+[1.480s] [ 30%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_utils/message_definition_cache.cpp.o[0m
+[1.480s] [ 30%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o[0m
+[1.488s] [ 40%] [32mBuilding CXX object CMakeFiles/rosx_introspection.dir/src/ros_utils/ros2_helpers.cpp.o[0m
+[2.005s] [01m[K/num4_ws/src/rosx_introspection/src/ros_parser.cpp:29:10:[m[K [01;31m[Kfatal error: [m[Krapidjson/document.h: No such file or directory
+[2.005s]    29 | #include [01;31m[K"rapidjson/document.h"[m[K
+[2.005s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.005s] compilation terminated.
+[2.009s] gmake[2]: *** [CMakeFiles/rosx_introspection.dir/build.make:132: CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o] Error 1
+[2.009s] gmake[2]: *** Waiting for unfinished jobs....
+[11.436s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rosx_introspection.dir/all] Error 2
+[11.437s] gmake: *** [Makefile:146: all] Error 2
+[11.463s] Invoked command in '/num4_ws/build/rosx_introspection' returned '2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8

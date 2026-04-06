@@ -1,0 +1,6 @@
+[ 28%] Built target gtest_main
+[ 28%] Built target gtest
+[ 57%] Built target imu_filter_madgwick
+[ 71%] Built target madgwick_test
+[ 85%] Built target stateless_orientation_test
+[100%] Built target imu_filter_madgwick_node

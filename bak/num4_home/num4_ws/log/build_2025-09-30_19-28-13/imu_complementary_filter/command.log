@@ -1,0 +1,6 @@
+Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_complementary_filter -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_complementary_filter
+Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_complementary_filter -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_complementary_filter
+Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_complementary_filter -- -j8 -l8
+Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_complementary_filter -- -j8 -l8
+Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_complementary_filter
+Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_complementary_filter

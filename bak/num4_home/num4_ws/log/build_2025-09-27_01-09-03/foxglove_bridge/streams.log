@@ -1,0 +1,30 @@
+[0.027s] Invoking command in '/num4_ws/build/foxglove_bridge': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge
+[0.247s] -- The CXX compiler identification is GNU 11.4.0
+[0.276s] -- Detecting CXX compiler ABI info
+[0.407s] -- Detecting CXX compiler ABI info - done
+[0.459s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.460s] -- Detecting CXX compile features
+[0.461s] -- Detecting CXX compile features - done
+[0.628s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")
+[0.632s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.799s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.803s] -- Found Threads: TRUE
+[0.849s] [31mCMake Error at CMakeLists.txt:30 (find_package):
+[0.849s]   By not providing "Findwebsocketpp.cmake" in CMAKE_MODULE_PATH this project
+[0.850s]   has asked CMake to find a package configuration file provided by
+[0.850s]   "websocketpp", but CMake did not find one.
+[0.850s] 
+[0.850s]   Could not find a package configuration file provided by "websocketpp" with
+[0.851s]   any of the following names:
+[0.851s] 
+[0.851s]     websocketppConfig.cmake
+[0.851s]     websocketpp-config.cmake
+[0.852s] 
+[0.852s]   Add the installation prefix of "websocketpp" to CMAKE_PREFIX_PATH or set
+[0.852s]   "websocketpp_DIR" to a directory containing one of the above files.  If
+[0.852s]   "websocketpp" provides a separate development package or SDK, be sure it
+[0.852s]   has been installed.
+[0.853s] 
+[0.853s] [0m
+[0.853s] -- Configuring incomplete, errors occurred!
+[0.879s] Invoked command in '/num4_ws/build/foxglove_bridge' returned '1': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge

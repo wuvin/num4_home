@@ -1,0 +1,55 @@
+[1.593s] Invoking command in '/num4_ws/build/pc2image': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /num4_ws/build/pc2image/build
+[1.905s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[1.905s]   warnings.warn(msg)
+[2.188s] running develop
+[2.188s] /usr/local/lib/python3.10/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[2.188s] !!
+[2.188s] 
+[2.188s]         ********************************************************************************
+[2.189s]         Please avoid running ``setup.py`` and ``easy_install``.
+[2.189s]         Instead, use pypa/build, pypa/installer or other
+[2.189s]         standards-based tools.
+[2.189s] 
+[2.189s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[2.189s]         ********************************************************************************
+[2.189s] 
+[2.189s] !!
+[2.189s]   easy_install.initialize_options(self)
+[2.589s] Removing /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image.egg-link (link to .)
+[2.687s] Invoked command in '/num4_ws/build/pc2image' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /num4_ws/build/pc2image/build
+[2.689s] Invoking command in '/num4_ws/src/pc2image': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pc2image build --build-base /num4_ws/build/pc2image/build install --record /num4_ws/build/pc2image/install.log --single-version-externally-managed install_data --force
+[2.986s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[2.986s]   warnings.warn(msg)
+[3.166s] running egg_info
+[3.193s] writing ../../build/pc2image/pc2image.egg-info/PKG-INFO
+[3.195s] writing dependency_links to ../../build/pc2image/pc2image.egg-info/dependency_links.txt
+[3.197s] writing requirements to ../../build/pc2image/pc2image.egg-info/requires.txt
+[3.198s] writing top-level names to ../../build/pc2image/pc2image.egg-info/top_level.txt
+[3.258s] reading manifest file '../../build/pc2image/pc2image.egg-info/SOURCES.txt'
+[3.261s] writing manifest file '../../build/pc2image/pc2image.egg-info/SOURCES.txt'
+[3.262s] running build
+[3.262s] running build_py
+[3.263s] creating /num4_ws/build/pc2image/build/lib/pc2image
+[3.264s] copying pc2image/ImageSubscriber.py -> /num4_ws/build/pc2image/build/lib/pc2image
+[3.265s] copying pc2image/__init__.py -> /num4_ws/build/pc2image/build/lib/pc2image
+[3.265s] copying pc2image/PointCloudProjector.py -> /num4_ws/build/pc2image/build/lib/pc2image
+[3.266s] copying pc2image/PointCloud2Subscriber.py -> /num4_ws/build/pc2image/build/lib/pc2image
+[3.267s] running install
+[3.275s] running install_lib
+[3.305s] creating /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image
+[3.305s] copying /num4_ws/build/pc2image/build/lib/pc2image/ImageSubscriber.py -> /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image
+[3.305s] copying /num4_ws/build/pc2image/build/lib/pc2image/__init__.py -> /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image
+[3.305s] copying /num4_ws/build/pc2image/build/lib/pc2image/PointCloudProjector.py -> /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image
+[3.305s] copying /num4_ws/build/pc2image/build/lib/pc2image/PointCloud2Subscriber.py -> /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image
+[3.307s] byte-compiling /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image/ImageSubscriber.py to ImageSubscriber.cpython-310.pyc
+[3.307s] byte-compiling /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image/__init__.py to __init__.cpython-310.pyc
+[3.308s] byte-compiling /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image/PointCloudProjector.py to PointCloudProjector.cpython-310.pyc
+[3.311s] byte-compiling /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image/PointCloud2Subscriber.py to PointCloud2Subscriber.cpython-310.pyc
+[3.312s] running install_data
+[3.313s] copying resource/pc2image -> /num4_ws/install/pc2image/share/ament_index/resource_index/packages
+[3.313s] copying package.xml -> /num4_ws/install/pc2image/share/pc2image
+[3.313s] running install_egg_info
+[3.345s] Copying ../../build/pc2image/pc2image.egg-info to /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image-0.0.0-py3.10.egg-info
+[3.347s] running install_scripts
+[3.585s] writing list of installed files to '/num4_ws/build/pc2image/install.log'
+[3.661s] Invoked command in '/num4_ws/src/pc2image' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/pc2image build --build-base /num4_ws/build/pc2image/build install --record /num4_ws/build/pc2image/install.log --single-version-externally-managed install_data --force

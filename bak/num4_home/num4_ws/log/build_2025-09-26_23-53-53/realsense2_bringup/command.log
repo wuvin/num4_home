@@ -1,0 +1,4 @@
+Invoking command in '/num4_ws/build/realsense2_bringup': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --build /num4_ws/build/realsense2_bringup -- -j8 -l8
+Invoked command in '/num4_ws/build/realsense2_bringup' returned '0': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --build /num4_ws/build/realsense2_bringup -- -j8 -l8
+Invoking command in '/num4_ws/build/realsense2_bringup': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --install /num4_ws/build/realsense2_bringup
+Invoked command in '/num4_ws/build/realsense2_bringup' returned '0': PS1=\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ /usr/local/bin/cmake --install /num4_ws/build/realsense2_bringup

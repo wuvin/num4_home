@@ -1,0 +1,20 @@
+[0.074s] Invoking command in '/num4_ws/build/foxglove_bridge': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge
+[0.260s] [31mCMake Error at CMakeLists.txt:30 (find_package):
+[0.261s]   By not providing "Findwebsocketpp.cmake" in CMAKE_MODULE_PATH this project
+[0.261s]   has asked CMake to find a package configuration file provided by
+[0.261s]   "websocketpp", but CMake did not find one.
+[0.262s] 
+[0.262s]   Could not find a package configuration file provided by "websocketpp" with
+[0.263s]   any of the following names:
+[0.263s] 
+[0.264s]     websocketppConfig.cmake
+[0.264s]     websocketpp-config.cmake
+[0.264s] 
+[0.265s]   Add the installation prefix of "websocketpp" to CMAKE_PREFIX_PATH or set
+[0.265s]   "websocketpp_DIR" to a directory containing one of the above files.  If
+[0.266s]   "websocketpp" provides a separate development package or SDK, be sure it
+[0.266s]   has been installed.
+[0.267s] 
+[0.267s] [0m
+[0.268s] -- Configuring incomplete, errors occurred!
+[0.489s] Invoked command in '/num4_ws/build/foxglove_bridge' returned '1': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge

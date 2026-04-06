@@ -1,0 +1,4 @@
+[0.059s] Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8
+[0.263s] [ 50%] Built target livox_to_pointcloud2
+[0.295s] [100%] Built target livox_to_pointcloud2_node
+[0.469s] Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8

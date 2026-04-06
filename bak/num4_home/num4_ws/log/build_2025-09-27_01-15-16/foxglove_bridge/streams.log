@@ -1,0 +1,44 @@
+[0.028s] Invoking command in '/num4_ws/build/foxglove_bridge': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/num4_ws/install/pc2image PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge
+[0.215s] -- Using standalone ASIO
+[0.220s] fatal: detected dubious ownership in repository at '/num4_ws/src/ros-foxglove-bridge'
+[0.220s] To add an exception for this directory, call:
+[0.220s] 
+[0.220s] 	git config --global --add safe.directory /num4_ws/src/ros-foxglove-bridge
+[0.221s] -- ROS_VERSION: 2
+[0.221s] -- ROS_DISTRO: humble
+[0.221s] -- ROS_ROOT: /opt/ros/humble
+[0.221s] -- Building with ament_cmake
+[0.221s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[0.635s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.667s] -- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/install/share/rosgraph_msgs/cmake)
+[0.731s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[0.737s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[0.751s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[0.771s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.796s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.843s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/install/share/rclcpp/cmake)
+[0.895s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[0.898s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[0.935s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.010s] -- Found rclcpp_components: 16.0.10 (/opt/ros/humble/install/share/rclcpp_components/cmake)
+[1.047s] -- Found resource_retriever: 3.1.2 (/opt/ros/humble/install/share/resource_retriever/cmake)
+[1.091s] -- library: /usr/lib/aarch64-linux-gnu/libcurl.so
+[1.110s] [31mCMake Error at CMakeLists.txt:186 (find_package):
+[1.110s]   By not providing "Findrosx_introspection.cmake" in CMAKE_MODULE_PATH this
+[1.111s]   project has asked CMake to find a package configuration file provided by
+[1.111s]   "rosx_introspection", but CMake did not find one.
+[1.111s] 
+[1.111s]   Could not find a package configuration file provided by
+[1.111s]   "rosx_introspection" with any of the following names:
+[1.111s] 
+[1.111s]     rosx_introspectionConfig.cmake
+[1.112s]     rosx_introspection-config.cmake
+[1.112s] 
+[1.112s]   Add the installation prefix of "rosx_introspection" to CMAKE_PREFIX_PATH or
+[1.112s]   set "rosx_introspection_DIR" to a directory containing one of the above
+[1.112s]   files.  If "rosx_introspection" provides a separate development package or
+[1.112s]   SDK, be sure it has been installed.
+[1.112s] 
+[1.112s] [0m
+[1.112s] -- Configuring incomplete, errors occurred!
+[1.147s] Invoked command in '/num4_ws/build/foxglove_bridge' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/num4_ws/install/pc2image PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/ros-foxglove-bridge -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge

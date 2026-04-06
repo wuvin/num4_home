@@ -1,0 +1,71 @@
+[0.000000] (-) TimerEvent: {}
+[0.001193] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.001329] (-) JobUnselected: {'identifier': 'imu_filter_madgwick'}
+[0.001413] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.001488] (-) JobUnselected: {'identifier': 'livox_bringup'}
+[0.001558] (-) JobUnselected: {'identifier': 'livox_to_pointcloud2'}
+[0.001628] (-) JobUnselected: {'identifier': 'pc2image'}
+[0.001696] (-) JobUnselected: {'identifier': 'realsense2_bringup'}
+[0.001761] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.001834] (foxglove_bridge) JobQueued: {'identifier': 'foxglove_bridge', 'dependencies': OrderedDict()}
+[0.001911] (foxglove_bridge) JobStarted: {'identifier': 'foxglove_bridge'}
+[0.024878] (foxglove_bridge) JobProgress: {'identifier': 'foxglove_bridge', 'progress': 'cmake'}
+[0.025835] (foxglove_bridge) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/ros-foxglove-bridge', '-DBUILD_TESTING=OFF', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/foxglove_bridge'], 'cwd': '/num4_ws/build/foxglove_bridge', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/foxglove_bridge'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.099475] (-) TimerEvent: {}
+[0.200134] (-) TimerEvent: {}
+[0.216436] (foxglove_bridge) StdoutLine: {'line': b'-- Using standalone ASIO\n'}
+[0.222649] (foxglove_bridge) StderrLine: {'line': b"fatal: detected dubious ownership in repository at '/num4_ws/src/ros-foxglove-bridge'\n"}
+[0.222955] (foxglove_bridge) StderrLine: {'line': b'To add an exception for this directory, call:\n'}
+[0.223095] (foxglove_bridge) StderrLine: {'line': b'\n'}
+[0.223208] (foxglove_bridge) StderrLine: {'line': b'\tgit config --global --add safe.directory /num4_ws/src/ros-foxglove-bridge\n'}
+[0.223899] (foxglove_bridge) StdoutLine: {'line': b'-- ROS_VERSION: 2\n'}
+[0.224023] (foxglove_bridge) StdoutLine: {'line': b'-- ROS_DISTRO: humble\n'}
+[0.224122] (foxglove_bridge) StdoutLine: {'line': b'-- ROS_ROOT: /opt/ros/humble\n'}
+[0.224212] (foxglove_bridge) StdoutLine: {'line': b'-- Building with ament_cmake\n'}
+[0.224338] (foxglove_bridge) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[0.300238] (-) TimerEvent: {}
+[0.400827] (-) TimerEvent: {}
+[0.501464] (-) TimerEvent: {}
+[0.602132] (-) TimerEvent: {}
+[0.612220] (foxglove_bridge) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.644652] (foxglove_bridge) StdoutLine: {'line': b'-- Found rosgraph_msgs: 1.2.1 (/opt/ros/humble/install/share/rosgraph_msgs/cmake)\n'}
+[0.702219] (-) TimerEvent: {}
+[0.709597] (foxglove_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[0.715750] (foxglove_bridge) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[0.729176] (foxglove_bridge) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[0.748519] (foxglove_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.773552] (foxglove_bridge) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.802297] (-) TimerEvent: {}
+[0.819782] (foxglove_bridge) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/install/share/rclcpp/cmake)\n'}
+[0.872444] (foxglove_bridge) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[0.875110] (foxglove_bridge) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.902384] (-) TimerEvent: {}
+[0.911607] (foxglove_bridge) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.986212] (foxglove_bridge) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.10 (/opt/ros/humble/install/share/rclcpp_components/cmake)\n'}
+[1.002476] (-) TimerEvent: {}
+[1.022929] (foxglove_bridge) StdoutLine: {'line': b'-- Found resource_retriever: 3.1.2 (/opt/ros/humble/install/share/resource_retriever/cmake)\n'}
+[1.068947] (foxglove_bridge) StdoutLine: {'line': b'-- library: /usr/lib/aarch64-linux-gnu/libcurl.so\n'}
+[1.086926] (foxglove_bridge) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:186 (find_package):\n'}
+[1.087120] (foxglove_bridge) StderrLine: {'line': b'  By not providing "Findrosx_introspection.cmake" in CMAKE_MODULE_PATH this\n'}
+[1.087269] (foxglove_bridge) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[1.087366] (foxglove_bridge) StderrLine: {'line': b'  "rosx_introspection", but CMake did not find one.\n'}
+[1.087455] (foxglove_bridge) StderrLine: {'line': b'\n'}
+[1.087542] (foxglove_bridge) StderrLine: {'line': b'  Could not find a package configuration file provided by\n'}
+[1.087628] (foxglove_bridge) StderrLine: {'line': b'  "rosx_introspection" with any of the following names:\n'}
+[1.087711] (foxglove_bridge) StderrLine: {'line': b'\n'}
+[1.087792] (foxglove_bridge) StderrLine: {'line': b'    rosx_introspectionConfig.cmake\n'}
+[1.087874] (foxglove_bridge) StderrLine: {'line': b'    rosx_introspection-config.cmake\n'}
+[1.087956] (foxglove_bridge) StderrLine: {'line': b'\n'}
+[1.088037] (foxglove_bridge) StderrLine: {'line': b'  Add the installation prefix of "rosx_introspection" to CMAKE_PREFIX_PATH or\n'}
+[1.088120] (foxglove_bridge) StderrLine: {'line': b'  set "rosx_introspection_DIR" to a directory containing one of the above\n'}
+[1.088204] (foxglove_bridge) StderrLine: {'line': b'  files.  If "rosx_introspection" provides a separate development package or\n'}
+[1.088288] (foxglove_bridge) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[1.088370] (foxglove_bridge) StderrLine: {'line': b'\n'}
+[1.088450] (foxglove_bridge) StderrLine: {'line': b'\x1b[0m\n'}
+[1.088531] (foxglove_bridge) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.102606] (-) TimerEvent: {}
+[1.121518] (foxglove_bridge) CommandEnded: {'returncode': 1}
+[1.202718] (-) TimerEvent: {}
+[1.303316] (-) TimerEvent: {}
+[1.304234] (foxglove_bridge) JobEnded: {'identifier': 'foxglove_bridge', 'rc': 1}
+[1.315290] (-) EventReactorShutdown: {}

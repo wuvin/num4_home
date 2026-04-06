@@ -1,0 +1,4 @@
+Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+Invoked command in '/num4_ws/build/rosx_introspection' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+Invoked command in '/num4_ws/build/rosx_introspection' returned '2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8

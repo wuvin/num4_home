@@ -1,0 +1,452 @@
+[0.222s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.222s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff815e95a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff815e9060>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff815e9060>>)
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.318s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.318s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/num4_ws'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'ros'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['cmake', 'python']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'cmake'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'python'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extensions ['python_setup_py']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(bin) by extension 'python_setup_py'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(doc) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'ros'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['cmake', 'python']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'cmake'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'python'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extensions ['python_setup_py']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools) by extension 'python_setup_py'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ignore_ament_install'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['colcon_pkg']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_complementary_filter) by extension 'ros'
+[0.361s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_complementary_filter' with type 'ros.ament_cmake' and name 'imu_complementary_filter'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['ignore', 'ignore_ament_install']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['colcon_pkg']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'colcon_pkg'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_filter_madgwick) by extension 'ros'
+[0.364s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_filter_madgwick' with type 'ros.ament_cmake' and name 'imu_filter_madgwick'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ignore'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ignore_ament_install'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['colcon_pkg']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'colcon_pkg'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['colcon_meta']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'colcon_meta'
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extensions ['ros']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/imu_tools) by extension 'ros'
+[0.367s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/imu_tools' with type 'ros.ament_cmake' and name 'imu_tools'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ignore'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ignore_ament_install'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['colcon_pkg']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'colcon_pkg'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['colcon_meta']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'colcon_meta'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extensions ['ros']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(src/imu_tools/rviz_imu_plugin) by extension 'ros'
+[0.371s] DEBUG:colcon.colcon_core.package_identification:Package 'src/imu_tools/rviz_imu_plugin' with type 'ros.ament_cmake' and name 'rviz_imu_plugin'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extension 'ignore_ament_install'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extensions ['colcon_pkg']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extension 'colcon_pkg'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extensions ['colcon_meta']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extension 'colcon_meta'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extensions ['ros']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_bringup) by extension 'ros'
+[0.373s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_bringup' with type 'ros.ament_cmake' and name 'livox_bringup'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extension 'ignore_ament_install'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extensions ['colcon_pkg']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extension 'colcon_pkg'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extensions ['colcon_meta']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extension 'colcon_meta'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extensions ['ros']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_to_pointcloud2) by extension 'ros'
+[0.384s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_to_pointcloud2' with type 'ros.ament_cmake' and name 'livox_to_pointcloud2'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extensions ['ignore', 'ignore_ament_install']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extension 'ignore'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extension 'ignore_ament_install'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extensions ['colcon_pkg']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extension 'colcon_pkg'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extensions ['colcon_meta']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extension 'colcon_meta'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extensions ['ros']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(src/pc2image) by extension 'ros'
+[0.387s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pc2image' with type 'ros.ament_python' and name 'pc2image'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extension 'ignore_ament_install'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extensions ['colcon_pkg']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extension 'colcon_pkg'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extensions ['colcon_meta']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extension 'colcon_meta'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extensions ['ros']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense2_bringup) by extension 'ros'
+[0.389s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense2_bringup' with type 'ros.ament_cmake' and name 'realsense2_bringup'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extensions ['colcon_meta']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extension 'colcon_meta'
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extensions ['ros']
+[0.390s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros-foxglove-bridge) by extension 'ros'
+[0.403s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros-foxglove-bridge' with type 'ros.ament_cmake' and name 'foxglove_bridge'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extensions ['ignore', 'ignore_ament_install']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extension 'ignore'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extension 'ignore_ament_install'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extensions ['colcon_pkg']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extension 'colcon_pkg'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extensions ['colcon_meta']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extension 'colcon_meta'
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extensions ['ros']
+[0.404s] Level 1:colcon.colcon_core.package_identification:_identify(src/rosx_introspection) by extension 'ros'
+[0.412s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rosx_introspection' with type 'ros.ament_cmake' and name 'rosx_introspection'
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.412s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_args' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_target' from command line to 'None'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.453s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_clean_first' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'cmake_force_configure' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'ament_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_complementary_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.454s] DEBUG:colcon.colcon_core.verb:Building package 'imu_complementary_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/imu_complementary_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/imu_complementary_filter', 'merge_install': False, 'path': '/num4_ws/src/imu_tools/imu_complementary_filter', 'symlink_install': True, 'test_result_base': None}
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_args' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_target' from command line to 'None'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.454s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_clean_cache' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_clean_first' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'cmake_force_configure' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'ament_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'catkin_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'imu_filter_madgwick' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.455s] DEBUG:colcon.colcon_core.verb:Building package 'imu_filter_madgwick' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/imu_filter_madgwick', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/imu_filter_madgwick', 'merge_install': False, 'path': '/num4_ws/src/imu_tools/imu_filter_madgwick', 'symlink_install': True, 'test_result_base': None}
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_target' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.455s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.456s] DEBUG:colcon.colcon_core.verb:Building package 'livox_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/livox_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/livox_bringup', 'merge_install': False, 'path': '/num4_ws/src/livox_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_target' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_clean_first' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'cmake_force_configure' from command line to 'False'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'ament_cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.456s] Level 5:colcon.colcon_core.verb:set package 'livox_to_pointcloud2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.456s] DEBUG:colcon.colcon_core.verb:Building package 'livox_to_pointcloud2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/livox_to_pointcloud2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/livox_to_pointcloud2', 'merge_install': False, 'path': '/num4_ws/src/livox_to_pointcloud2', 'symlink_install': True, 'test_result_base': None}
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_target' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_clean_cache' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_clean_first' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'cmake_force_configure' from command line to 'False'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'ament_cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'catkin_cmake_args' from command line to 'None'
+[0.457s] Level 5:colcon.colcon_core.verb:set package 'pc2image' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.457s] DEBUG:colcon.colcon_core.verb:Building package 'pc2image' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/pc2image', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/pc2image', 'merge_install': False, 'path': '/num4_ws/src/pc2image', 'symlink_install': True, 'test_result_base': None}
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_target' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_clean_cache' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_clean_first' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'cmake_force_configure' from command line to 'False'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'ament_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'catkin_cmake_args' from command line to 'None'
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'rosx_introspection' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.458s] DEBUG:colcon.colcon_core.verb:Building package 'rosx_introspection' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/rosx_introspection', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/rosx_introspection', 'merge_install': False, 'path': '/num4_ws/src/rosx_introspection', 'symlink_install': True, 'test_result_base': None}
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_target' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_clean_first' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'cmake_force_configure' from command line to 'False'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'ament_cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'rviz_imu_plugin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.459s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_imu_plugin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/rviz_imu_plugin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/rviz_imu_plugin', 'merge_install': False, 'path': '/num4_ws/src/imu_tools/rviz_imu_plugin', 'symlink_install': True, 'test_result_base': None}
+[0.459s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_target' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'foxglove_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.460s] DEBUG:colcon.colcon_core.verb:Building package 'foxglove_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/foxglove_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/foxglove_bridge', 'merge_install': False, 'path': '/num4_ws/src/ros-foxglove-bridge', 'symlink_install': True, 'test_result_base': None}
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_target' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_clean_first' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'cmake_force_configure' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'ament_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'imu_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.461s] DEBUG:colcon.colcon_core.verb:Building package 'imu_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/imu_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/imu_tools', 'merge_install': False, 'path': '/num4_ws/src/imu_tools/imu_tools', 'symlink_install': True, 'test_result_base': None}
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_target' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.461s] Level 5:colcon.colcon_core.verb:set package 'realsense2_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.462s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/num4_ws/build/realsense2_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/num4_ws/install/realsense2_bringup', 'merge_install': False, 'path': '/num4_ws/src/realsense2_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.462s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.464s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.464s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/imu_tools/imu_filter_madgwick' with build type 'ament_cmake'
+[0.465s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/imu_tools/imu_filter_madgwick'
+[0.471s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.472s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.472s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.489s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/imu_tools/imu_complementary_filter' with build type 'ament_cmake'
+[0.490s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/imu_tools/imu_complementary_filter'
+[0.490s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.490s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.503s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/rosx_introspection' with build type 'ament_cmake'
+[0.504s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/rosx_introspection'
+[0.504s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.504s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.517s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/imu_tools/rviz_imu_plugin' with build type 'ament_cmake'
+[0.518s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/imu_tools/rviz_imu_plugin'
+[0.518s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.518s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.531s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/livox_bringup' with build type 'ament_cmake'
+[0.531s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/livox_bringup'
+[0.531s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.532s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.544s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/num4_ws/src/livox_to_pointcloud2' with build type 'ament_cmake'
+[0.544s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/num4_ws/src/livox_to_pointcloud2'
+[0.544s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.544s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.558s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/num4_ws/src/pc2image' with build type 'ament_python'
+[0.558s] Level 1:colcon.colcon_core.shell:create_environment_hook('pc2image', 'ament_prefix_path')
+[0.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/pc2image/share/pc2image/hook/ament_prefix_path.ps1'
+[0.562s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/pc2image/share/pc2image/hook/ament_prefix_path.dsv'
+[0.564s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/pc2image/share/pc2image/hook/ament_prefix_path.sh'
+[0.569s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.569s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_filter_madgwick -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_filter_madgwick
+[0.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_complementary_filter -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_complementary_filter
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+[0.627s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/rviz_imu_plugin': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/rviz_imu_plugin -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rviz_imu_plugin
+[0.633s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_bringup
+[0.642s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+[1.162s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/num4_ws/src/pc2image'
+[1.163s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.163s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.454s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_bringup
+[1.457s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_bringup -- -j8 -l8
+[1.654s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_bringup -- -j8 -l8
+[2.080s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/livox_bringup': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_bringup
+[2.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/rosx_introspection' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/rosx_introspection -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rosx_introspection
+[2.085s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/rosx_introspection': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+[2.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_complementary_filter -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_complementary_filter
+[2.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_complementary_filter -- -j8 -l8
+[2.332s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_bringup)
+[2.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/livox_bringup' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_bringup
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup' for CMake module files
+[2.341s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup' for CMake config files
+[2.341s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_bringup', 'cmake_prefix_path')
+[2.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.ps1'
+[2.343s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.dsv'
+[2.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.sh'
+[2.345s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/bin'
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/lib/pkgconfig/livox_bringup.pc'
+[2.346s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/lib/python3.10/site-packages'
+[2.347s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/bin'
+[2.347s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.ps1'
+[2.351s] INFO:colcon.colcon_core.shell:Creating package descriptor '/num4_ws/install/livox_bringup/share/livox_bringup/package.dsv'
+[2.352s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.sh'
+[2.354s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.bash'
+[2.355s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.zsh'
+[2.357s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/num4_ws/install/livox_bringup/share/colcon-core/packages/livox_bringup)
+[2.431s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/imu_filter_madgwick' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_filter_madgwick -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_filter_madgwick
+[2.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8
+[2.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_complementary_filter -- -j8 -l8
+[2.568s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_bringup)
+[2.568s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup' for CMake module files
+[2.569s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup' for CMake config files
+[2.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_bringup', 'cmake_prefix_path')
+[2.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.ps1'
+[2.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.dsv'
+[2.572s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/livox_bringup/share/livox_bringup/hook/cmake_prefix_path.sh'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/bin'
+[2.573s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/lib/pkgconfig/livox_bringup.pc'
+[2.573s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/lib/python3.10/site-packages'
+[2.573s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/livox_bringup/bin'
+[2.574s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.ps1'
+[2.576s] INFO:colcon.colcon_core.shell:Creating package descriptor '/num4_ws/install/livox_bringup/share/livox_bringup/package.dsv'
+[2.577s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.sh'
+[2.578s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.bash'
+[2.579s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/livox_bringup/share/livox_bringup/package.zsh'
+[2.580s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/num4_ws/install/livox_bringup/share/colcon-core/packages/livox_bringup)
+[2.587s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /num4_ws/install/pc2image/share/ament_index/resource_index/packages/pc2image
+[2.587s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /num4_ws/install/pc2image/share/pc2image/package.xml
+[2.591s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/pc2image': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /num4_ws/build/pc2image/build --no-deps symlink_data --force
+[2.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/rviz_imu_plugin' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/rviz_imu_plugin -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rviz_imu_plugin
+[2.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/rviz_imu_plugin': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rviz_imu_plugin -- -j8 -l8
+[2.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_complementary_filter': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_complementary_filter
+[2.747s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/imu_filter_madgwick' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8
+[2.760s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/rosx_introspection' returned '2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rosx_introspection -- -j8 -l8
+[2.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(imu_complementary_filter)
+[2.913s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter' for CMake module files
+[2.913s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/num4_ws/build/imu_complementary_filter' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_complementary_filter
+[2.914s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter' for CMake config files
+[2.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_complementary_filter', 'cmake_prefix_path')
+[2.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.ps1'
+[2.916s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.dsv'
+[2.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/cmake_prefix_path.sh'
+[2.918s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter/lib'
+[2.919s] Level 1:colcon.colcon_core.shell:create_environment_hook('imu_complementary_filter', 'ld_library_path_lib')
+[2.920s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/ld_library_path_lib.ps1'
+[2.921s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/ld_library_path_lib.dsv'
+[2.921s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/hook/ld_library_path_lib.sh'
+[2.922s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter/bin'
+[2.922s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter/lib/pkgconfig/imu_complementary_filter.pc'
+[2.923s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter/lib/python3.10/site-packages'
+[2.923s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/imu_complementary_filter/bin'
+[2.924s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.ps1'
+[2.925s] INFO:colcon.colcon_core.shell:Creating package descriptor '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.dsv'
+[2.925s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.sh'
+[2.926s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.bash'
+[2.927s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/imu_complementary_filter/share/imu_complementary_filter/package.zsh'
+[2.927s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/num4_ws/install/imu_complementary_filter/share/colcon-core/packages/imu_complementary_filter)
+[2.965s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_filter_madgwick
+[3.000s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rosx_introspection)
+[3.001s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection' for CMake module files
+[3.002s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection' for CMake config files
+[3.003s] Level 1:colcon.colcon_core.shell:create_environment_hook('rosx_introspection', 'cmake_prefix_path')
+[3.003s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/rosx_introspection/share/rosx_introspection/hook/cmake_prefix_path.ps1'
+[3.004s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/num4_ws/install/rosx_introspection/share/rosx_introspection/hook/cmake_prefix_path.dsv'
+[3.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/num4_ws/install/rosx_introspection/share/rosx_introspection/hook/cmake_prefix_path.sh'
+[3.005s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection/lib'
+[3.006s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection/bin'
+[3.006s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection/lib/pkgconfig/rosx_introspection.pc'
+[3.006s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection/lib/python3.10/site-packages'
+[3.007s] Level 1:colcon.colcon_core.environment:checking '/num4_ws/install/rosx_introspection/bin'
+[3.007s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/rosx_introspection/share/rosx_introspection/package.ps1'
+[3.008s] INFO:colcon.colcon_core.shell:Creating package descriptor '/num4_ws/install/rosx_introspection/share/rosx_introspection/package.dsv'
+[3.009s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/rosx_introspection/share/rosx_introspection/package.sh'
+[3.010s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/rosx_introspection/share/rosx_introspection/package.bash'
+[3.010s] INFO:colcon.colcon_core.shell:Creating package script '/num4_ws/install/rosx_introspection/share/rosx_introspection/package.zsh'
+[3.011s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/num4_ws/install/rosx_introspection/share/colcon-core/packages/rosx_introspection)
+[4.682s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.683s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.683s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[4.683s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.714s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.714s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.714s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.714s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.722s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[4.723s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.729s] INFO:colcon.colcon_core.shell:Creating prefix script '/num4_ws/install/local_setup.ps1'
+[4.738s] INFO:colcon.colcon_core.shell:Creating prefix util module '/num4_ws/install/_local_setup_util_ps1.py'
+[4.744s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/num4_ws/install/setup.ps1'
+[4.750s] INFO:colcon.colcon_core.shell:Creating prefix script '/num4_ws/install/local_setup.sh'
+[4.752s] INFO:colcon.colcon_core.shell:Creating prefix util module '/num4_ws/install/_local_setup_util_sh.py'
+[4.755s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/num4_ws/install/setup.sh'
+[4.760s] INFO:colcon.colcon_core.shell:Creating prefix script '/num4_ws/install/local_setup.bash'
+[4.762s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/num4_ws/install/setup.bash'
+[4.768s] INFO:colcon.colcon_core.shell:Creating prefix script '/num4_ws/install/local_setup.zsh'
+[4.771s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/num4_ws/install/setup.zsh'

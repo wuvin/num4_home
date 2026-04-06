@@ -1,0 +1,8 @@
+[01m[K/num4_ws/src/rosx_introspection/src/ros_parser.cpp:29:10:[m[K [01;31m[Kfatal error: [m[Krapidjson/document.h: No such file or directory
+   29 | #include [01;31m[K"rapidjson/document.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/rosx_introspection.dir/build.make:132: CMakeFiles/rosx_introspection.dir/src/ros_parser.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/rosx_introspection.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

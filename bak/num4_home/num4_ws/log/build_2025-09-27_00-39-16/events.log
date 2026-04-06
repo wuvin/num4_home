@@ -1,0 +1,517 @@
+[0.000000] (-) TimerEvent: {}
+[0.001184] (-) JobUnselected: {'identifier': 'imu_complementary_filter'}
+[0.001313] (-) JobUnselected: {'identifier': 'imu_tools'}
+[0.001401] (-) JobUnselected: {'identifier': 'livox_bringup'}
+[0.001477] (-) JobUnselected: {'identifier': 'livox_to_pointcloud2'}
+[0.001620] (-) JobUnselected: {'identifier': 'realsense2_bringup'}
+[0.001699] (-) JobUnselected: {'identifier': 'rviz_imu_plugin'}
+[0.001823] (imu_filter_madgwick) JobQueued: {'identifier': 'imu_filter_madgwick', 'dependencies': OrderedDict()}
+[0.001908] (imu_filter_madgwick) JobStarted: {'identifier': 'imu_filter_madgwick'}
+[0.025931] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'cmake'}
+[0.026214] (imu_filter_madgwick) Command: {'cmd': ['/usr/local/bin/cmake', '/num4_ws/src/imu_tools/imu_filter_madgwick', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_filter_madgwick'], 'cwd': '/num4_ws/build/imu_filter_madgwick', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[0.099377] (-) TimerEvent: {}
+[0.199921] (-) TimerEvent: {}
+[0.228393] (imu_filter_madgwick) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.300076] (-) TimerEvent: {}
+[0.333697] (imu_filter_madgwick) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.367622] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400354] (-) TimerEvent: {}
+[0.493149] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.500487] (-) TimerEvent: {}
+[0.546457] (imu_filter_madgwick) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.547779] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.549466] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.565874] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600633] (-) TimerEvent: {}
+[0.701281] (-) TimerEvent: {}
+[0.703832] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.758212] (imu_filter_madgwick) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.759423] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.761673] (imu_filter_madgwick) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.773419] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)\n'}
+[0.801386] (-) TimerEvent: {}
+[0.901891] (-) TimerEvent: {}
+[1.002657] (-) TimerEvent: {}
+[1.103463] (-) TimerEvent: {}
+[1.116193] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Python3: /usr/local/bin/python3 (found version "3.10.12") found components: Interpreter\n'}
+[1.203799] (-) TimerEvent: {}
+[1.234016] (imu_filter_madgwick) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.303913] (-) TimerEvent: {}
+[1.330847] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/install/share/rclcpp/cmake)\n'}
+[1.404044] (-) TimerEvent: {}
+[1.431525] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)\n'}
+[1.440643] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)\n'}
+[1.456784] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)\n'}
+[1.481099] (imu_filter_madgwick) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.504105] (-) TimerEvent: {}
+[1.513144] (imu_filter_madgwick) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.599448] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)\n'}
+[1.604185] (-) TimerEvent: {}
+[1.605007] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.653245] (imu_filter_madgwick) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.668647] (imu_filter_madgwick) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.704334] (-) TimerEvent: {}
+[1.780611] (imu_filter_madgwick) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.783277] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Threads: TRUE\n'}
+[1.804421] (-) TimerEvent: {}
+[1.904845] (-) TimerEvent: {}
+[1.914607] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found rclcpp_components: 16.0.10 (/opt/ros/humble/install/share/rclcpp_components/cmake)\n'}
+[1.968336] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/install/share/geometry_msgs/cmake)\n'}
+[1.996444] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.8 (/opt/ros/humble/install/share/tf2_geometry_msgs/cmake)\n'}
+[2.004929] (-) TimerEvent: {}
+[2.028871] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/install/share/eigen3_cmake_module/cmake)\n'}
+[2.031521] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0")\n'}
+[2.032215] (imu_filter_madgwick) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.105032] (-) TimerEvent: {}
+[2.181956] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/install/share/sensor_msgs/cmake)\n'}
+[2.205111] (-) TimerEvent: {}
+[2.223224] (imu_filter_madgwick) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.10 (/opt/ros/humble/install/share/ament_cmake_gtest/cmake)\n'}
+[2.229770] (imu_filter_madgwick) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/humble/install/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[2.305267] (-) TimerEvent: {}
+[2.368963] (imu_filter_madgwick) StdoutLine: {'line': b'-- Configuring done (2.2s)\n'}
+[2.405365] (-) TimerEvent: {}
+[2.426425] (imu_filter_madgwick) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[2.427152] (imu_filter_madgwick) StdoutLine: {'line': b'-- Build files have been written to: /num4_ws/build/imu_filter_madgwick\n'}
+[2.468316] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[2.469733] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'build'}
+[2.471567] (imu_filter_madgwick) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/num4_ws/build/imu_filter_madgwick', '--', '-j8', '-l8'], 'cwd': '/num4_ws/build/imu_filter_madgwick', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[2.505470] (-) TimerEvent: {}
+[2.606123] (-) TimerEvent: {}
+[2.642565] (imu_filter_madgwick) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter.cpp.o\x1b[0m\n'}
+[2.643289] (imu_filter_madgwick) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/imu_filter_ros.cpp.o\x1b[0m\n'}
+[2.643551] (imu_filter_madgwick) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick.dir/src/stateless_orientation.cpp.o\x1b[0m\n'}
+[2.643714] (imu_filter_madgwick) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[2.643853] (imu_filter_madgwick) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[2.706274] (-) TimerEvent: {}
+[2.806831] (-) TimerEvent: {}
+[2.907349] (-) TimerEvent: {}
+[3.007855] (-) TimerEvent: {}
+[3.108395] (-) TimerEvent: {}
+[3.208894] (-) TimerEvent: {}
+[3.309397] (-) TimerEvent: {}
+[3.409904] (-) TimerEvent: {}
+[3.510424] (-) TimerEvent: {}
+[3.611017] (-) TimerEvent: {}
+[3.711545] (-) TimerEvent: {}
+[3.812096] (-) TimerEvent: {}
+[3.912658] (-) TimerEvent: {}
+[4.013189] (-) TimerEvent: {}
+[4.113718] (-) TimerEvent: {}
+[4.185657] (imu_filter_madgwick) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[4.210584] (imu_filter_madgwick) StdoutLine: {'line': b'[ 42%] Built target gtest_main\n'}
+[4.213810] (-) TimerEvent: {}
+[4.314258] (-) TimerEvent: {}
+[4.414758] (-) TimerEvent: {}
+[4.515257] (-) TimerEvent: {}
+[4.615774] (-) TimerEvent: {}
+[4.716273] (-) TimerEvent: {}
+[4.816770] (-) TimerEvent: {}
+[4.917267] (-) TimerEvent: {}
+[5.017789] (-) TimerEvent: {}
+[5.118314] (-) TimerEvent: {}
+[5.218851] (-) TimerEvent: {}
+[5.319378] (-) TimerEvent: {}
+[5.419888] (-) TimerEvent: {}
+[5.520422] (-) TimerEvent: {}
+[5.620956] (-) TimerEvent: {}
+[5.721492] (-) TimerEvent: {}
+[5.822036] (-) TimerEvent: {}
+[5.922524] (-) TimerEvent: {}
+[6.023013] (-) TimerEvent: {}
+[6.123500] (-) TimerEvent: {}
+[6.223995] (-) TimerEvent: {}
+[6.324497] (-) TimerEvent: {}
+[6.424987] (-) TimerEvent: {}
+[6.525476] (-) TimerEvent: {}
+[6.625971] (-) TimerEvent: {}
+[6.726475] (-) TimerEvent: {}
+[6.827003] (-) TimerEvent: {}
+[6.927481] (-) TimerEvent: {}
+[7.027978] (-) TimerEvent: {}
+[7.128500] (-) TimerEvent: {}
+[7.228988] (-) TimerEvent: {}
+[7.329497] (-) TimerEvent: {}
+[7.429999] (-) TimerEvent: {}
+[7.530517] (-) TimerEvent: {}
+[7.631058] (-) TimerEvent: {}
+[7.731573] (-) TimerEvent: {}
+[7.832082] (-) TimerEvent: {}
+[7.932581] (-) TimerEvent: {}
+[8.033085] (-) TimerEvent: {}
+[8.133766] (-) TimerEvent: {}
+[8.234488] (-) TimerEvent: {}
+[8.335199] (-) TimerEvent: {}
+[8.387177] (imu_filter_madgwick) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[8.435339] (-) TimerEvent: {}
+[8.463014] (imu_filter_madgwick) StdoutLine: {'line': b'[ 50%] Built target gtest\n'}
+[8.535496] (-) TimerEvent: {}
+[8.636169] (-) TimerEvent: {}
+[8.736685] (-) TimerEvent: {}
+[8.837361] (-) TimerEvent: {}
+[8.938067] (-) TimerEvent: {}
+[9.038579] (-) TimerEvent: {}
+[9.139256] (-) TimerEvent: {}
+[9.239920] (-) TimerEvent: {}
+[9.340597] (-) TimerEvent: {}
+[9.441108] (-) TimerEvent: {}
+[9.541616] (-) TimerEvent: {}
+[9.642135] (-) TimerEvent: {}
+[9.742680] (-) TimerEvent: {}
+[9.843245] (-) TimerEvent: {}
+[9.943777] (-) TimerEvent: {}
+[10.044305] (-) TimerEvent: {}
+[10.144838] (-) TimerEvent: {}
+[10.245393] (-) TimerEvent: {}
+[10.345924] (-) TimerEvent: {}
+[10.446434] (-) TimerEvent: {}
+[10.546956] (-) TimerEvent: {}
+[10.647486] (-) TimerEvent: {}
+[10.748022] (-) TimerEvent: {}
+[10.848545] (-) TimerEvent: {}
+[10.949234] (-) TimerEvent: {}
+[11.049766] (-) TimerEvent: {}
+[11.150443] (-) TimerEvent: {}
+[11.250988] (-) TimerEvent: {}
+[11.351658] (-) TimerEvent: {}
+[11.452338] (-) TimerEvent: {}
+[11.553024] (-) TimerEvent: {}
+[11.653702] (-) TimerEvent: {}
+[11.754225] (-) TimerEvent: {}
+[11.854893] (-) TimerEvent: {}
+[11.955416] (-) TimerEvent: {}
+[12.056080] (-) TimerEvent: {}
+[12.156755] (-) TimerEvent: {}
+[12.257425] (-) TimerEvent: {}
+[12.358117] (-) TimerEvent: {}
+[12.458655] (-) TimerEvent: {}
+[12.559175] (-) TimerEvent: {}
+[12.659702] (-) TimerEvent: {}
+[12.760394] (-) TimerEvent: {}
+[12.860916] (-) TimerEvent: {}
+[12.961441] (-) TimerEvent: {}
+[13.061974] (-) TimerEvent: {}
+[13.162502] (-) TimerEvent: {}
+[13.263044] (-) TimerEvent: {}
+[13.363570] (-) TimerEvent: {}
+[13.464099] (-) TimerEvent: {}
+[13.564626] (-) TimerEvent: {}
+[13.665159] (-) TimerEvent: {}
+[13.765844] (-) TimerEvent: {}
+[13.866524] (-) TimerEvent: {}
+[13.967060] (-) TimerEvent: {}
+[14.067719] (-) TimerEvent: {}
+[14.168242] (-) TimerEvent: {}
+[14.268919] (-) TimerEvent: {}
+[14.369596] (-) TimerEvent: {}
+[14.470277] (-) TimerEvent: {}
+[14.570788] (-) TimerEvent: {}
+[14.671319] (-) TimerEvent: {}
+[14.771998] (-) TimerEvent: {}
+[14.872683] (-) TimerEvent: {}
+[14.973365] (-) TimerEvent: {}
+[15.074033] (-) TimerEvent: {}
+[15.174561] (-) TimerEvent: {}
+[15.275246] (-) TimerEvent: {}
+[15.375927] (-) TimerEvent: {}
+[15.476608] (-) TimerEvent: {}
+[15.577139] (-) TimerEvent: {}
+[15.677671] (-) TimerEvent: {}
+[15.778215] (-) TimerEvent: {}
+[15.878744] (-) TimerEvent: {}
+[15.979256] (-) TimerEvent: {}
+[16.079790] (-) TimerEvent: {}
+[16.180297] (-) TimerEvent: {}
+[16.280810] (-) TimerEvent: {}
+[16.381339] (-) TimerEvent: {}
+[16.481859] (-) TimerEvent: {}
+[16.582376] (-) TimerEvent: {}
+[16.683061] (-) TimerEvent: {}
+[16.783728] (-) TimerEvent: {}
+[16.884253] (-) TimerEvent: {}
+[16.984925] (-) TimerEvent: {}
+[17.085606] (-) TimerEvent: {}
+[17.186126] (-) TimerEvent: {}
+[17.286775] (-) TimerEvent: {}
+[17.387298] (-) TimerEvent: {}
+[17.487972] (-) TimerEvent: {}
+[17.588476] (-) TimerEvent: {}
+[17.689129] (-) TimerEvent: {}
+[17.789794] (-) TimerEvent: {}
+[17.890482] (-) TimerEvent: {}
+[17.991172] (-) TimerEvent: {}
+[18.091696] (-) TimerEvent: {}
+[18.192371] (-) TimerEvent: {}
+[18.293067] (-) TimerEvent: {}
+[18.393588] (-) TimerEvent: {}
+[18.494110] (-) TimerEvent: {}
+[18.594648] (-) TimerEvent: {}
+[18.695152] (-) TimerEvent: {}
+[18.795662] (-) TimerEvent: {}
+[18.896161] (-) TimerEvent: {}
+[18.996669] (-) TimerEvent: {}
+[19.097183] (-) TimerEvent: {}
+[19.197690] (-) TimerEvent: {}
+[19.298195] (-) TimerEvent: {}
+[19.398712] (-) TimerEvent: {}
+[19.499223] (-) TimerEvent: {}
+[19.599891] (-) TimerEvent: {}
+[19.700391] (-) TimerEvent: {}
+[19.801037] (-) TimerEvent: {}
+[19.901529] (-) TimerEvent: {}
+[20.002021] (-) TimerEvent: {}
+[20.102508] (-) TimerEvent: {}
+[20.203154] (-) TimerEvent: {}
+[20.303658] (-) TimerEvent: {}
+[20.404303] (-) TimerEvent: {}
+[20.504946] (-) TimerEvent: {}
+[20.605598] (-) TimerEvent: {}
+[20.706096] (-) TimerEvent: {}
+[20.806763] (-) TimerEvent: {}
+[20.907406] (-) TimerEvent: {}
+[21.008048] (-) TimerEvent: {}
+[21.108701] (-) TimerEvent: {}
+[21.209205] (-) TimerEvent: {}
+[21.309729] (-) TimerEvent: {}
+[21.410229] (-) TimerEvent: {}
+[21.510751] (-) TimerEvent: {}
+[21.611258] (-) TimerEvent: {}
+[21.711760] (-) TimerEvent: {}
+[21.812258] (-) TimerEvent: {}
+[21.912778] (-) TimerEvent: {}
+[22.013291] (-) TimerEvent: {}
+[22.113794] (-) TimerEvent: {}
+[22.214295] (-) TimerEvent: {}
+[22.316843] (-) TimerEvent: {}
+[22.417341] (-) TimerEvent: {}
+[22.517856] (-) TimerEvent: {}
+[22.618512] (-) TimerEvent: {}
+[22.719186] (-) TimerEvent: {}
+[22.819835] (-) TimerEvent: {}
+[22.920489] (-) TimerEvent: {}
+[23.020994] (-) TimerEvent: {}
+[23.121671] (-) TimerEvent: {}
+[23.222324] (-) TimerEvent: {}
+[23.322993] (-) TimerEvent: {}
+[23.423481] (-) TimerEvent: {}
+[23.523979] (-) TimerEvent: {}
+[23.624619] (-) TimerEvent: {}
+[23.725280] (-) TimerEvent: {}
+[23.825776] (-) TimerEvent: {}
+[23.926438] (-) TimerEvent: {}
+[24.027109] (-) TimerEvent: {}
+[24.127612] (-) TimerEvent: {}
+[24.228127] (-) TimerEvent: {}
+[24.328636] (-) TimerEvent: {}
+[24.429144] (-) TimerEvent: {}
+[24.529636] (-) TimerEvent: {}
+[24.630128] (-) TimerEvent: {}
+[24.730663] (-) TimerEvent: {}
+[24.831170] (-) TimerEvent: {}
+[24.931669] (-) TimerEvent: {}
+[25.032176] (-) TimerEvent: {}
+[25.132687] (-) TimerEvent: {}
+[25.233202] (-) TimerEvent: {}
+[25.333883] (-) TimerEvent: {}
+[25.434543] (-) TimerEvent: {}
+[25.535069] (-) TimerEvent: {}
+[25.635708] (-) TimerEvent: {}
+[25.736214] (-) TimerEvent: {}
+[25.836709] (-) TimerEvent: {}
+[25.937347] (-) TimerEvent: {}
+[26.038006] (-) TimerEvent: {}
+[26.138511] (-) TimerEvent: {}
+[26.239031] (-) TimerEvent: {}
+[26.339517] (-) TimerEvent: {}
+[26.440092] (-) TimerEvent: {}
+[26.540622] (-) TimerEvent: {}
+[26.641086] (-) TimerEvent: {}
+[26.741549] (-) TimerEvent: {}
+[26.842108] (-) TimerEvent: {}
+[26.942655] (-) TimerEvent: {}
+[27.043134] (-) TimerEvent: {}
+[27.143644] (-) TimerEvent: {}
+[27.244148] (-) TimerEvent: {}
+[27.344688] (-) TimerEvent: {}
+[27.445153] (-) TimerEvent: {}
+[27.545615] (-) TimerEvent: {}
+[27.646141] (-) TimerEvent: {}
+[27.746734] (-) TimerEvent: {}
+[27.847208] (-) TimerEvent: {}
+[27.947707] (-) TimerEvent: {}
+[28.048200] (-) TimerEvent: {}
+[28.148722] (-) TimerEvent: {}
+[28.249186] (-) TimerEvent: {}
+[28.349709] (-) TimerEvent: {}
+[28.450286] (-) TimerEvent: {}
+[28.550974] (-) TimerEvent: {}
+[28.651464] (-) TimerEvent: {}
+[28.751908] (-) TimerEvent: {}
+[28.852467] (-) TimerEvent: {}
+[28.952939] (-) TimerEvent: {}
+[29.053498] (-) TimerEvent: {}
+[29.154041] (-) TimerEvent: {}
+[29.254503] (-) TimerEvent: {}
+[29.354976] (-) TimerEvent: {}
+[29.455384] (-) TimerEvent: {}
+[29.555805] (-) TimerEvent: {}
+[29.656358] (-) TimerEvent: {}
+[29.756800] (-) TimerEvent: {}
+[29.857205] (-) TimerEvent: {}
+[29.957698] (-) TimerEvent: {}
+[30.058326] (-) TimerEvent: {}
+[30.158882] (-) TimerEvent: {}
+[30.259315] (-) TimerEvent: {}
+[30.359731] (-) TimerEvent: {}
+[30.460201] (-) TimerEvent: {}
+[30.560705] (-) TimerEvent: {}
+[30.661112] (-) TimerEvent: {}
+[30.761507] (-) TimerEvent: {}
+[30.861947] (-) TimerEvent: {}
+[30.962488] (-) TimerEvent: {}
+[31.063102] (-) TimerEvent: {}
+[31.126287] (imu_filter_madgwick) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libimu_filter_madgwick.so\x1b[0m\n'}
+[31.163243] (-) TimerEvent: {}
+[31.263757] (-) TimerEvent: {}
+[31.364384] (-) TimerEvent: {}
+[31.465004] (-) TimerEvent: {}
+[31.565646] (-) TimerEvent: {}
+[31.666473] (-) TimerEvent: {}
+[31.767069] (-) TimerEvent: {}
+[31.867644] (-) TimerEvent: {}
+[31.968205] (-) TimerEvent: {}
+[32.068874] (-) TimerEvent: {}
+[32.169539] (-) TimerEvent: {}
+[32.270062] (-) TimerEvent: {}
+[32.370571] (-) TimerEvent: {}
+[32.471190] (-) TimerEvent: {}
+[32.571664] (-) TimerEvent: {}
+[32.672363] (-) TimerEvent: {}
+[32.773033] (-) TimerEvent: {}
+[32.873695] (-) TimerEvent: {}
+[32.948075] (imu_filter_madgwick) StdoutLine: {'line': b'[ 57%] Built target imu_filter_madgwick\n'}
+[32.971445] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object test/CMakeFiles/madgwick_test.dir/madgwick_test.cpp.o\x1b[0m\n'}
+[32.971788] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/imu_filter_madgwick_node.dir/src/imu_filter_node.cpp.o\x1b[0m\n'}
+[32.971922] (imu_filter_madgwick) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object test/CMakeFiles/stateless_orientation_test.dir/stateless_orientation_test.cpp.o\x1b[0m\n'}
+[32.973774] (-) TimerEvent: {}
+[33.074199] (-) TimerEvent: {}
+[33.174716] (-) TimerEvent: {}
+[33.275206] (-) TimerEvent: {}
+[33.375683] (-) TimerEvent: {}
+[33.476172] (-) TimerEvent: {}
+[33.576661] (-) TimerEvent: {}
+[33.677140] (-) TimerEvent: {}
+[33.777655] (-) TimerEvent: {}
+[33.878193] (-) TimerEvent: {}
+[33.978947] (-) TimerEvent: {}
+[34.079628] (-) TimerEvent: {}
+[34.180163] (-) TimerEvent: {}
+[34.280698] (-) TimerEvent: {}
+[34.381230] (-) TimerEvent: {}
+[34.481921] (-) TimerEvent: {}
+[34.582621] (-) TimerEvent: {}
+[34.683177] (-) TimerEvent: {}
+[34.783713] (-) TimerEvent: {}
+[34.884241] (-) TimerEvent: {}
+[34.984944] (-) TimerEvent: {}
+[35.085480] (-) TimerEvent: {}
+[35.186010] (-) TimerEvent: {}
+[35.286533] (-) TimerEvent: {}
+[35.387047] (-) TimerEvent: {}
+[35.487546] (-) TimerEvent: {}
+[35.588062] (-) TimerEvent: {}
+[35.596585] (imu_filter_madgwick) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable madgwick_test\x1b[0m\n'}
+[35.688190] (-) TimerEvent: {}
+[35.708752] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable stateless_orientation_test\x1b[0m\n'}
+[35.788348] (-) TimerEvent: {}
+[35.888968] (-) TimerEvent: {}
+[35.989543] (-) TimerEvent: {}
+[36.090112] (-) TimerEvent: {}
+[36.190714] (-) TimerEvent: {}
+[36.291287] (-) TimerEvent: {}
+[36.391865] (-) TimerEvent: {}
+[36.492395] (-) TimerEvent: {}
+[36.575583] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] Built target madgwick_test\n'}
+[36.592510] (-) TimerEvent: {}
+[36.692990] (-) TimerEvent: {}
+[36.717230] (imu_filter_madgwick) StdoutLine: {'line': b'[ 92%] Built target stateless_orientation_test\n'}
+[36.793115] (-) TimerEvent: {}
+[36.893672] (-) TimerEvent: {}
+[36.994215] (-) TimerEvent: {}
+[37.094767] (-) TimerEvent: {}
+[37.195534] (-) TimerEvent: {}
+[37.296074] (-) TimerEvent: {}
+[37.396528] (-) TimerEvent: {}
+[37.497002] (-) TimerEvent: {}
+[37.597523] (-) TimerEvent: {}
+[37.698010] (-) TimerEvent: {}
+[37.798481] (-) TimerEvent: {}
+[37.898979] (-) TimerEvent: {}
+[37.999440] (-) TimerEvent: {}
+[38.099961] (-) TimerEvent: {}
+[38.200567] (-) TimerEvent: {}
+[38.301112] (-) TimerEvent: {}
+[38.401599] (-) TimerEvent: {}
+[38.469225] (imu_filter_madgwick) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable imu_filter_madgwick_node\x1b[0m\n'}
+[38.501763] (-) TimerEvent: {}
+[38.602311] (-) TimerEvent: {}
+[38.702843] (-) TimerEvent: {}
+[38.803530] (-) TimerEvent: {}
+[38.904209] (-) TimerEvent: {}
+[39.004899] (-) TimerEvent: {}
+[39.105449] (-) TimerEvent: {}
+[39.205960] (-) TimerEvent: {}
+[39.302070] (imu_filter_madgwick) StdoutLine: {'line': b'[100%] Built target imu_filter_madgwick_node\n'}
+[39.306047] (-) TimerEvent: {}
+[39.337040] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[39.406147] (-) TimerEvent: {}
+[39.506529] (-) TimerEvent: {}
+[39.556446] (imu_filter_madgwick) JobProgress: {'identifier': 'imu_filter_madgwick', 'progress': 'install'}
+[39.606653] (-) TimerEvent: {}
+[39.701575] (imu_filter_madgwick) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/num4_ws/build/imu_filter_madgwick'], 'cwd': '/num4_ws/build/imu_filter_madgwick', 'env': OrderedDict([('TWINE_PASSWORD', 'NvidiaJetson24'), ('OPENBLAS_CORETYPE', 'ARMV8'), ('PYTHONFAULTHANDLER', '1'), ('CUDACXX', '/usr/local/cuda/bin/nvcc'), ('PYTHONIOENCODING', 'utf-8'), ('PIP_ROOT_USER_ACTION', 'ignore'), ('LANGUAGE', 'en_US:en'), ('PIP_TRUSTED_HOST', 'jetson.webredirect.org'), ('PIP_DEFAULT_TIMEOUT', '100'), ('PYTHONHASHSEED', 'random'), ('HOSTNAME', 'num4'), ('TWINE_REPOSITORY_URL', 'http://jao-51/jp6/cu126'), ('TAR_INDEX_URL', 'http://jetson.webredirect.org:8000/jp6/cu126'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/realsense2_camera/lib:/ros2_ws/install/realsense2_camera_msgs/lib:/ros2_ws/install/livox_ros_driver2/lib:/ros2_ws/install/diagnostic_updater/lib:/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64:'), ('HOME', '/root'), ('OLDPWD', '/num4_ws/src'), ('CMAKE_CUDA_COMPILER', '/usr/local/cuda/bin/nvcc'), ('TORCH_NVCC_FLAGS', '-Xfatbin -compress-all'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('CUDA_TOOLKIT_ROOT_DIR', '/usr/local/cuda'), ('CUDA_NVCC_EXECUTABLE', '/usr/local/cuda/bin/nvcc'), ('CUDNN_LIB_PATH', '/usr/lib/aarch64-linux-gnu'), ('PS1', '\\[\\e[1;35m\\]\\u@\\h:\\[\\e[1;34m\\]\\w\\[\\e[0m\\]\\$'), ('CUDAARCHS', '87'), ('PIP_CACHE_PURGE', 'true'), ('COLCON_PREFIX_PATH', '/ros2_ws/install:/opt/ros/humble/install'), ('ROS_DISTRO', 'humble'), ('SCP_UPLOAD_PASS', 'nvidia'), ('PIP_DISABLE_PIP_VERSION_CHECK', 'on'), ('CUDA_ARCHITECTURES', '87'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('TWINE_USERNAME', 'jp6'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('PIP_INDEX_URL', 'http://jetson.webredirect.org/jp6/cu126'), ('PIP_NO_CACHE_DIR', 'off'), ('DISPLAY', 'localhost:10.0'), ('SCP_UPLOAD_USER', 'nvidia'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_ROOT', '/opt/ros/humble'), ('ROS_DOMAIN_ID', '42'), ('SCP_UPLOAD_URL', 'jao-51:/dist/jp6/cu126'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install:/opt/ros/humble/install'), ('TWINE_NON_INTERACTIVE', '1'), ('DEBIAN_FRONTEND', 'noninteractive'), ('SHELL', '/bin/bash'), ('PYTHON_VERSION', '3.10'), ('OPENCV_VERSION', '4.10.0'), ('NVCC_PATH', '/usr/local/cuda/bin/nvcc'), ('OPENCV_URL', ''), ('PWD', '/num4_ws/build/imu_filter_madgwick'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda'), ('CUDNN_LIB_INCLUDE_PATH', '/usr/include'), ('PYTHONPATH', '/ros2_ws/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages:/ros2_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/ros2_ws/install/diagnostic_updater/local/lib/python3.10/dist-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'void'), ('COLCON', '1'), ('CUDA_BIN_PATH', '/usr/local/cuda/bin'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/realsense2_camera:/ros2_ws/install/realsense2_camera_msgs:/ros2_ws/install/livox_ros_driver2:/ros2_ws/install/diagnostic_updater:/opt/ros/humble/install')]), 'shell': False}
+[39.706714] (-) TimerEvent: {}
+[39.807285] (-) TimerEvent: {}
+[39.832510] (imu_filter_madgwick) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[39.833354] (imu_filter_madgwick) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[39.834507] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/base_node.hpp\n'}
+[39.839645] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h\n'}
+[39.844410] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_ros.h\n'}
+[39.849465] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/stateless_orientation.h\n'}
+[39.854753] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/visibility_control.h\n'}
+[39.861091] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/world_frame.h\n'}
+[39.867177] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node\n'}
+[39.874541] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter.launch.py\n'}
+[39.881845] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter_component.launch.py\n'}
+[39.888225] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config/imu_filter.yaml\n'}
+[39.894945] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.sh\n'}
+[39.900976] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.dsv\n'}
+[39.907363] (-) TimerEvent: {}
+[39.908244] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/package_run_dependencies/imu_filter_madgwick\n'}
+[39.914337] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/parent_prefix_path/imu_filter_madgwick\n'}
+[39.920729] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.sh\n'}
+[39.927231] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.dsv\n'}
+[39.933240] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.sh\n'}
+[39.942097] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.dsv\n'}
+[39.947933] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.bash\n'}
+[39.953971] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.sh\n'}
+[39.959924] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.zsh\n'}
+[39.965946] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.dsv\n'}
+[39.971759] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv\n'}
+[39.978078] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/packages/imu_filter_madgwick\n'}
+[39.984293] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/rclcpp_components/imu_filter_madgwick\n'}
+[39.990588] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[39.996862] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[40.005887] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[40.007458] (-) TimerEvent: {}
+[40.012580] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig.cmake\n'}
+[40.018409] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig-version.cmake\n'}
+[40.024380] (imu_filter_madgwick) StdoutLine: {'line': b'-- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.xml\n'}
+[40.030198] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /num4_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so\n'}
+[40.075512] (imu_filter_madgwick) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/num4_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so" to ""\n'}
+[40.075921] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/export_imu_filter_madgwickExport.cmake\n'}
+[40.076193] (imu_filter_madgwick) StdoutLine: {'line': b'-- Installing: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/export_imu_filter_madgwickExport-noconfig.cmake\n'}
+[40.102915] (imu_filter_madgwick) CommandEnded: {'returncode': 0}
+[40.107566] (-) TimerEvent: {}
+[40.208486] (-) TimerEvent: {}
+[40.309290] (-) TimerEvent: {}
+[40.382842] (imu_filter_madgwick) JobEnded: {'identifier': 'imu_filter_madgwick', 'rc': 0}
+[40.384976] (-) EventReactorShutdown: {}

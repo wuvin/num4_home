@@ -1,0 +1,63 @@
+[0.140s] Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_filter_madgwick -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_filter_madgwick
+[0.322s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/install/share/ament_cmake/cmake)
+[0.756s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.809s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/install/share/rclcpp/cmake)
+[0.934s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_c/cmake)
+[0.941s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/install/share/rosidl_adapter/cmake)
+[0.959s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/install/share/rosidl_generator_cpp/cmake)
+[1.004s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.061s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.194s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/install/share/rmw_implementation_cmake/cmake)
+[1.201s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/install/share/rmw_cyclonedds_cpp/cmake)
+[1.249s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.357s] -- Found rclcpp_components: 16.0.10 (/opt/ros/humble/install/share/rclcpp_components/cmake)
+[1.408s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/install/share/geometry_msgs/cmake)
+[1.436s] -- Found tf2_geometry_msgs: 0.25.8 (/opt/ros/humble/install/share/tf2_geometry_msgs/cmake)
+[1.450s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/install/share/eigen3_cmake_module/cmake)
+[1.454s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.615s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/install/share/sensor_msgs/cmake)
+[1.822s] -- Configuring done (1.5s)
+[1.920s] -- Generating done (0.1s)
+[1.920s] -- Build files have been written to: /num4_ws/build/imu_filter_madgwick
+[1.965s] Invoked command in '/num4_ws/build/imu_filter_madgwick' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/imu_filter_madgwick -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/imu_filter_madgwick
+[1.966s] Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8
+[2.189s] [ 66%] Built target imu_filter_madgwick
+[2.242s] [100%] Built target imu_filter_madgwick_node
+[2.281s] Invoked command in '/num4_ws/build/imu_filter_madgwick' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/imu_filter_madgwick -- -j8 -l8
+[2.499s] Invoking command in '/num4_ws/build/imu_filter_madgwick': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/imu_filter_madgwick
+[2.630s] -- Install configuration: ""
+[2.631s] -- Execute custom install script
+[2.632s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/base_node.hpp
+[2.632s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter.h
+[2.632s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/imu_filter_ros.h
+[2.633s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/stateless_orientation.h
+[2.633s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/visibility_control.h
+[2.633s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/include/imu_filter_madgwick/world_frame.h
+[2.634s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/lib/imu_filter_madgwick/imu_filter_madgwick_node
+[2.635s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter.launch.py
+[2.635s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/launch/imu_filter_component.launch.py
+[2.636s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/config/imu_filter.yaml
+[2.636s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.sh
+[2.636s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/library_path.dsv
+[2.637s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/package_run_dependencies/imu_filter_madgwick
+[2.637s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/parent_prefix_path/imu_filter_madgwick
+[2.638s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.sh
+[2.638s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/ament_prefix_path.dsv
+[2.638s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.sh
+[2.639s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/environment/path.dsv
+[2.639s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.bash
+[2.639s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.sh
+[2.640s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.zsh
+[2.640s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/local_setup.dsv
+[2.641s] -- Symlinking: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.dsv
+[2.646s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/packages/imu_filter_madgwick
+[2.646s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/ament_index/resource_index/rclcpp_components/imu_filter_madgwick
+[2.647s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.647s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_libraries-extras.cmake
+[2.647s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/ament_cmake_export_targets-extras.cmake
+[2.648s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig.cmake
+[2.648s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/imu_filter_madgwickConfig-version.cmake
+[2.648s] -- Up-to-date symlink: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/package.xml
+[2.650s] -- Up-to-date: /num4_ws/install/imu_filter_madgwick/lib/libimu_filter_madgwick.so
+[2.650s] -- Up-to-date: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/export_imu_filter_madgwickExport.cmake
+[2.650s] -- Up-to-date: /num4_ws/install/imu_filter_madgwick/share/imu_filter_madgwick/cmake/export_imu_filter_madgwickExport-noconfig.cmake

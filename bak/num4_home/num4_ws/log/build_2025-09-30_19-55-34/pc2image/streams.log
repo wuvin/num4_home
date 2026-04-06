@@ -1,0 +1,32 @@
+[1.400s] Invoking command in '/num4_ws/build/pc2image': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /num4_ws/build/pc2image/build --no-deps symlink_data
+[1.670s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[1.670s]   warnings.warn(msg)
+[1.956s] running develop
+[1.956s] /usr/local/lib/python3.10/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.956s] !!
+[1.956s] 
+[1.957s]         ********************************************************************************
+[1.957s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.957s]         Instead, use pypa/build, pypa/installer or other
+[1.957s]         standards-based tools.
+[1.957s] 
+[1.957s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.958s]         ********************************************************************************
+[1.958s] 
+[1.958s] !!
+[1.958s]   easy_install.initialize_options(self)
+[2.316s] running egg_info
+[2.342s] writing pc2image.egg-info/PKG-INFO
+[2.343s] writing dependency_links to pc2image.egg-info/dependency_links.txt
+[2.343s] writing entry points to pc2image.egg-info/entry_points.txt
+[2.344s] writing requirements to pc2image.egg-info/requires.txt
+[2.344s] writing top-level names to pc2image.egg-info/top_level.txt
+[2.400s] reading manifest file 'pc2image.egg-info/SOURCES.txt'
+[2.402s] writing manifest file 'pc2image.egg-info/SOURCES.txt'
+[2.488s] running build_ext
+[2.488s] Creating /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image.egg-link (link to .)
+[2.490s] Installing launch_projector script to /num4_ws/install/pc2image/lib/pc2image
+[2.491s] 
+[2.491s] Installed /num4_ws/build/pc2image
+[2.491s] running symlink_data
+[2.571s] Invoked command in '/num4_ws/build/pc2image' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /num4_ws/build/pc2image/build --no-deps symlink_data

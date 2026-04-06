@@ -1,0 +1,35 @@
+[2.032s] Invoking command in '/num4_ws/build/pc2image': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ PYTHONPATH=/num4_ws/build/pc2image/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/num4_ws/install/pc2image/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /num4_ws/build/pc2image/build --no-deps symlink_data --force
+[2.327s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[2.328s]   warnings.warn(msg)
+[2.626s] running develop
+[2.627s] /usr/local/lib/python3.10/dist-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[2.627s] !!
+[2.627s] 
+[2.627s]         ********************************************************************************
+[2.628s]         Please avoid running ``setup.py`` and ``easy_install``.
+[2.628s]         Instead, use pypa/build, pypa/installer or other
+[2.628s]         standards-based tools.
+[2.628s] 
+[2.628s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[2.628s]         ********************************************************************************
+[2.628s] 
+[2.628s] !!
+[2.628s]   easy_install.initialize_options(self)
+[2.983s] running egg_info
+[3.009s] writing pc2image.egg-info/PKG-INFO
+[3.010s] writing dependency_links to pc2image.egg-info/dependency_links.txt
+[3.011s] writing entry points to pc2image.egg-info/entry_points.txt
+[3.011s] writing requirements to pc2image.egg-info/requires.txt
+[3.011s] writing top-level names to pc2image.egg-info/top_level.txt
+[3.066s] reading manifest file 'pc2image.egg-info/SOURCES.txt'
+[3.069s] writing manifest file 'pc2image.egg-info/SOURCES.txt'
+[3.156s] running build_ext
+[3.156s] Creating /num4_ws/install/pc2image/lib/python3.10/site-packages/pc2image.egg-link (link to .)
+[3.158s] Installing launch_projector script to /num4_ws/install/pc2image/lib/pc2image
+[3.158s] 
+[3.158s] Installed /num4_ws/build/pc2image
+[3.158s] running symlink_data
+[3.159s] symbolically linking /num4_ws/build/pc2image/resource/pc2image -> /num4_ws/install/pc2image/share/ament_index/resource_index/packages
+[3.159s] symbolically linking /num4_ws/build/pc2image/package.xml -> /num4_ws/install/pc2image/share/pc2image
+[3.160s] creating /num4_ws/install/pc2image/share/pc2image/launch
+[3.160s] error: [Errno 2] No such file or directory: '/num4_ws/install/pc2image/share/pc2image/launch/launch_projector.py'

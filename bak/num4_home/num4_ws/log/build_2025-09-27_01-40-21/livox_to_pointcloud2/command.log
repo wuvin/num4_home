@@ -1,0 +1,6 @@
+Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/livox_to_pointcloud2 -DBUILD_TESTING=OFF -DCMAKE_INSTALL_PREFIX=/num4_ws/install/livox_to_pointcloud2
+Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8
+Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/livox_to_pointcloud2 -- -j8 -l8
+Invoking command in '/num4_ws/build/livox_to_pointcloud2': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_to_pointcloud2
+Invoked command in '/num4_ws/build/livox_to_pointcloud2' returned '0': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --install /num4_ws/build/livox_to_pointcloud2

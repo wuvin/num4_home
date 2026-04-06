@@ -1,0 +1,13 @@
+[0.083s] Invoking command in '/num4_ws/build/rviz_imu_plugin': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake --build /num4_ws/build/rviz_imu_plugin -- -j8 -l8
+[0.262s] [  0%] Built target rviz_imu_plugin_autogen_timestamp_deps
+[0.287s] [ 10%] [34m[1mAutomatic MOC for target rviz_imu_plugin[0m
+[1.478s] [ 10%] Built target rviz_imu_plugin_autogen
+[1.523s] [ 20%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/rviz_imu_plugin_autogen/mocs_compilation.cpp.o[0m
+[1.524s] [ 30%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_display.cpp.o[0m
+[1.525s] [ 60%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_acc_visual.cpp.o[0m
+[1.525s] [ 40%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_orientation_visual.cpp.o[0m
+[1.526s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_axes_visual.cpp.o[0m
+[1.528s] [ 80%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_visual.cpp.o[0m
+[1.528s] [ 80%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_display.cpp.o[0m
+[29.128s] [ 90%] [32m[1mLinking CXX shared library librviz_imu_plugin.so[0m
+[33.074s] [100%] Built target rviz_imu_plugin

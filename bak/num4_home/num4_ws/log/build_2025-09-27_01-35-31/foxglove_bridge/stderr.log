@@ -1,0 +1,21 @@
+fatal: detected dubious ownership in repository at '/num4_ws/src/ros-foxglove-bridge'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /num4_ws/src/ros-foxglove-bridge
+[31mCMake Error at CMakeLists.txt:186 (find_package):
+  By not providing "Findrosx_introspection.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "rosx_introspection", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "rosx_introspection" with any of the following names:
+
+    rosx_introspectionConfig.cmake
+    rosx_introspection-config.cmake
+
+  Add the installation prefix of "rosx_introspection" to CMAKE_PREFIX_PATH or
+  set "rosx_introspection_DIR" to a directory containing one of the above
+  files.  If "rosx_introspection" provides a separate development package or
+  SDK, be sure it has been installed.
+
+[0m

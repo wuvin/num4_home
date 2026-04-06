@@ -1,0 +1,1 @@
+Invoking command in '/num4_ws/build/rviz_imu_plugin': PS1=\[\e[1;35m\]\u@\h:\[\e[1;34m\]\w\[\e[0m\]\$ /usr/local/bin/cmake /num4_ws/src/imu_tools/rviz_imu_plugin -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/num4_ws/install/rviz_imu_plugin

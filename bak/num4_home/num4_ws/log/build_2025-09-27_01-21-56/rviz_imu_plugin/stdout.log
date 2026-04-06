@@ -1,0 +1,12 @@
+[  0%] Built target rviz_imu_plugin_autogen_timestamp_deps
+[ 10%] [34m[1mAutomatic MOC for target rviz_imu_plugin[0m
+[ 10%] Built target rviz_imu_plugin_autogen
+[ 20%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/rviz_imu_plugin_autogen/mocs_compilation.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_display.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_acc_visual.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_orientation_visual.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/imu_axes_visual.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_visual.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/rviz_imu_plugin.dir/src/mag_display.cpp.o[0m
+[ 90%] [32m[1mLinking CXX shared library librviz_imu_plugin.so[0m
+[100%] Built target rviz_imu_plugin
