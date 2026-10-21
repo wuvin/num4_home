@@ -22,6 +22,7 @@ Utilities that exist above ROS 2 workspace and outside Docker container.
 | :--- | :--: |
 | build_Dockerfile.sh | Sample command used to build from Dockerfile on remote |
 | fix_jetson_routing_dns.sh | Allow remote to use connection shared by client |
+| logger_bash_bashrc.sh | Contents of `/etc/bash.bashrc` modified to implement logger |
 | loggercmd.sh | Script sourced by `/etc/bash.bashrc` to record CLI executions |
 | loggerin.service | Script in `/etc/systemd/system/` that tells `systemd` to execute `loggerin.sh` when Jetson starts |
 | loggerin.sh | Script that logs to `/home/$USER/Documents/log.txt` upon certain events |
