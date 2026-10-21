@@ -66,4 +66,4 @@ log_command() {
 }
 
 # Run function after every command
-export PROMPT_COMMAND="log_command; $PROMT_COMMAND"
+export PROMPT_COMMAND="log_command; $PROMPT_COMMAND"

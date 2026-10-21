@@ -6,7 +6,7 @@ After=network-online.target
 Type=oneshot
 RemainAfterExit=true
 ExecStart=/home/num4/Documents/Logs/loggerin.sh "POWER_ON"
-ExecStop=/home/num4/Documents/Log/loggerin.sh "SHUTDOWN"
+ExecStop=/home/num4/Documents/Logs/loggerin.sh "SHUTDOWN"
 StandardOutput=journal
 User=num4
 
