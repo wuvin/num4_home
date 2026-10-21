@@ -2,7 +2,7 @@
 ---
 File: config/README.md
 Contact: wu.kevi@northeastern.edu
-Last Modified: February 18, 2026
+Last Modified: October 21, 2026
 ---
 -->
 
@@ -34,6 +34,18 @@ Utilities that exist above ROS 2 workspace and outside Docker container.
 Provide laptop's internet access to Jetson. If the Jetson connection is wireless
 or via WiFi, then the laptop's internet connection cannot also be wireless; that
 is, the internet and Jetson connections cannot be through the same interface.
+
+### In Case of Folder Permission Denied
+
+Note that `/etc/bash.bashrc` is also sourced by root shells (e.g., `sudo
+-i`). As a result, `mkdir -p` and `>>` creates files and folders under
+`/home/num4/Documents/Logs/cmd` owned by root. Later writes as `num4` to
+the same day's file by other logging scripts would then fail.
+
+If such a case arises and shows "Permission denied.", then there are two
+fixes:
+1) `sudo chown -R num4:num4 /home/num4/Documents/Logs`
+2) Make script skip logging when `[ "$EUID" -eq 0 ]`
 
 ---
 
