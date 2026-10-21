@@ -12,22 +12,21 @@
 #   fi
 #
 # Contact:      wu.kevi@northeastern.edu
-# Last Updated: February 18, 2026
+# Last Updated: October 21, 2026
 
 LOG_DIR="/home/num4/Documents/Logs/cmd"
 
 # Function to execute with unsynchronized clock
 get_next_file_unsync() {
+    local PREFIX="$LOG_DIR/1969/1969-12-31"
+
     mkdir -p "$LOG_DIR/1969"
 
     local LATEST=$(
-        ls "$LOG_DIR/1969/1969-12-31"_*.log 2>/dev/null |
+        ls "$PREFIX"_*.log 2>/dev/null |
         sort -V |
         tail -n 1
     )
-    local BASE="${LATEST%.*}"
-    local PREFIX="${BASE%_*}"
-    local NUMBER=$((10#${BASE##*_} + 1))
 
     if [ -z "$LATEST" ]; then
         local NUMBER=0
@@ -36,9 +35,7 @@ get_next_file_unsync() {
         local NUMBER=$((10#${BASE##*_} + 1))
     fi
 
-    NEXT_FILE=$(printf "%s_%07d.log" "$PREFIX" "$NUMBER")
-
-    echo "$NEXT_FILE"
+    printf "%s_%07d.log\n" "$PREFIX" "$NUMBER"
 }
 
 # Function to record command
@@ -51,7 +48,9 @@ log_command() {
     local LOG_DATE=$(date +%Y-%m-%d)
 
     if [ "$LOG_DATE" = "1969-12-31" ]; then
-        local LOG_FILE=$(get_next_file_unsync)
+        # local LOG_FILE=$(get_next_file_unsync)
+        [ -n "$UNSYNC_LOG_FILE" ] || UNSYNC_LOG_FILE=$(get_next_file_unsync)
+        local LOG_FILE=$UNSYNC_LOG_FILE
     else
         local FILE_DIR="$LOG_DIR/$(date +%Y)/$(date +'%m - %B')"
         local LOG_FILE=$FILE_DIR/"$(date +%Y-%m-%d).log"
