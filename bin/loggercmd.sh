@@ -66,4 +66,5 @@ log_command() {
 }
 
 # Run function after every command
-export PROMPT_COMMAND="log_command; $PROMPT_COMMAND"
+[[ $PROMPT_COMMAND == *log_command* ]] ||  # add once; avoid export
+    PROMPT_COMMAND="log_command${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
