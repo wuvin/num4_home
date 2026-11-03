@@ -27,7 +27,8 @@ Utilities that exist above ROS 2 workspace and outside Docker container.
 | loggerin.service | Script in `/etc/systemd/system/` that tells `systemd` to execute `loggerin.sh` when Jetson starts |
 | loggerin.sh | Script that logs to `/home/$USER/Documents/log.txt` upon certain events |
 | route_network_interface.sh | Allow client to share its internet connection |
-| setup_num4_data.sh | Client-side script to set up Docker terminals on remote for data collection |
+| setup_num4_data.sh | Client-side script to create multiple separate GNOME tabs to set up remote for data collection |
+| setup_num4_tmux.sh | Run a group of nodes on remote in a tmux session |
 | ssh_port_forward_u2d2.sh | Failed attempt at SSH port forwarding for DYNAMIXEL Wizard 2.0 to be used between client and remote |
 
 ### Forwarding Internet Connection
